@@ -4,7 +4,10 @@ project:
 
 website:
   title: "Aurélie Blumenfeld"
+  favicon : favicon_AB.png
   navbar:
+    title: false
+    logo: logo.png
     left:
       - href: index.qmd
         text: Home

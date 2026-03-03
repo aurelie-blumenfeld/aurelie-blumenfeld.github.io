@@ -6,4 +6,4 @@ about:
   image-width: 9em
   image-shape: round
 ---
-Hello ! I am a French Student
+Hello ! I am a French Student {{< fa face-smile >}}
