@@ -16,11 +16,11 @@ website:
 
 format:
   html:
-    theme:
-      - cosmo
-      - brand
-    css: styles.css
+    theme: 
+      - cosmo        # ← thème de base obligatoire
+      - styles.scss  # ← tes personnalisations par dessus
     toc: true
+    page-layout: full
 
 
 
