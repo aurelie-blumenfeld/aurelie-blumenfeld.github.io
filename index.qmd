@@ -1,7 +1,28 @@
 ---
-title: "Aurélie Blumenfeld"
+title: Aurélie BLUMENFELD
+image: profile-picture.jpg
+about:
+  template: trestles
+  image-width: 9em
+  image-shape: round
+  links:
+    - icon: linkedin
+      text: LinkedIn
+      href: href:https://www.linkedin.com/in/aurélie-blumenfeld-6b6335291/
+    - icon: file-earmark-pdf
+      text: CV
+      href: CV_aurelieblumenfeld.pdf
+    - icon: envelope
+      text: Contact
+      href: mailto:aurelieblumenfeld@gmail.com
 ---
 
-This is a Test website.
+## Hi, I'm Aurélie 👋
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+With a background in biology, I transitioned into business school with one clear focus: **the healthcare sector**. Currently completing an Erasmus exchange at Dublin City University, I'm in my first year of the **Information Systems Management program** at IMT Business School — looking to bridge my scientific background and digital skills through IS projects in health, pharma, or MedTech.
+
+::: {.hero-tags}
+`Information Systems` `Healthcare` `Project Management` `MedTech`
+:::
+
+[See my experience →](parcours.qmd){.btn-primary}
