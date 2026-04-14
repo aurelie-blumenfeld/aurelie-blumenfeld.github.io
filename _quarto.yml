@@ -19,6 +19,7 @@ format:
     theme: 
       - cosmo        # ← thème de base obligatoire
       - styles.scss  # ← tes personnalisations par dessus
+    css: styles.css
     mainfont: Montserrat 
     toc: true
     page-layout: full
