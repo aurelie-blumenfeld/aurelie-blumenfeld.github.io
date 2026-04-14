@@ -8,7 +8,7 @@ about:
   links:
     - icon: linkedin
       text: LinkedIn
-      href: href:https://www.linkedin.com/in/aurélie-blumenfeld-6b6335291/
+      href: href:https://www.linkedin.com/in/aurelie-blumenfeld-6b6335291/
     - icon: file-earmark-pdf
       text: CV
       href: CV_aurelieblumenfeld.pdf
