@@ -21,7 +21,7 @@ format:
       - styles.scss  # ← tes personnalisations par dessus
     css: styles.css
     mainfont: Montserrat 
-    toc: true
+    toc: false
     page-layout: full
 
 
