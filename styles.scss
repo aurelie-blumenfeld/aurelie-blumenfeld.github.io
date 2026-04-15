@@ -21,3 +21,13 @@ $body-bg: #FAF2FF;
 .exp-body { font-size: 14px; color: #6b6b8a; margin: 16px 0; }
 .exp-body li { margin-bottom: 8px; }
 .exp-tags code { background: #EEEDFB; color: #5548C8; border: none; font-size: 11px; padding: 3px 10px; border-radius: 100px; font-family: inherit; }
+
+
+/*-- scss:rules --*/
+.quarto-grid-item .thumbnail-image {
+  object-fit: contain !important;
+  background-color: #FAF2FF;
+  padding: 16px;
+  width: 100% !important;
+  height: 200px !important;
+}

@@ -3,6 +3,7 @@ title: "Lean Management in Emergency Departments"
 description: "A consulting report applying Lean methodologies to improve patient flow and reduce waiting times in an Irish hospital emergency department."
 date: 2024-12-01
 categories: [Lean Management, Healthcare, Consulting, VSM]
+image: ../images/hospital.png
 ---
 
 ## Overview
