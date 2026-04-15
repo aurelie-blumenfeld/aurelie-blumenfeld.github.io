@@ -1,0 +1,79 @@
+---
+title: "My Journey"
+page-layout: full
+toc: false
+---
+
+## Education
+
+::: timeline
+::: timeline-item
+::: timeline-date
+2024 – 2025
+:::
+::: timeline-content
+### Erasmus Exchange
+**Dublin City University** · Dublin, Ireland
+
+As part of my programme, I completed an Erasmus exchange at DCU. This experience strengthened my ability to work in an international environment and is the context in which this portfolio was created.
+:::
+:::
+
+::: timeline-item
+::: timeline-date
+2023 – present
+:::
+::: timeline-content
+### Programme Grande École — Information Systems Management
+**IMT Business School**
+
+I joined IMT Business School to develop a business and digital perspective, specialising in project management, business analysis, and digital transformation in organisations.
+:::
+:::
+
+::: timeline-item
+::: timeline-date
+2020 – 2023
+:::
+::: timeline-content
+### Bachelor's Degree in Biology
+Before moving into business school, I completed a degree in biology. This background gave me a strong analytical foundation and a natural affinity for the healthcare sector.
+:::
+:::
+:::
+
+## Experience
+
+::: exp-card
+::: exp-header
+### Junior Project Manager Intern — Customer Experience
+**GE HealthCare** · Buc, France · April 2026 · 22 weeks
+:::
+::: exp-body
+Currently contributing to customer experience improvement projects in an international HealthTech environment.
+
+- Contribution to customer experience optimisation projects
+- Coordination with operational teams and progress tracking
+- Process analysis and recommendations
+:::
+::: exp-tags
+`Project Management` `Customer Experience` `MedTech` `International`
+:::
+:::
+
+::: exp-card
+::: exp-header
+### Procurement Project Management Intern
+**BioSerenity** · 2024
+:::
+::: exp-body
+BioSerenity develops connected medical devices for neurological monitoring. My mission focused on coordinating a multi-year PCB component procurement strategy.
+
+- Coordinated a 3-year PCB procurement strategy involving 3 internal teams, with CFO-level reporting via SAP Business ByDesign
+- Managed a Plan A → Plan B pivot following regulatory non-compliance of obsolete components
+- Tracked and updated stock and order data in SAP Business ByDesign
+:::
+::: exp-tags
+`SAP Business ByDesign` `Procurement` `Cross-team coordination` `Medical devices` `Risk management`
+:::
+:::

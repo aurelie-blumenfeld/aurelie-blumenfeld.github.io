@@ -4,5 +4,11 @@
   },
   "index.qmd": {
     "index.html": "239226a3"
+  },
+  "docs/myjourney.qmd": {
+    "myjourney.html": "db37f0a8"
+  },
+  "myjourney.qmd": {
+    "myjourney.html": "ffbf7039"
   }
 }
