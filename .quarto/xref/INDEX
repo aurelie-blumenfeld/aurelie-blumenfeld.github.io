@@ -31,5 +31,8 @@
   },
   "projects/index.qmd": {
     "index.html": "c5140d0f"
+  },
+  "projects/lean-management.qmd": {
+    "lean-management.html": "1ef7c8ee"
   }
 }

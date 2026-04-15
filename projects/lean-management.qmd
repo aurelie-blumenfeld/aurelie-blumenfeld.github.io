@@ -1,0 +1,43 @@
+---
+title: "Lean Management in Emergency Departments"
+description: "A consulting report applying Lean methodologies to improve patient flow and reduce waiting times in an Irish hospital emergency department."
+date: 2024-12-01
+categories: [Lean Management, Healthcare, Consulting, VSM]
+---
+
+## Overview
+
+This project was completed as part of the **Advanced Operational Modelling** module at Dublin City University during my Erasmus exchange. The objective was to act as a management consultant and propose Lean-based improvements for a fictitious Irish hospital emergency department.
+
+## The Problem
+
+::: {.callout-note}
+Emergency departments across Ireland face significant pressure from increasing patient volumes, staff shortages, and inefficient processes — leading to long waiting times and patient dissatisfaction.
+:::
+
+## Methodology
+
+Three core Lean tools were applied:
+
+- **Value Stream Mapping (VSM)** — to identify waste and bottlenecks in the patient journey
+- **Kaizen** — to propose continuous improvement initiatives
+- **5S** — to reorganise physical spaces and improve efficiency
+
+## Key Findings
+
+| Issue | Impact |
+|-------|--------|
+| Redundant triage steps | Increased waiting time |
+| Poor bed management | Patient flow bottlenecks |
+| Disorganised storage | Staff time wasted |
+
+## Recommendations
+
+1. Implement a fast-track pathway for low-acuity patients
+2. Introduce real-time bed management dashboard
+3. Apply 5S methodology to medication and equipment storage
+4. Run regular Kaizen events with frontline staff
+
+## Key Takeaways
+
+This project strengthened my ability to apply structured problem-solving frameworks to real-world healthcare operations — directly relevant to my career goals in MOA/PMO roles in the health sector.
