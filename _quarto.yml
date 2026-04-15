@@ -13,8 +13,8 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - href: myjourney.qmd
-        text: My Journey
+      - href: aboutme.qmd
+        text: About Me
 
 format:
   html:

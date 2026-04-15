@@ -1,33 +1,5 @@
 [
   {
-    "objectID": "myjourney.html",
-    "href": "myjourney.html",
-    "title": "My Journey",
-    "section": "",
-    "text": "2024 – 2025\n\n\n\nDublin City University · Dublin, Ireland\nAs part of my programme, I completed an Erasmus exchange at DCU. This experience strengthened my ability to work in an international environment and is the context in which this portfolio was created.\n\n\n\n\n2023 – present\n\n\n\nIMT Business School\nI joined IMT Business School to develop a business and digital perspective, specialising in project management, business analysis, and digital transformation in organisations.\n\n\n\n\n2020 – 2023\n\n\n\nBefore moving into business school, I completed a degree in biology. This background gave me a strong analytical foundation and a natural affinity for the healthcare sector."
-  },
-  {
-    "objectID": "myjourney.html#education",
-    "href": "myjourney.html#education",
-    "title": "My Journey",
-    "section": "",
-    "text": "2024 – 2025\n\n\n\nDublin City University · Dublin, Ireland\nAs part of my programme, I completed an Erasmus exchange at DCU. This experience strengthened my ability to work in an international environment and is the context in which this portfolio was created.\n\n\n\n\n2023 – present\n\n\n\nIMT Business School\nI joined IMT Business School to develop a business and digital perspective, specialising in project management, business analysis, and digital transformation in organisations.\n\n\n\n\n2020 – 2023\n\n\n\nBefore moving into business school, I completed a degree in biology. This background gave me a strong analytical foundation and a natural affinity for the healthcare sector."
-  },
-  {
-    "objectID": "myjourney.html#experience",
-    "href": "myjourney.html#experience",
-    "title": "My Journey",
-    "section": "Experience",
-    "text": "Experience\n\n\nJunior Project Manager Intern — Customer Experience\nGE HealthCare · Buc, France · April 2026 · 22 weeks\n\n\nCurrently contributing to customer experience improvement projects in an international HealthTech environment.\n\nContribution to customer experience optimisation projects\nCoordination with operational teams and progress tracking\nProcess analysis and recommendations\n\n\n\nProject Management Customer Experience MedTech International\n\n\n\n\nProcurement Project Management Intern\nBioSerenity · 2024\n\n\nBioSerenity develops connected medical devices for neurological monitoring. My mission focused on coordinating a multi-year PCB component procurement strategy.\n\nCoordinated a 3-year PCB procurement strategy involving 3 internal teams, with CFO-level reporting via SAP Business ByDesign\nManaged a Plan A → Plan B pivot following regulatory non-compliance of obsolete components\nTracked and updated stock and order data in SAP Business ByDesign\n\n\n\nSAP Business ByDesign Procurement Cross-team coordination Medical devices Risk management"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "Aurélie BLUMENFELD",
-    "section": "",
-    "text": "Hello ! I am a French Student"
-  },
-  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Aurélie BLUMENFELD",
@@ -40,5 +12,26 @@
     "title": "Aurélie BLUMENFELD",
     "section": "",
     "text": "With a background in biology, I transitioned into business school with one clear focus: the healthcare sector. Currently completing an Erasmus exchange at Dublin City University, I’m in my first year of the Information Systems Management program at IMT Business School — looking to bridge my scientific background and digital skills through IS projects in health, pharma, or MedTech.\n\nInformation Systems Healthcare Project Management MedTech\n\nSee my experience →"
+  },
+  {
+    "objectID": "aboutme.html",
+    "href": "aboutme.html",
+    "title": "My Journey",
+    "section": "",
+    "text": "2024 – 2025\n\n\n\nDublin City University · Dublin, Ireland\nAs part of my programme, I completed an Erasmus exchange at DCU. This experience strengthened my ability to work in an international environment and is the context in which this portfolio was created.\n\n\n\n\n2023 – present\n\n\n\nIMT Business School\nI joined IMT Business School to develop a business and digital perspective, specialising in project management, business analysis, and digital transformation in organisations.\n\n\n\n\n2020 – 2023\n\n\n\nBefore moving into business school, I completed a degree in biology. This background gave me a strong analytical foundation and a natural affinity for the healthcare sector."
+  },
+  {
+    "objectID": "aboutme.html#education",
+    "href": "aboutme.html#education",
+    "title": "My Journey",
+    "section": "",
+    "text": "2024 – 2025\n\n\n\nDublin City University · Dublin, Ireland\nAs part of my programme, I completed an Erasmus exchange at DCU. This experience strengthened my ability to work in an international environment and is the context in which this portfolio was created.\n\n\n\n\n2023 – present\n\n\n\nIMT Business School\nI joined IMT Business School to develop a business and digital perspective, specialising in project management, business analysis, and digital transformation in organisations.\n\n\n\n\n2020 – 2023\n\n\n\nBefore moving into business school, I completed a degree in biology. This background gave me a strong analytical foundation and a natural affinity for the healthcare sector."
+  },
+  {
+    "objectID": "aboutme.html#experience",
+    "href": "aboutme.html#experience",
+    "title": "My Journey",
+    "section": "Experience",
+    "text": "Experience\n\n\nJunior Project Manager Intern — Customer Experience\nGE HealthCare · Buc, France · April 2026 · 22 weeks\n\n\nCurrently contributing to customer experience improvement projects in an international HealthTech environment.\n\nContribution to customer experience optimisation projects\nCoordination with operational teams and progress tracking\nProcess analysis and recommendations\n\n\n\nProject Management Customer Experience MedTech International\n\n\n\n\nProcurement Project Management Intern\nBioSerenity · 2024\n\n\nBioSerenity develops connected medical devices for neurological monitoring. My mission focused on coordinating a multi-year PCB component procurement strategy.\n\nCoordinated a 3-year PCB procurement strategy involving 3 internal teams, with CFO-level reporting via SAP Business ByDesign\nManaged a Plan A → Plan B pivot following regulatory non-compliance of obsolete components\nTracked and updated stock and order data in SAP Business ByDesign\n\n\n\nSAP Business ByDesign Procurement Cross-team coordination Medical devices Risk management"
   }
 ]
