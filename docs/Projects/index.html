@@ -83,7 +83,7 @@ ul.task-list li input[type="checkbox"] {
     const options = {
       valueNames: ['listing-image','listing-title','listing-description','listing-categories','listing-date',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-author","listing-image","listing-description"],
+      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -161,7 +161,7 @@ window.Quarto = {
 <span class="menu-text">About Me</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../projects/index.qmd"> 
+    <a class="nav-link active" href="../projects/index.html" aria-current="page"> 
 <span class="menu-text">Projects</span></a>
   </li>  
 </ul>
@@ -204,13 +204,28 @@ window.Quarto = {
 
 <div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
 <div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-listing-file-modified-sort="1776264515638">
-<a href="../Projects/impulsecap.html" class="quarto-grid-link">
+<div class="g-col-1" data-index="0" data-categories="RW50cmVwcmVuZXVyc2hpcCUyQ0hlYWx0aFRlY2g=" data-listing-date-sort="1762902000000" data-listing-file-modified-sort="1776275072252" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
+<a href="../projects/impulsecap.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
 <div class="card-body post-contents">
-<div class="card-text listing-description delink">
+<h5 class="no-anchor card-title listing-title">
+ImpulseCap
+</h5>
+<div class="listing-categories">
 
+<div class="listing-category" onclick="window.quartoListingCategory('RW50cmVwcmVuZXVyc2hpcA=='); return false;">Entrepreneurship</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('SGVhbHRoVGVjaA=='); return false;">HealthTech</div>
+
+</div>
+<div class="card-text listing-description delink">
+<p>Adaptive fitness app for people with disabilities.</p>
+</div>
+<div class="card-attribution card-text-small end">
+<div class="listing-date">
+Nov 12, 2025
+</div>
 </div>
 </div>
 </div></a>

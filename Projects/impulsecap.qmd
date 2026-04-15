@@ -1,0 +1,6 @@
+---
+title: "ImpulseCap"
+description: "Adaptive fitness app for people with disabilities."
+date: 2025-11-12
+categories: [Entrepreneurship, HealthTech]
+---

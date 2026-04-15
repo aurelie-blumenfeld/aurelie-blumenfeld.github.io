@@ -19,5 +19,17 @@
   },
   "Projects/index.qmd": {
     "index.html": "c50cb27d"
+  },
+  "docs/Projects/index.qmd": {
+    "index.html": "1aa49e95"
+  },
+  "docs/projects/index.qmd": {
+    "index.html": "bb826666"
+  },
+  "projects/impulsecap.qmd": {
+    "impulsecap.html": "71e9cb87"
+  },
+  "projects/index.qmd": {
+    "index.html": "c5140d0f"
   }
 }
