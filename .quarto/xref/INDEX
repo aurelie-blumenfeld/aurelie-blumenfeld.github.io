@@ -13,5 +13,11 @@
   },
   "aboutme.qmd": {
     "aboutme.html": "07bc0d1a"
+  },
+  "Projects/impulsecap.qmd": {
+    "impulsecap.html": "1aa92fa3"
+  },
+  "Projects/index.qmd": {
+    "index.html": "c50cb27d"
   }
 }
