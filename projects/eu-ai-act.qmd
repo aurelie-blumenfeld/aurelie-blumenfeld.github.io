@@ -1,0 +1,43 @@
+---
+title: "EU AI Act — Organisational Impact Analysis"
+description: "An analysis of the EU AI Act's impact on organisations, examining compliance challenges and strategic responses across three case studies."
+date: 2025-01-15
+categories: [AI Regulation, Business Analysis, EU Policy, Research]
+---
+
+## Overview
+
+This project was completed as part of the **Business Applications of AI** module at Dublin City University during my Erasmus exchange. The objective was to analyse the impact of the EU AI Act on organisations and produce a 2,000-word report accompanied by a 5-minute video presentation.
+
+## The EU AI Act
+
+::: {.callout-note}
+The EU AI Act, adopted in 2024, is the world's first comprehensive legal framework for artificial intelligence. It classifies AI systems by risk level and imposes obligations on developers and deployers accordingly.
+:::
+
+## Case Studies
+
+Three organisations were analysed:
+
+| Organisation | Sector | AI Use Case |
+|-------------|--------|-------------|
+| Philips | HealthTech | Medical imaging AI |
+| BNP Paribas | Finance | Credit scoring & fraud detection |
+| Otto Group | Retail | Demand forecasting & personalisation |
+
+## Key Findings
+
+- High-risk AI systems in healthcare and finance face the strictest compliance requirements
+- Organisations must implement **transparency**, **human oversight**, and **risk management** frameworks
+- Smaller firms face disproportionate compliance costs compared to large corporations
+
+## Implications for Organisations
+
+1. Audit existing AI systems and classify them by risk level
+2. Appoint an AI compliance officer or integrate responsibility into existing governance
+3. Invest in explainability and documentation of AI decision-making processes
+4. Engage with regulators early to anticipate evolving requirements
+
+## Key Takeaways
+
+This project developed my ability to analyse regulatory frameworks and assess their organisational impact — a skill directly applicable to IS project management roles in regulated sectors such as health and pharma.
