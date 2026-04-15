@@ -1,0 +1,26 @@
+---
+title: "Contact"
+toc: false
+page-layout: full
+---
+
+## Get in Touch
+
+I am currently looking for a **work-study contract (alternance)** starting September 2025 in a MOA, AMOA, or PMO role, ideally in the health, pharma, or MedTech sector.
+
+Feel free to reach out for any opportunity or collaboration.
+
+::: {.callout-tip}
+## Best way to reach me
+I typically respond within 24 hours.
+:::
+
+| | |
+|---|---|
+| {{< fa envelope >}} Email | [aurеlieblumenfeld@gmail.com](mailto:aurelieblumenfeld@gmail.com) |
+| {{< fa brands linkedin >}} LinkedIn | [linkedin.com/in/aurelie-blumenfeld](https://fr.linkedin.com/in/aurélie-blumenfeld-6b6335291) |
+| {{< fa file-pdf >}} CV | [Download my CV](../CV_aurelieblumenfeld.pdf) |
+
+## Location
+
+Based in **Paris, France** — open to remote and hybrid opportunities.
