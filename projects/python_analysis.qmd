@@ -5,3 +5,105 @@ date: 2024-12-01
 categories: [Information Systems, Healthcare, IT, Python]
 image: ../images/python_analysis.png
 ---
+## Introduction
+
+As a business school student specialising in Information Systems with a strong interest in the healthcare sector, I wanted to combine both fields in a concrete data project.
+
+This analysis explores the evolution of critical care bed capacity in French hospitals between 2013 and 2024, using open data published by the **DREES** (Direction de la recherche, des études, de l'évaluation et des statistiques), the French Ministry of Health's statistical department.
+
+::: {.callout-note}
+## Key questions explored
+- How did critical care capacity evolve over the past decade?
+- What was the measurable impact of the Covid-19 pandemic on hospital capacity?
+- How are critical care beds distributed between public and private institutions?
+- Which departments concentrate the most critical care resources?
+:::
+
+**Dataset**: DREES – Lits de soins critiques (2013–2024)  
+**Tools**: Python (pandas, matplotlib, seaborn)
+
+---
+
+## 1. Loading and Exploring the Dataset
+
+```{python}
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+df = pd.read_csv("data/lits_soins_critiques_2022.csv", sep=";", encoding="utf-8")
+print("Dimensions:", df.shape)
+print("\nColumns:", df.columns.tolist())
+print("\nYears available:", sorted(df["annee"].unique()))
+print("\nEstablishment types:", df["statut_etab"].unique())
+print("\nBed types:", df["uni"].unique())
+```
+
+The dataset contains 5 variables: `id_geo`, `statut_etab`, `annee`, `uni`, `nb_lit`. No missing values — the dataset is clean and ready for analysis.
+
+---
+
+## 2. National Evolution of Critical Care Beds (2013–2024)
+
+```python
+# chunk Python — courbe évolution nationale
+```
+
+::: {.callout-tip}
+## Key observation
+The chart shows a steady increase from 2013 to 2019, followed by a sharp peak in 2020 (+6% vs 2019). This spike directly reflects the emergency measures taken during the Covid-19 pandemic, when French hospitals were required to rapidly scale up their critical care capacity. From 2021 onwards, capacity progressively returned to pre-pandemic levels.
+:::
+
+---
+
+## 3. Evolution by Type of Critical Care Unit
+
+```python
+# chunk Python — courbe par type de lits
+```
+
+::: {.callout-tip}
+## Key observation
+The 2020 surge was driven primarily by adult ICU beds. Adult continuous monitoring beds represent the largest category overall, but show a notable drop in 2024, suggesting a structural reorganisation of critical care capacity post-pandemic.
+:::
+
+---
+
+## 4. Distribution by Establishment Status (2024)
+
+```python
+# chunk Python — camembert public/privé
+```
+
+::: {.callout-tip}
+## Key observation
+Public hospitals account for 70% of all critical care beds in France. This distribution is particularly relevant in the context of healthcare information systems — public and private institutions operate on different IS architectures, regulatory frameworks, and data governance models, a key challenge for interoperability in the French health system.
+:::
+
+---
+
+## 5. Top 10 Departments by Critical Care Capacity (2024)
+
+```python
+# chunk Python — barplot top 10
+```
+
+::: {.callout-tip}
+## Key observation
+Paris leads by a significant margin, followed by Nord and Bouches-du-Rhône. This concentration highlights a persistent territorial inequality in access to critical care resources, a known challenge in French health policy often discussed alongside the issue of *déserts médicaux*.
+:::
+
+---
+
+## Summary & Reflections
+
+| Finding | Insight |
+|---------|---------|
+| +6% beds in 2020 | Measurable Covid-19 emergency response |
+| 70% public sector | Public hospitals dominate critical care |
+| Paris, Nord, BdR lead | Territorial concentration of resources |
+| Post-2021 decline | Gradual return to structural capacity |
+
+This project allowed me to apply data manipulation and visualisation skills to a real-world healthcare dataset. Beyond the technical exercise, it reinforced my understanding of how data can inform strategic decisions in hospital management — whether around resource allocation, capacity planning, or IS design.
+
+As someone aiming to work at the intersection of healthcare and information systems, being able to read, clean, and interpret health data is a skill I consider essential for roles in MOA, AMOA, or project management in MedTech and pharma environments.

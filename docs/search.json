@@ -1,5 +1,61 @@
 [
   {
+    "objectID": "projects/python_analysis.html",
+    "href": "projects/python_analysis.html",
+    "title": "Hospital Critical Care Capacity in France",
+    "section": "",
+    "text": "As a business school student specialising in Information Systems with a strong interest in the healthcare sector, I wanted to combine both fields in a concrete data project.\nThis analysis explores the evolution of critical care bed capacity in French hospitals between 2013 and 2024, using open data published by the DREES (Direction de la recherche, des études, de l’évaluation et des statistiques), the French Ministry of Health’s statistical department.\n\n\n\n\n\n\nNoteKey questions explored\n\n\n\n\nHow did critical care capacity evolve over the past decade?\nWhat was the measurable impact of the Covid-19 pandemic on hospital capacity?\nHow are critical care beds distributed between public and private institutions?\nWhich departments concentrate the most critical care resources?\n\n\n\nDataset: DREES – Lits de soins critiques (2013–2024)\nTools: Python (pandas, matplotlib, seaborn)"
+  },
+  {
+    "objectID": "projects/python_analysis.html#introduction",
+    "href": "projects/python_analysis.html#introduction",
+    "title": "Hospital Critical Care Capacity in France",
+    "section": "",
+    "text": "As a business school student specialising in Information Systems with a strong interest in the healthcare sector, I wanted to combine both fields in a concrete data project.\nThis analysis explores the evolution of critical care bed capacity in French hospitals between 2013 and 2024, using open data published by the DREES (Direction de la recherche, des études, de l’évaluation et des statistiques), the French Ministry of Health’s statistical department.\n\n\n\n\n\n\nNoteKey questions explored\n\n\n\n\nHow did critical care capacity evolve over the past decade?\nWhat was the measurable impact of the Covid-19 pandemic on hospital capacity?\nHow are critical care beds distributed between public and private institutions?\nWhich departments concentrate the most critical care resources?\n\n\n\nDataset: DREES – Lits de soins critiques (2013–2024)\nTools: Python (pandas, matplotlib, seaborn)"
+  },
+  {
+    "objectID": "projects/python_analysis.html#loading-and-exploring-the-dataset",
+    "href": "projects/python_analysis.html#loading-and-exploring-the-dataset",
+    "title": "Hospital Critical Care Capacity in France",
+    "section": "1. Loading and Exploring the Dataset",
+    "text": "1. Loading and Exploring the Dataset\n\nimport pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\n\ndf = pd.read_csv(\"data/lits_soins_critiques_2022.csv\", sep=\";\", encoding=\"utf-8\")\nprint(\"Dimensions:\", df.shape)\nprint(\"\\nColumns:\", df.columns.tolist())\nprint(\"\\nYears available:\", sorted(df[\"annee\"].unique()))\nprint(\"\\nEstablishment types:\", df[\"statut_etab\"].unique())\nprint(\"\\nBed types:\", df[\"uni\"].unique())\n\nDimensions: (15141, 5)\n\nColumns: ['id_geo', 'statut_etab', 'annee', 'uni', 'nb_lit']\n\nYears available: [np.int64(2013), np.int64(2019), np.int64(2020), np.int64(2021), np.int64(2022), np.int64(2023), np.int64(2024)]\n\nEstablishment types: &lt;StringArray&gt;\n['1_Public', '2_Prive_BL', '3_Prive_BNL']\nLength: 3, dtype: str\n\nBed types: &lt;StringArray&gt;\n['REAADU', 'REAENF', 'USIC', 'SIUNV', 'AUTSI', 'SURVADU', 'SURVENF']\nLength: 7, dtype: str\n\n\nThe dataset contains 5 variables: id_geo, statut_etab, annee, uni, nb_lit. No missing values — the dataset is clean and ready for analysis."
+  },
+  {
+    "objectID": "projects/python_analysis.html#national-evolution-of-critical-care-beds-20132024",
+    "href": "projects/python_analysis.html#national-evolution-of-critical-care-beds-20132024",
+    "title": "Hospital Critical Care Capacity in France",
+    "section": "2. National Evolution of Critical Care Beds (2013–2024)",
+    "text": "2. National Evolution of Critical Care Beds (2013–2024)\n# chunk Python — courbe évolution nationale\n\n\n\n\n\n\nTipKey observation\n\n\n\nThe chart shows a steady increase from 2013 to 2019, followed by a sharp peak in 2020 (+6% vs 2019). This spike directly reflects the emergency measures taken during the Covid-19 pandemic, when French hospitals were required to rapidly scale up their critical care capacity. From 2021 onwards, capacity progressively returned to pre-pandemic levels."
+  },
+  {
+    "objectID": "projects/python_analysis.html#evolution-by-type-of-critical-care-unit",
+    "href": "projects/python_analysis.html#evolution-by-type-of-critical-care-unit",
+    "title": "Hospital Critical Care Capacity in France",
+    "section": "3. Evolution by Type of Critical Care Unit",
+    "text": "3. Evolution by Type of Critical Care Unit\n# chunk Python — courbe par type de lits\n\n\n\n\n\n\nTipKey observation\n\n\n\nThe 2020 surge was driven primarily by adult ICU beds. Adult continuous monitoring beds represent the largest category overall, but show a notable drop in 2024, suggesting a structural reorganisation of critical care capacity post-pandemic."
+  },
+  {
+    "objectID": "projects/python_analysis.html#distribution-by-establishment-status-2024",
+    "href": "projects/python_analysis.html#distribution-by-establishment-status-2024",
+    "title": "Hospital Critical Care Capacity in France",
+    "section": "4. Distribution by Establishment Status (2024)",
+    "text": "4. Distribution by Establishment Status (2024)\n# chunk Python — camembert public/privé\n\n\n\n\n\n\nTipKey observation\n\n\n\nPublic hospitals account for 70% of all critical care beds in France. This distribution is particularly relevant in the context of healthcare information systems — public and private institutions operate on different IS architectures, regulatory frameworks, and data governance models, a key challenge for interoperability in the French health system."
+  },
+  {
+    "objectID": "projects/python_analysis.html#top-10-departments-by-critical-care-capacity-2024",
+    "href": "projects/python_analysis.html#top-10-departments-by-critical-care-capacity-2024",
+    "title": "Hospital Critical Care Capacity in France",
+    "section": "5. Top 10 Departments by Critical Care Capacity (2024)",
+    "text": "5. Top 10 Departments by Critical Care Capacity (2024)\n# chunk Python — barplot top 10\n\n\n\n\n\n\nTipKey observation\n\n\n\nParis leads by a significant margin, followed by Nord and Bouches-du-Rhône. This concentration highlights a persistent territorial inequality in access to critical care resources, a known challenge in French health policy often discussed alongside the issue of déserts médicaux."
+  },
+  {
+    "objectID": "projects/python_analysis.html#summary-reflections",
+    "href": "projects/python_analysis.html#summary-reflections",
+    "title": "Hospital Critical Care Capacity in France",
+    "section": "Summary & Reflections",
+    "text": "Summary & Reflections\n\n\n\nFinding\nInsight\n\n\n\n\n+6% beds in 2020\nMeasurable Covid-19 emergency response\n\n\n70% public sector\nPublic hospitals dominate critical care\n\n\nParis, Nord, BdR lead\nTerritorial concentration of resources\n\n\nPost-2021 decline\nGradual return to structural capacity\n\n\n\nThis project allowed me to apply data manipulation and visualisation skills to a real-world healthcare dataset. Beyond the technical exercise, it reinforced my understanding of how data can inform strategic decisions in hospital management — whether around resource allocation, capacity planning, or IS design.\nAs someone aiming to work at the intersection of healthcare and information systems, being able to read, clean, and interpret health data is a skill I consider essential for roles in MOA, AMOA, or project management in MedTech and pharma environments."
+  },
+  {
     "objectID": "projects/index.html",
     "href": "projects/index.html",
     "title": "Projects",

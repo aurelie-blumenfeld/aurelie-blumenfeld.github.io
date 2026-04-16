@@ -22,6 +22,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -161,8 +196,169 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>As a business school student specialising in Information Systems with a strong interest in the healthcare sector, I wanted to combine both fields in a concrete data project.</p>
+<p>This analysis explores the evolution of critical care bed capacity in French hospitals between 2013 and 2024, using open data published by the <strong>DREES</strong> (Direction de la recherche, des études, de l’évaluation et des statistiques), the French Ministry of Health’s statistical department.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Key questions explored
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>How did critical care capacity evolve over the past decade?</li>
+<li>What was the measurable impact of the Covid-19 pandemic on hospital capacity?</li>
+<li>How are critical care beds distributed between public and private institutions?</li>
+<li>Which departments concentrate the most critical care resources?</li>
+</ul>
+</div>
+</div>
+<p><strong>Dataset</strong>: DREES – Lits de soins critiques (2013–2024)<br>
+<strong>Tools</strong>: Python (pandas, matplotlib, seaborn)</p>
+<hr>
+</section>
+<section id="loading-and-exploring-the-dataset" class="level2">
+<h2 class="anchored" data-anchor-id="loading-and-exploring-the-dataset">1. Loading and Exploring the Dataset</h2>
+<div id="06c92028" class="cell" data-execution_count="1">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">"data/lits_soins_critiques_2022.csv"</span>, sep<span class="op">=</span><span class="st">";"</span>, encoding<span class="op">=</span><span class="st">"utf-8"</span>)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Dimensions:"</span>, df.shape)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Columns:"</span>, df.columns.tolist())</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Years available:"</span>, <span class="bu">sorted</span>(df[<span class="st">"annee"</span>].unique()))</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Establishment types:"</span>, df[<span class="st">"statut_etab"</span>].unique())</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Bed types:"</span>, df[<span class="st">"uni"</span>].unique())</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Dimensions: (15141, 5)
+
+Columns: ['id_geo', 'statut_etab', 'annee', 'uni', 'nb_lit']
+
+Years available: [np.int64(2013), np.int64(2019), np.int64(2020), np.int64(2021), np.int64(2022), np.int64(2023), np.int64(2024)]
+
+Establishment types: &lt;StringArray&gt;
+['1_Public', '2_Prive_BL', '3_Prive_BNL']
+Length: 3, dtype: str
+
+Bed types: &lt;StringArray&gt;
+['REAADU', 'REAENF', 'USIC', 'SIUNV', 'AUTSI', 'SURVADU', 'SURVENF']
+Length: 7, dtype: str</code></pre>
+</div>
+</div>
+<p>The dataset contains 5 variables: <code>id_geo</code>, <code>statut_etab</code>, <code>annee</code>, <code>uni</code>, <code>nb_lit</code>. No missing values — the dataset is clean and ready for analysis.</p>
+<hr>
+</section>
+<section id="national-evolution-of-critical-care-beds-20132024" class="level2">
+<h2 class="anchored" data-anchor-id="national-evolution-of-critical-care-beds-20132024">2. National Evolution of Critical Care Beds (2013–2024)</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># chunk Python — courbe évolution nationale</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Key observation
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The chart shows a steady increase from 2013 to 2019, followed by a sharp peak in 2020 (+6% vs 2019). This spike directly reflects the emergency measures taken during the Covid-19 pandemic, when French hospitals were required to rapidly scale up their critical care capacity. From 2021 onwards, capacity progressively returned to pre-pandemic levels.</p>
+</div>
+</div>
+<hr>
+</section>
+<section id="evolution-by-type-of-critical-care-unit" class="level2">
+<h2 class="anchored" data-anchor-id="evolution-by-type-of-critical-care-unit">3. Evolution by Type of Critical Care Unit</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># chunk Python — courbe par type de lits</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Key observation
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The 2020 surge was driven primarily by adult ICU beds. Adult continuous monitoring beds represent the largest category overall, but show a notable drop in 2024, suggesting a structural reorganisation of critical care capacity post-pandemic.</p>
+</div>
+</div>
+<hr>
+</section>
+<section id="distribution-by-establishment-status-2024" class="level2">
+<h2 class="anchored" data-anchor-id="distribution-by-establishment-status-2024">4. Distribution by Establishment Status (2024)</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># chunk Python — camembert public/privé</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Key observation
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Public hospitals account for 70% of all critical care beds in France. This distribution is particularly relevant in the context of healthcare information systems — public and private institutions operate on different IS architectures, regulatory frameworks, and data governance models, a key challenge for interoperability in the French health system.</p>
+</div>
+</div>
+<hr>
+</section>
+<section id="top-10-departments-by-critical-care-capacity-2024" class="level2">
+<h2 class="anchored" data-anchor-id="top-10-departments-by-critical-care-capacity-2024">5. Top 10 Departments by Critical Care Capacity (2024)</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># chunk Python — barplot top 10</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Key observation
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Paris leads by a significant margin, followed by Nord and Bouches-du-Rhône. This concentration highlights a persistent territorial inequality in access to critical care resources, a known challenge in French health policy often discussed alongside the issue of <em>déserts médicaux</em>.</p>
+</div>
+</div>
+<hr>
+</section>
+<section id="summary-reflections" class="level2">
+<h2 class="anchored" data-anchor-id="summary-reflections">Summary &amp; Reflections</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Finding</th>
+<th>Insight</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>+6% beds in 2020</td>
+<td>Measurable Covid-19 emergency response</td>
+</tr>
+<tr class="even">
+<td>70% public sector</td>
+<td>Public hospitals dominate critical care</td>
+</tr>
+<tr class="odd">
+<td>Paris, Nord, BdR lead</td>
+<td>Territorial concentration of resources</td>
+</tr>
+<tr class="even">
+<td>Post-2021 decline</td>
+<td>Gradual return to structural capacity</td>
+</tr>
+</tbody>
+</table>
+<p>This project allowed me to apply data manipulation and visualisation skills to a real-world healthcare dataset. Beyond the technical exercise, it reinforced my understanding of how data can inform strategic decisions in hospital management — whether around resource allocation, capacity planning, or IS design.</p>
+<p>As someone aiming to work at the intersection of healthcare and information systems, being able to read, clean, and interpret health data is a skill I consider essential for roles in MOA, AMOA, or project management in MedTech and pharma environments.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
