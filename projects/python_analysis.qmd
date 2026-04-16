@@ -108,8 +108,26 @@ The 2020 surge was driven primarily by adult ICU beds. Adult continuous monitori
 
 ## 4. Distribution by Establishment Status (2024)
 
-```python
-# chunk Python — camembert public/privé
+```{python}
+#| fig-cap: "Distribution of critical care beds by establishment status in France (2024)"
+#| fig-alt: "Pie chart showing critical care beds by establishment status"
+
+statut = df[
+    (df["id_geo"] == "00_FR") & (df["annee"] == 2024)
+].groupby("statut_etab")["nb_lit"].sum().reset_index()
+
+statut["statut_etab"] = statut["statut_etab"].replace({
+    "1_Public": "Public",
+    "2_Prive_BL": "Private (for-profit)",
+    "3_Prive_BNL": "Private (non-profit)"
+})
+
+plt.figure(figsize=(7, 7))
+plt.pie(statut["nb_lit"], labels=statut["statut_etab"], autopct="%1.1f%%",
+        colors=["#4C72B0", "#DD8452", "#55A868"], startangle=140)
+plt.title("Critical care beds by establishment status (2024)", fontsize=12)
+plt.tight_layout()
+plt.show()
 ```
 
 ::: {.callout-tip}
@@ -121,8 +139,26 @@ Public hospitals account for 70% of all critical care beds in France. This distr
 
 ## 5. Top 10 Departments by Critical Care Capacity (2024)
 
-```python
-# chunk Python — barplot top 10
+```{python}
+#| fig-cap: "Top 10 French departments by critical care bed count (2024)"
+#| fig-alt: "Bar chart showing top 10 departments by critical care capacity"
+
+deps = df[
+    (df["annee"] == 2024) &
+    (~df["id_geo"].isin(["00_FR", "00_MET"]))
+].groupby("id_geo")["nb_lit"].sum().reset_index()
+
+deps = deps.sort_values("nb_lit", ascending=True).tail(10)
+deps["nom"] = deps["id_geo"].str.split("_", n=1).str[1]
+
+plt.figure(figsize=(10, 6))
+sns.barplot(data=deps, x="nb_lit", y="nom", hue="nom", palette="Blues_d", legend=False)
+plt.title("Top 10 departments by critical care bed count (2024)", fontsize=13)
+plt.xlabel("Number of beds")
+plt.ylabel("Department")
+plt.grid(True, linestyle="--", alpha=0.5, axis="x")
+plt.tight_layout()
+plt.show()
 ```
 
 ::: {.callout-tip}

@@ -227,7 +227,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="loading-and-exploring-the-dataset" class="level2">
 <h2 class="anchored" data-anchor-id="loading-and-exploring-the-dataset">1. Loading and Exploring the Dataset</h2>
-<div id="ba71f13d" class="cell" data-execution_count="1">
+<div id="5ce9b340" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
@@ -319,7 +319,7 @@ Bed types: ['REAADU', 'REAENF', 'USIC', 'SIUNV', 'AUTSI', 'SURVADU', 'SURVENF']<
 </section>
 <section id="national-evolution-of-critical-care-beds-20132024" class="level2">
 <h2 class="anchored" data-anchor-id="national-evolution-of-critical-care-beds-20132024">2. National Evolution of Critical Care Beds (2013–2024)</h2>
-<div id="160783e2" class="cell" data-execution_count="2">
+<div id="4a9b28e4" class="cell" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>evolution <span class="op">=</span> df[df[<span class="st">"id_geo"</span>] <span class="op">==</span> <span class="st">"00_FR"</span>].groupby(<span class="st">"annee"</span>)[<span class="st">"nb_lit"</span>].<span class="bu">sum</span>().reset_index()</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">5</span>))</span>
@@ -356,7 +356,7 @@ Bed types: ['REAADU', 'REAENF', 'USIC', 'SIUNV', 'AUTSI', 'SURVADU', 'SURVENF']<
 </section>
 <section id="evolution-by-type-of-critical-care-unit" class="level2">
 <h2 class="anchored" data-anchor-id="evolution-by-type-of-critical-care-unit">3. Evolution by Type of Critical Care Unit</h2>
-<div id="d61e787b" class="cell" data-execution_count="3">
+<div id="6681a715" class="cell" data-execution_count="3">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>types_lits <span class="op">=</span> df[df[<span class="st">"id_geo"</span>] <span class="op">==</span> <span class="st">"00_FR"</span>].groupby([<span class="st">"annee"</span>, <span class="st">"uni"</span>])[<span class="st">"nb_lit"</span>].<span class="bu">sum</span>().reset_index()</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>types_lits[<span class="st">"uni"</span>] <span class="op">=</span> types_lits[<span class="st">"uni"</span>].replace({</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"REAADU"</span>: <span class="st">"Adult ICU"</span>,</span>
@@ -403,7 +403,32 @@ Bed types: ['REAADU', 'REAENF', 'USIC', 'SIUNV', 'AUTSI', 'SURVADU', 'SURVENF']<
 </section>
 <section id="distribution-by-establishment-status-2024" class="level2">
 <h2 class="anchored" data-anchor-id="distribution-by-establishment-status-2024">4. Distribution by Establishment Status (2024)</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># chunk Python — camembert public/privé</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="6de81c2e" class="cell" data-execution_count="4">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>statut <span class="op">=</span> df[</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    (df[<span class="st">"id_geo"</span>] <span class="op">==</span> <span class="st">"00_FR"</span>) <span class="op">&amp;</span> (df[<span class="st">"annee"</span>] <span class="op">==</span> <span class="dv">2024</span>)</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>].groupby(<span class="st">"statut_etab"</span>)[<span class="st">"nb_lit"</span>].<span class="bu">sum</span>().reset_index()</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>statut[<span class="st">"statut_etab"</span>] <span class="op">=</span> statut[<span class="st">"statut_etab"</span>].replace({</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">"1_Public"</span>: <span class="st">"Public"</span>,</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">"2_Prive_BL"</span>: <span class="st">"Private (for-profit)"</span>,</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">"3_Prive_BNL"</span>: <span class="st">"Private (non-profit)"</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>})</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">7</span>, <span class="dv">7</span>))</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>plt.pie(statut[<span class="st">"nb_lit"</span>], labels<span class="op">=</span>statut[<span class="st">"statut_etab"</span>], autopct<span class="op">=</span><span class="st">"</span><span class="sc">%1.1f%%</span><span class="st">"</span>,</span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>        colors<span class="op">=</span>[<span class="st">"#4C72B0"</span>, <span class="st">"#DD8452"</span>, <span class="st">"#55A868"</span>], startangle<span class="op">=</span><span class="dv">140</span>)</span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"Critical care beds by establishment status (2024)"</span>, fontsize<span class="op">=</span><span class="dv">12</span>)</span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="python_analysis_files/figure-html/cell-5-output-1.png" alt="Pie chart showing critical care beds by establishment status" width="642" height="662" class="figure-img"></p>
+<figcaption>Distribution of critical care beds by establishment status in France (2024)</figcaption>
+</figure>
+</div>
+</div>
+</div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -421,7 +446,32 @@ Bed types: ['REAADU', 'REAENF', 'USIC', 'SIUNV', 'AUTSI', 'SURVADU', 'SURVENF']<
 </section>
 <section id="top-10-departments-by-critical-care-capacity-2024" class="level2">
 <h2 class="anchored" data-anchor-id="top-10-departments-by-critical-care-capacity-2024">5. Top 10 Departments by Critical Care Capacity (2024)</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># chunk Python — barplot top 10</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="f5b6caba" class="cell" data-execution_count="5">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>deps <span class="op">=</span> df[</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    (df[<span class="st">"annee"</span>] <span class="op">==</span> <span class="dv">2024</span>) <span class="op">&amp;</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    (<span class="op">~</span>df[<span class="st">"id_geo"</span>].isin([<span class="st">"00_FR"</span>, <span class="st">"00_MET"</span>]))</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>].groupby(<span class="st">"id_geo"</span>)[<span class="st">"nb_lit"</span>].<span class="bu">sum</span>().reset_index()</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>deps <span class="op">=</span> deps.sort_values(<span class="st">"nb_lit"</span>, ascending<span class="op">=</span><span class="va">True</span>).tail(<span class="dv">10</span>)</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>deps[<span class="st">"nom"</span>] <span class="op">=</span> deps[<span class="st">"id_geo"</span>].<span class="bu">str</span>.split(<span class="st">"_"</span>, n<span class="op">=</span><span class="dv">1</span>).<span class="bu">str</span>[<span class="dv">1</span>]</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">6</span>))</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>sns.barplot(data<span class="op">=</span>deps, x<span class="op">=</span><span class="st">"nb_lit"</span>, y<span class="op">=</span><span class="st">"nom"</span>, hue<span class="op">=</span><span class="st">"nom"</span>, palette<span class="op">=</span><span class="st">"Blues_d"</span>, legend<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"Top 10 departments by critical care bed count (2024)"</span>, fontsize<span class="op">=</span><span class="dv">13</span>)</span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"Number of beds"</span>)</span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"Department"</span>)</span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>plt.grid(<span class="va">True</span>, linestyle<span class="op">=</span><span class="st">"--"</span>, alpha<span class="op">=</span><span class="fl">0.5</span>, axis<span class="op">=</span><span class="st">"x"</span>)</span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="python_analysis_files/figure-html/cell-6-output-1.png" alt="Bar chart showing top 10 departments by critical care capacity" width="950" height="566" class="figure-img"></p>
+<figcaption>Top 10 French departments by critical care bed count (2024)</figcaption>
+</figure>
+</div>
+</div>
+</div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
