@@ -48,8 +48,20 @@ The dataset contains 5 variables: `id_geo`, `statut_etab`, `annee`, `uni`, `nb_l
 
 ## 2. National Evolution of Critical Care Beds (2013–2024)
 
-```python
-# chunk Python — courbe évolution nationale
+```{python}
+#| fig-cap: "Evolution of total critical care beds in France (2013–2024)"
+#| fig-alt: "Line chart showing the evolution of critical care beds in France"
+
+evolution = df[df["id_geo"] == "00_FR"].groupby("annee")["nb_lit"].sum().reset_index()
+
+plt.figure(figsize=(10, 5))
+sns.lineplot(data=evolution, x="annee", y="nb_lit", marker="o", color="#4C72B0", linewidth=2.5)
+plt.title("Total critical care beds in France (2013–2024)", fontsize=13)
+plt.xlabel("Year")
+plt.ylabel("Number of beds")
+plt.grid(True, linestyle="--", alpha=0.5)
+plt.tight_layout()
+plt.show()
 ```
 
 ::: {.callout-tip}
@@ -61,8 +73,30 @@ The chart shows a steady increase from 2013 to 2019, followed by a sharp peak in
 
 ## 3. Evolution by Type of Critical Care Unit
 
-```python
-# chunk Python — courbe par type de lits
+```{python}
+#| fig-cap: "Critical care beds by unit type in France (2013–2024)"
+#| fig-alt: "Line chart showing critical care beds by unit type"
+
+types_lits = df[df["id_geo"] == "00_FR"].groupby(["annee", "uni"])["nb_lit"].sum().reset_index()
+types_lits["uni"] = types_lits["uni"].replace({
+    "REAADU": "Adult ICU",
+    "REAENF": "Paediatric ICU",
+    "USIC": "Cardiac intensive care",
+    "SIUNV": "Neurovascular intensive care",
+    "SURVADU": "Adult continuous monitoring",
+    "SURVENF": "Paediatric continuous monitoring",
+    "AUTSI": "Other intensive care"
+})
+
+plt.figure(figsize=(12, 6))
+sns.lineplot(data=types_lits, x="annee", y="nb_lit", hue="uni", marker="o", linewidth=2)
+plt.title("Critical care beds by unit type — France (2013–2024)", fontsize=13)
+plt.xlabel("Year")
+plt.ylabel("Number of beds")
+plt.legend(title="Unit type", bbox_to_anchor=(1.05, 1), loc="upper left")
+plt.grid(True, linestyle="--", alpha=0.5)
+plt.tight_layout()
+plt.show()
 ```
 
 ::: {.callout-tip}
