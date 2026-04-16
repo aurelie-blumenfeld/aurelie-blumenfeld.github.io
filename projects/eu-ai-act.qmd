@@ -39,6 +39,10 @@ Three organisations were analysed:
 3. Invest in explainability and documentation of AI decision-making processes
 4. Engage with regulators early to anticipate evolving requirements
 
+## Video Presentation
+
+{{< video https://www.youtube.com/watch?v=oDLX7r-Wr1M >}}
+
 ## Key Takeaways
 
 This project developed my ability to analyse regulatory frameworks and assess their organisational impact — a skill directly applicable to IS project management roles in regulated sectors such as health and pharma.
