@@ -9,9 +9,11 @@ about:
     - icon: linkedin
       text: LinkedIn
       href: https://fr.linkedin.com/in/aurélie-blumenfeld-6b6335291
+      target: _blank
     - icon: file-earmark-pdf
       text: CV
       href: CV_aurelieblumenfeld.pdf
+      target: _blank
     - icon: envelope
       text: Contact
       href: mailto:aurelieblumenfeld@gmail.com
