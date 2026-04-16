@@ -60,7 +60,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2" crossorigin="anonymous"></script><script src="../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../site_libs/quarto-nav/headroom.min.js"></script>
 <script src="../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
@@ -106,6 +106,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
+<script src="https://cdn.jsdelivr.net/npm/requirejs@2.3.6/require.min.js" integrity="sha384-c9c+LnTbwQ3aujuU7ULEPVvgLs+Fn6fJUvIGTsuu1ZcCf11fiEubah0ttpca4ntM sha384-6V1/AdqZRWk1KAlWbKBlGhN7VG4iE/yAZcO6NZPMF8od0vukrvr0tg4qY6NSrItx" crossorigin="anonymous"></script>
+
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
 
 
 <link rel="stylesheet" href="../styles.css">
@@ -224,31 +227,91 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="loading-and-exploring-the-dataset" class="level2">
 <h2 class="anchored" data-anchor-id="loading-and-exploring-the-dataset">1. Loading and Exploring the Dataset</h2>
-<div id="06c92028" class="cell" data-execution_count="1">
+<div id="fa3ce9c6" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">"data/lits_soins_critiques_2022.csv"</span>, sep<span class="op">=</span><span class="st">";"</span>, encoding<span class="op">=</span><span class="st">"utf-8"</span>)</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Dimensions:"</span>, df.shape)</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Columns:"</span>, df.columns.tolist())</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Years available:"</span>, <span class="bu">sorted</span>(df[<span class="st">"annee"</span>].unique()))</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Establishment types:"</span>, df[<span class="st">"statut_etab"</span>].unique())</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Bed types:"</span>, df[<span class="st">"uni"</span>].unique())</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> IPython.display <span class="im">import</span> display</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">"data/lits_soins_critiques_2022.csv"</span>, sep<span class="op">=</span><span class="st">";"</span>, encoding<span class="op">=</span><span class="st">"utf-8"</span>)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Dimensions:"</span>, df.shape)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Columns:"</span>, df.columns.tolist())</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Years available:"</span>, <span class="bu">sorted</span>(df[<span class="st">"annee"</span>].astype(<span class="bu">int</span>).unique().tolist()))</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Establishment types:"</span>, df[<span class="st">"statut_etab"</span>].unique().tolist())</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Bed types:"</span>, df[<span class="st">"uni"</span>].unique().tolist())</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>display(df.head())</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Dimensions: (15141, 5)
 
 Columns: ['id_geo', 'statut_etab', 'annee', 'uni', 'nb_lit']
 
-Years available: [np.int64(2013), np.int64(2019), np.int64(2020), np.int64(2021), np.int64(2022), np.int64(2023), np.int64(2024)]
+Years available: [2013, 2019, 2020, 2021, 2022, 2023, 2024]
 
-Establishment types: &lt;StringArray&gt;
-['1_Public', '2_Prive_BL', '3_Prive_BNL']
-Length: 3, dtype: str
+Establishment types: ['1_Public', '2_Prive_BL', '3_Prive_BNL']
 
-Bed types: &lt;StringArray&gt;
-['REAADU', 'REAENF', 'USIC', 'SIUNV', 'AUTSI', 'SURVADU', 'SURVENF']
-Length: 7, dtype: str</code></pre>
+Bed types: ['REAADU', 'REAENF', 'USIC', 'SIUNV', 'AUTSI', 'SURVADU', 'SURVENF']</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">id_geo</th>
+<th data-quarto-table-cell-role="th">statut_etab</th>
+<th data-quarto-table-cell-role="th">annee</th>
+<th data-quarto-table-cell-role="th">uni</th>
+<th data-quarto-table-cell-role="th">nb_lit</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">0</th>
+<td>00_FR</td>
+<td>1_Public</td>
+<td>2013</td>
+<td>REAADU</td>
+<td>4242.0</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">1</th>
+<td>00_FR</td>
+<td>1_Public</td>
+<td>2019</td>
+<td>REAADU</td>
+<td>4245.0</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">2</th>
+<td>00_FR</td>
+<td>1_Public</td>
+<td>2020</td>
+<td>REAENF</td>
+<td>342.0</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">3</th>
+<td>00_FR</td>
+<td>1_Public</td>
+<td>2013</td>
+<td>USIC</td>
+<td>1825.0</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">4</th>
+<td>00_FR</td>
+<td>1_Public</td>
+<td>2022</td>
+<td>USIC</td>
+<td>1804.0</td>
+</tr>
+</tbody>
+</table>
+
+</div>
 </div>
 </div>
 <p>The dataset contains 5 variables: <code>id_geo</code>, <code>statut_etab</code>, <code>annee</code>, <code>uni</code>, <code>nb_lit</code>. No missing values — the dataset is clean and ready for analysis.</p>

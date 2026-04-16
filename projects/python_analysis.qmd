@@ -30,13 +30,16 @@ This analysis explores the evolution of critical care bed capacity in French hos
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
+from IPython.display import display
 
 df = pd.read_csv("data/lits_soins_critiques_2022.csv", sep=";", encoding="utf-8")
 print("Dimensions:", df.shape)
 print("\nColumns:", df.columns.tolist())
-print("\nYears available:", sorted(df["annee"].unique()))
-print("\nEstablishment types:", df["statut_etab"].unique())
-print("\nBed types:", df["uni"].unique())
+print("\nYears available:", sorted(df["annee"].astype(int).unique().tolist()))
+print("\nEstablishment types:", df["statut_etab"].unique().tolist())
+print("\nBed types:", df["uni"].unique().tolist())
+
+display(df.head())
 ```
 
 The dataset contains 5 variables: `id_geo`, `statut_etab`, `annee`, `uni`, `nb_lit`. No missing values — the dataset is clean and ready for analysis.
