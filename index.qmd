@@ -27,4 +27,4 @@ With a background in biology, I transitioned into business school with one clear
 `Information Systems` `Healthcare` `Project Management` `MedTech`
 :::
 
-[See my experience →](parcours.qmd){.btn-primary}
+[See my journey →](aboutme.qmd){.btn-primary}
