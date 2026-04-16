@@ -6,7 +6,7 @@ project:
 
 website:
   title: "Aurélie Blumenfeld"
-  favicon : favicon_AB.png
+  favicon: favicon_AB.png
   navbar:
     title: false
     logo: logo.png
@@ -21,7 +21,9 @@ website:
         text: Contact
       - href: reflection.qmd
         text: Reflection
-
+  page-footer:
+    left: "© 2025 Aurélie Blumenfeld"
+    right: "Built with [Quarto](https://quarto.org)"
 format:
   html:
     theme: 
