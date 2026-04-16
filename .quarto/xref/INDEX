@@ -40,5 +40,8 @@
   },
   "contact.qmd": {
     "contact.html": "e7c14f9a"
+  },
+  "projects/python_analysis.qmd": {
+    "python_analysis.html": "93f919aa"
   }
 }

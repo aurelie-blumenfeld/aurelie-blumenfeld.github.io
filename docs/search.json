@@ -1,52 +1,115 @@
 [
   {
-    "objectID": "projects/lean-management.html",
-    "href": "projects/lean-management.html",
-    "title": "Lean Management in Emergency Departments",
+    "objectID": "projects/index.html",
+    "href": "projects/index.html",
+    "title": "Projects",
     "section": "",
-    "text": "This project was completed as part of the Advanced Operational Modelling module at Dublin City University during my Erasmus exchange. The objective was to act as a management consultant and propose Lean-based improvements for a fictitious Irish hospital emergency department."
+    "text": "ImpulseCap\n\n\n\nEntrepreneurship\n\nHealthTech\n\n\n\nAdaptive fitness app for people with disabilities.\n\n\n\nNov 12, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nEU AI Act — Organisational Impact Analysis\n\n\n\nAI Regulation\n\nBusiness Analysis\n\nEU Policy\n\nResearch\n\n\n\nAn analysis of the EU AI Act’s impact on organisations, examining compliance challenges and strategic responses across three case studies.\n\n\n\nJan 15, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nLean Management in Emergency Departments\n\n\n\nLean Management\n\nHealthcare\n\nConsulting\n\nVSM\n\n\n\nA consulting report applying Lean methodologies to improve patient flow and reduce waiting times in an Irish hospital emergency department.\n\n\n\nDec 1, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nHospital Critical Care Capacity in France\n\n\n\nInformation Systems\n\nHealthcare\n\nIT\n\nPython\n\n\n\nevolution of critical care bed capacity in French hospitals between 2013 and 2024, using open data published by the DREES (Direction de la recherche, des études, de…\n\n\n\nDec 1, 2024\n\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "projects/lean-management.html#overview",
-    "href": "projects/lean-management.html#overview",
-    "title": "Lean Management in Emergency Departments",
+    "objectID": "projects/eu-ai-act.html",
+    "href": "projects/eu-ai-act.html",
+    "title": "EU AI Act — Organisational Impact Analysis",
     "section": "",
-    "text": "This project was completed as part of the Advanced Operational Modelling module at Dublin City University during my Erasmus exchange. The objective was to act as a management consultant and propose Lean-based improvements for a fictitious Irish hospital emergency department."
+    "text": "This project was completed as part of the Business Applications of AI module at Dublin City University during my Erasmus exchange. The objective was to analyse the impact of the EU AI Act on organisations and produce a 2,000-word report accompanied by a 5-minute video presentation."
   },
   {
-    "objectID": "projects/lean-management.html#the-problem",
-    "href": "projects/lean-management.html#the-problem",
-    "title": "Lean Management in Emergency Departments",
-    "section": "The Problem",
-    "text": "The Problem\n\n\n\n\n\n\nNote\n\n\n\nEmergency departments across Ireland face significant pressure from increasing patient volumes, staff shortages, and inefficient processes — leading to long waiting times and patient dissatisfaction."
+    "objectID": "projects/eu-ai-act.html#overview",
+    "href": "projects/eu-ai-act.html#overview",
+    "title": "EU AI Act — Organisational Impact Analysis",
+    "section": "",
+    "text": "This project was completed as part of the Business Applications of AI module at Dublin City University during my Erasmus exchange. The objective was to analyse the impact of the EU AI Act on organisations and produce a 2,000-word report accompanied by a 5-minute video presentation."
   },
   {
-    "objectID": "projects/lean-management.html#methodology",
-    "href": "projects/lean-management.html#methodology",
-    "title": "Lean Management in Emergency Departments",
-    "section": "Methodology",
-    "text": "Methodology\nThree core Lean tools were applied:\n\nValue Stream Mapping (VSM) — to identify waste and bottlenecks in the patient journey\nKaizen — to propose continuous improvement initiatives\n5S — to reorganise physical spaces and improve efficiency"
+    "objectID": "projects/eu-ai-act.html#the-eu-ai-act",
+    "href": "projects/eu-ai-act.html#the-eu-ai-act",
+    "title": "EU AI Act — Organisational Impact Analysis",
+    "section": "The EU AI Act",
+    "text": "The EU AI Act\n\n\n\n\n\n\nNote\n\n\n\nThe EU AI Act, adopted in 2024, is the world’s first comprehensive legal framework for artificial intelligence. It classifies AI systems by risk level and imposes obligations on developers and deployers accordingly."
   },
   {
-    "objectID": "projects/lean-management.html#key-findings",
-    "href": "projects/lean-management.html#key-findings",
-    "title": "Lean Management in Emergency Departments",
+    "objectID": "projects/eu-ai-act.html#case-studies",
+    "href": "projects/eu-ai-act.html#case-studies",
+    "title": "EU AI Act — Organisational Impact Analysis",
+    "section": "Case Studies",
+    "text": "Case Studies\nThree organisations were analysed:\n\n\n\nOrganisation\nSector\nAI Use Case\n\n\n\n\nPhilips\nHealthTech\nMedical imaging AI\n\n\nBNP Paribas\nFinance\nCredit scoring & fraud detection\n\n\nOtto Group\nRetail\nDemand forecasting & personalisation"
+  },
+  {
+    "objectID": "projects/eu-ai-act.html#key-findings",
+    "href": "projects/eu-ai-act.html#key-findings",
+    "title": "EU AI Act — Organisational Impact Analysis",
     "section": "Key Findings",
-    "text": "Key Findings\n\n\n\nIssue\nImpact\n\n\n\n\nRedundant triage steps\nIncreased waiting time\n\n\nPoor bed management\nPatient flow bottlenecks\n\n\nDisorganised storage\nStaff time wasted"
+    "text": "Key Findings\n\nHigh-risk AI systems in healthcare and finance face the strictest compliance requirements\nOrganisations must implement transparency, human oversight, and risk management frameworks\nSmaller firms face disproportionate compliance costs compared to large corporations"
   },
   {
-    "objectID": "projects/lean-management.html#recommendations",
-    "href": "projects/lean-management.html#recommendations",
-    "title": "Lean Management in Emergency Departments",
-    "section": "Recommendations",
-    "text": "Recommendations\n\nImplement a fast-track pathway for low-acuity patients\nIntroduce real-time bed management dashboard\nApply 5S methodology to medication and equipment storage\nRun regular Kaizen events with frontline staff"
+    "objectID": "projects/eu-ai-act.html#implications-for-organisations",
+    "href": "projects/eu-ai-act.html#implications-for-organisations",
+    "title": "EU AI Act — Organisational Impact Analysis",
+    "section": "Implications for Organisations",
+    "text": "Implications for Organisations\n\nAudit existing AI systems and classify them by risk level\nAppoint an AI compliance officer or integrate responsibility into existing governance\nInvest in explainability and documentation of AI decision-making processes\nEngage with regulators early to anticipate evolving requirements"
   },
   {
-    "objectID": "projects/lean-management.html#key-takeaways",
-    "href": "projects/lean-management.html#key-takeaways",
-    "title": "Lean Management in Emergency Departments",
+    "objectID": "projects/eu-ai-act.html#key-takeaways",
+    "href": "projects/eu-ai-act.html#key-takeaways",
+    "title": "EU AI Act — Organisational Impact Analysis",
     "section": "Key Takeaways",
-    "text": "Key Takeaways\nThis project strengthened my ability to apply structured problem-solving frameworks to real-world healthcare operations — directly relevant to my career goals in MOA/PMO roles in the health sector."
+    "text": "Key Takeaways\nThis project developed my ability to analyse regulatory frameworks and assess their organisational impact — a skill directly applicable to IS project management roles in regulated sectors such as health and pharma."
+  },
+  {
+    "objectID": "contact.html",
+    "href": "contact.html",
+    "title": "Contact",
+    "section": "",
+    "text": "I am currently looking for a work-study contract (alternance) starting September 2025 in a MOA, AMOA, or PMO role, ideally in the health, pharma, or MedTech sector.\nFeel free to reach out for any opportunity or collaboration.\n\n\n\n\n\n\nTipBest way to reach me\n\n\n\nI typically respond within 24 hours.\n\n\n\n\n\n Email\naurеlieblumenfeld@gmail.com\n\n\n LinkedIn\nlinkedin.com/in/aurelie-blumenfeld\n\n\n CV\nDownload my CV"
+  },
+  {
+    "objectID": "contact.html#get-in-touch",
+    "href": "contact.html#get-in-touch",
+    "title": "Contact",
+    "section": "",
+    "text": "I am currently looking for a work-study contract (alternance) starting September 2025 in a MOA, AMOA, or PMO role, ideally in the health, pharma, or MedTech sector.\nFeel free to reach out for any opportunity or collaboration.\n\n\n\n\n\n\nTipBest way to reach me\n\n\n\nI typically respond within 24 hours.\n\n\n\n\n\n Email\naurеlieblumenfeld@gmail.com\n\n\n LinkedIn\nlinkedin.com/in/aurelie-blumenfeld\n\n\n CV\nDownload my CV"
+  },
+  {
+    "objectID": "contact.html#location",
+    "href": "contact.html#location",
+    "title": "Contact",
+    "section": "Location",
+    "text": "Location\nBased in Paris, France — open to remote and hybrid opportunities."
+  },
+  {
+    "objectID": "aboutme.html",
+    "href": "aboutme.html",
+    "title": "My Journey",
+    "section": "",
+    "text": "2024 – 2025\n\n\n\nDublin City University · Dublin, Ireland\nAs part of my programme, I completed an Erasmus exchange at DCU. This experience strengthened my ability to work in an international environment and is the context in which this portfolio was created.\n\n\n\n\n2023 – present\n\n\n\nIMT Business School\nI joined IMT Business School to develop a business and digital perspective, specialising in project management, business analysis, and digital transformation in organisations.\n\n\n\n\n2020 – 2023\n\n\n\nBefore moving into business school, I completed a degree in biology. This background gave me a strong analytical foundation and a natural affinity for the healthcare sector."
+  },
+  {
+    "objectID": "aboutme.html#education",
+    "href": "aboutme.html#education",
+    "title": "My Journey",
+    "section": "",
+    "text": "2024 – 2025\n\n\n\nDublin City University · Dublin, Ireland\nAs part of my programme, I completed an Erasmus exchange at DCU. This experience strengthened my ability to work in an international environment and is the context in which this portfolio was created.\n\n\n\n\n2023 – present\n\n\n\nIMT Business School\nI joined IMT Business School to develop a business and digital perspective, specialising in project management, business analysis, and digital transformation in organisations.\n\n\n\n\n2020 – 2023\n\n\n\nBefore moving into business school, I completed a degree in biology. This background gave me a strong analytical foundation and a natural affinity for the healthcare sector."
+  },
+  {
+    "objectID": "aboutme.html#experience",
+    "href": "aboutme.html#experience",
+    "title": "My Journey",
+    "section": "Experience",
+    "text": "Experience\n\n\nJunior Project Manager Intern — Customer Experience\nGE HealthCare · Buc, France · April 2026 · 22 weeks\n\n\nCurrently contributing to customer experience improvement projects in an international HealthTech environment.\n\nContribution to customer experience optimisation projects\nCoordination with operational teams and progress tracking\nProcess analysis and recommendations\n\n\n\nProject Management Customer Experience MedTech International\n\n\n\n\nProcurement Project Management Intern\nBioSerenity · 2024\n\n\nBioSerenity develops connected medical devices for neurological monitoring. My mission focused on coordinating a multi-year PCB component procurement strategy.\n\nCoordinated a 3-year PCB procurement strategy involving 3 internal teams, with CFO-level reporting via SAP Business ByDesign\nManaged a Plan A → Plan B pivot following regulatory non-compliance of obsolete components\nTracked and updated stock and order data in SAP Business ByDesign\n\n\n\nSAP Business ByDesign Procurement Cross-team coordination Medical devices Risk management"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Aurélie BLUMENFELD",
+    "section": "",
+    "text": "With a background in biology, I transitioned into business school with one clear focus: the healthcare sector. Currently completing an Erasmus exchange at Dublin City University, I’m in my first year of the Information Systems Management program at IMT Business School — looking to bridge my scientific background and digital skills through IS projects in health, pharma, or MedTech.\n\nInformation Systems Healthcare Project Management MedTech\n\nSee my experience →"
+  },
+  {
+    "objectID": "index.html#hi-im-aurélie",
+    "href": "index.html#hi-im-aurélie",
+    "title": "Aurélie BLUMENFELD",
+    "section": "",
+    "text": "With a background in biology, I transitioned into business school with one clear focus: the healthcare sector. Currently completing an Erasmus exchange at Dublin City University, I’m in my first year of the Information Systems Management program at IMT Business School — looking to bridge my scientific background and digital skills through IS projects in health, pharma, or MedTech.\n\nInformation Systems Healthcare Project Management MedTech\n\nSee my experience →"
   },
   {
     "objectID": "projects/impulsecap.html",
@@ -112,115 +175,52 @@
     "text": "Key Takeaways\nThis project gave me hands-on experience in entrepreneurship, from market analysis and competitor research to financial modelling and pitching to a jury of entrepreneurs and professors."
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Aurélie BLUMENFELD",
+    "objectID": "projects/lean-management.html",
+    "href": "projects/lean-management.html",
+    "title": "Lean Management in Emergency Departments",
     "section": "",
-    "text": "With a background in biology, I transitioned into business school with one clear focus: the healthcare sector. Currently completing an Erasmus exchange at Dublin City University, I’m in my first year of the Information Systems Management program at IMT Business School — looking to bridge my scientific background and digital skills through IS projects in health, pharma, or MedTech.\n\nInformation Systems Healthcare Project Management MedTech\n\nSee my experience →"
+    "text": "This project was completed as part of the Advanced Operational Modelling module at Dublin City University during my Erasmus exchange. The objective was to act as a management consultant and propose Lean-based improvements for a fictitious Irish hospital emergency department."
   },
   {
-    "objectID": "index.html#hi-im-aurélie",
-    "href": "index.html#hi-im-aurélie",
-    "title": "Aurélie BLUMENFELD",
+    "objectID": "projects/lean-management.html#overview",
+    "href": "projects/lean-management.html#overview",
+    "title": "Lean Management in Emergency Departments",
     "section": "",
-    "text": "With a background in biology, I transitioned into business school with one clear focus: the healthcare sector. Currently completing an Erasmus exchange at Dublin City University, I’m in my first year of the Information Systems Management program at IMT Business School — looking to bridge my scientific background and digital skills through IS projects in health, pharma, or MedTech.\n\nInformation Systems Healthcare Project Management MedTech\n\nSee my experience →"
+    "text": "This project was completed as part of the Advanced Operational Modelling module at Dublin City University during my Erasmus exchange. The objective was to act as a management consultant and propose Lean-based improvements for a fictitious Irish hospital emergency department."
   },
   {
-    "objectID": "aboutme.html",
-    "href": "aboutme.html",
-    "title": "My Journey",
-    "section": "",
-    "text": "2024 – 2025\n\n\n\nDublin City University · Dublin, Ireland\nAs part of my programme, I completed an Erasmus exchange at DCU. This experience strengthened my ability to work in an international environment and is the context in which this portfolio was created.\n\n\n\n\n2023 – present\n\n\n\nIMT Business School\nI joined IMT Business School to develop a business and digital perspective, specialising in project management, business analysis, and digital transformation in organisations.\n\n\n\n\n2020 – 2023\n\n\n\nBefore moving into business school, I completed a degree in biology. This background gave me a strong analytical foundation and a natural affinity for the healthcare sector."
+    "objectID": "projects/lean-management.html#the-problem",
+    "href": "projects/lean-management.html#the-problem",
+    "title": "Lean Management in Emergency Departments",
+    "section": "The Problem",
+    "text": "The Problem\n\n\n\n\n\n\nNote\n\n\n\nEmergency departments across Ireland face significant pressure from increasing patient volumes, staff shortages, and inefficient processes — leading to long waiting times and patient dissatisfaction."
   },
   {
-    "objectID": "aboutme.html#education",
-    "href": "aboutme.html#education",
-    "title": "My Journey",
-    "section": "",
-    "text": "2024 – 2025\n\n\n\nDublin City University · Dublin, Ireland\nAs part of my programme, I completed an Erasmus exchange at DCU. This experience strengthened my ability to work in an international environment and is the context in which this portfolio was created.\n\n\n\n\n2023 – present\n\n\n\nIMT Business School\nI joined IMT Business School to develop a business and digital perspective, specialising in project management, business analysis, and digital transformation in organisations.\n\n\n\n\n2020 – 2023\n\n\n\nBefore moving into business school, I completed a degree in biology. This background gave me a strong analytical foundation and a natural affinity for the healthcare sector."
+    "objectID": "projects/lean-management.html#methodology",
+    "href": "projects/lean-management.html#methodology",
+    "title": "Lean Management in Emergency Departments",
+    "section": "Methodology",
+    "text": "Methodology\nThree core Lean tools were applied:\n\nValue Stream Mapping (VSM) — to identify waste and bottlenecks in the patient journey\nKaizen — to propose continuous improvement initiatives\n5S — to reorganise physical spaces and improve efficiency"
   },
   {
-    "objectID": "aboutme.html#experience",
-    "href": "aboutme.html#experience",
-    "title": "My Journey",
-    "section": "Experience",
-    "text": "Experience\n\n\nJunior Project Manager Intern — Customer Experience\nGE HealthCare · Buc, France · April 2026 · 22 weeks\n\n\nCurrently contributing to customer experience improvement projects in an international HealthTech environment.\n\nContribution to customer experience optimisation projects\nCoordination with operational teams and progress tracking\nProcess analysis and recommendations\n\n\n\nProject Management Customer Experience MedTech International\n\n\n\n\nProcurement Project Management Intern\nBioSerenity · 2024\n\n\nBioSerenity develops connected medical devices for neurological monitoring. My mission focused on coordinating a multi-year PCB component procurement strategy.\n\nCoordinated a 3-year PCB procurement strategy involving 3 internal teams, with CFO-level reporting via SAP Business ByDesign\nManaged a Plan A → Plan B pivot following regulatory non-compliance of obsolete components\nTracked and updated stock and order data in SAP Business ByDesign\n\n\n\nSAP Business ByDesign Procurement Cross-team coordination Medical devices Risk management"
-  },
-  {
-    "objectID": "contact.html",
-    "href": "contact.html",
-    "title": "Contact",
-    "section": "",
-    "text": "I am currently looking for a work-study contract (alternance) starting September 2025 in a MOA, AMOA, or PMO role, ideally in the health, pharma, or MedTech sector.\nFeel free to reach out for any opportunity or collaboration.\n\n\n\n\n\n\nTipBest way to reach me\n\n\n\nI typically respond within 24 hours.\n\n\n\n\n\n Email\naurеlieblumenfeld@gmail.com\n\n\n LinkedIn\nlinkedin.com/in/aurelie-blumenfeld\n\n\n CV\nDownload my CV"
-  },
-  {
-    "objectID": "contact.html#get-in-touch",
-    "href": "contact.html#get-in-touch",
-    "title": "Contact",
-    "section": "",
-    "text": "I am currently looking for a work-study contract (alternance) starting September 2025 in a MOA, AMOA, or PMO role, ideally in the health, pharma, or MedTech sector.\nFeel free to reach out for any opportunity or collaboration.\n\n\n\n\n\n\nTipBest way to reach me\n\n\n\nI typically respond within 24 hours.\n\n\n\n\n\n Email\naurеlieblumenfeld@gmail.com\n\n\n LinkedIn\nlinkedin.com/in/aurelie-blumenfeld\n\n\n CV\nDownload my CV"
-  },
-  {
-    "objectID": "contact.html#location",
-    "href": "contact.html#location",
-    "title": "Contact",
-    "section": "Location",
-    "text": "Location\nBased in Paris, France — open to remote and hybrid opportunities."
-  },
-  {
-    "objectID": "projects/eu-ai-act.html",
-    "href": "projects/eu-ai-act.html",
-    "title": "EU AI Act — Organisational Impact Analysis",
-    "section": "",
-    "text": "This project was completed as part of the Business Applications of AI module at Dublin City University during my Erasmus exchange. The objective was to analyse the impact of the EU AI Act on organisations and produce a 2,000-word report accompanied by a 5-minute video presentation."
-  },
-  {
-    "objectID": "projects/eu-ai-act.html#overview",
-    "href": "projects/eu-ai-act.html#overview",
-    "title": "EU AI Act — Organisational Impact Analysis",
-    "section": "",
-    "text": "This project was completed as part of the Business Applications of AI module at Dublin City University during my Erasmus exchange. The objective was to analyse the impact of the EU AI Act on organisations and produce a 2,000-word report accompanied by a 5-minute video presentation."
-  },
-  {
-    "objectID": "projects/eu-ai-act.html#the-eu-ai-act",
-    "href": "projects/eu-ai-act.html#the-eu-ai-act",
-    "title": "EU AI Act — Organisational Impact Analysis",
-    "section": "The EU AI Act",
-    "text": "The EU AI Act\n\n\n\n\n\n\nNote\n\n\n\nThe EU AI Act, adopted in 2024, is the world’s first comprehensive legal framework for artificial intelligence. It classifies AI systems by risk level and imposes obligations on developers and deployers accordingly."
-  },
-  {
-    "objectID": "projects/eu-ai-act.html#case-studies",
-    "href": "projects/eu-ai-act.html#case-studies",
-    "title": "EU AI Act — Organisational Impact Analysis",
-    "section": "Case Studies",
-    "text": "Case Studies\nThree organisations were analysed:\n\n\n\nOrganisation\nSector\nAI Use Case\n\n\n\n\nPhilips\nHealthTech\nMedical imaging AI\n\n\nBNP Paribas\nFinance\nCredit scoring & fraud detection\n\n\nOtto Group\nRetail\nDemand forecasting & personalisation"
-  },
-  {
-    "objectID": "projects/eu-ai-act.html#key-findings",
-    "href": "projects/eu-ai-act.html#key-findings",
-    "title": "EU AI Act — Organisational Impact Analysis",
+    "objectID": "projects/lean-management.html#key-findings",
+    "href": "projects/lean-management.html#key-findings",
+    "title": "Lean Management in Emergency Departments",
     "section": "Key Findings",
-    "text": "Key Findings\n\nHigh-risk AI systems in healthcare and finance face the strictest compliance requirements\nOrganisations must implement transparency, human oversight, and risk management frameworks\nSmaller firms face disproportionate compliance costs compared to large corporations"
+    "text": "Key Findings\n\n\n\nIssue\nImpact\n\n\n\n\nRedundant triage steps\nIncreased waiting time\n\n\nPoor bed management\nPatient flow bottlenecks\n\n\nDisorganised storage\nStaff time wasted"
   },
   {
-    "objectID": "projects/eu-ai-act.html#implications-for-organisations",
-    "href": "projects/eu-ai-act.html#implications-for-organisations",
-    "title": "EU AI Act — Organisational Impact Analysis",
-    "section": "Implications for Organisations",
-    "text": "Implications for Organisations\n\nAudit existing AI systems and classify them by risk level\nAppoint an AI compliance officer or integrate responsibility into existing governance\nInvest in explainability and documentation of AI decision-making processes\nEngage with regulators early to anticipate evolving requirements"
+    "objectID": "projects/lean-management.html#recommendations",
+    "href": "projects/lean-management.html#recommendations",
+    "title": "Lean Management in Emergency Departments",
+    "section": "Recommendations",
+    "text": "Recommendations\n\nImplement a fast-track pathway for low-acuity patients\nIntroduce real-time bed management dashboard\nApply 5S methodology to medication and equipment storage\nRun regular Kaizen events with frontline staff"
   },
   {
-    "objectID": "projects/eu-ai-act.html#key-takeaways",
-    "href": "projects/eu-ai-act.html#key-takeaways",
-    "title": "EU AI Act — Organisational Impact Analysis",
+    "objectID": "projects/lean-management.html#key-takeaways",
+    "href": "projects/lean-management.html#key-takeaways",
+    "title": "Lean Management in Emergency Departments",
     "section": "Key Takeaways",
-    "text": "Key Takeaways\nThis project developed my ability to analyse regulatory frameworks and assess their organisational impact — a skill directly applicable to IS project management roles in regulated sectors such as health and pharma."
-  },
-  {
-    "objectID": "projects/index.html",
-    "href": "projects/index.html",
-    "title": "Projects",
-    "section": "",
-    "text": "ImpulseCap\n\n\n\nEntrepreneurship\n\nHealthTech\n\n\n\nAdaptive fitness app for people with disabilities.\n\n\n\nNov 12, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nEU AI Act — Organisational Impact Analysis\n\n\n\nAI Regulation\n\nBusiness Analysis\n\nEU Policy\n\nResearch\n\n\n\nAn analysis of the EU AI Act’s impact on organisations, examining compliance challenges and strategic responses across three case studies.\n\n\n\nJan 15, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nLean Management in Emergency Departments\n\n\n\nLean Management\n\nHealthcare\n\nConsulting\n\nVSM\n\n\n\nA consulting report applying Lean methodologies to improve patient flow and reduce waiting times in an Irish hospital emergency department.\n\n\n\nDec 1, 2024\n\n\n\n\n\n\nNo matching items"
+    "text": "Key Takeaways\nThis project strengthened my ability to apply structured problem-solving frameworks to real-world healthcare operations — directly relevant to my career goals in MOA/PMO roles in the health sector."
   }
 ]
