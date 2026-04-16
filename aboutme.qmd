@@ -2,6 +2,7 @@
 title: "My Journey"
 page-layout: full
 toc: false
+anchor-sections: false
 ---
 
 ## Education
@@ -9,7 +10,7 @@ toc: false
 ::: timeline
 ::: timeline-item
 ::: timeline-date
-2024 – 2025
+2025 – 2026
 :::
 ::: timeline-content
 ### Erasmus Exchange
@@ -21,7 +22,7 @@ As part of my programme, I completed an Erasmus exchange at DCU. This experience
 
 ::: timeline-item
 ::: timeline-date
-2023 – present
+2024 – present
 :::
 ::: timeline-content
 ### Programme Grande École — Information Systems Management
@@ -33,7 +34,7 @@ I joined IMT Business School to develop a business and digital perspective, spec
 
 ::: timeline-item
 ::: timeline-date
-2020 – 2023
+2020 – 2024
 :::
 ::: timeline-content
 ### Bachelor's Degree in Biology
@@ -64,7 +65,7 @@ Currently contributing to customer experience improvement projects in an interna
 ::: exp-card
 ::: exp-header
 ### Procurement Project Management Intern
-**BioSerenity** · 2024
+**BioSerenity** · 2025
 :::
 ::: exp-body
 BioSerenity develops connected medical devices for neurological monitoring. My mission focused on coordinating a multi-year PCB component procurement strategy.
