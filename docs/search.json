@@ -1,171 +1,108 @@
 [
   {
-    "objectID": "projects/python_analysis.html",
-    "href": "projects/python_analysis.html",
-    "title": "Hospital Critical Care Capacity in France",
+    "objectID": "reflection.html",
+    "href": "reflection.html",
+    "title": "Reflection",
     "section": "",
-    "text": "As a business school student specialising in Information Systems with a strong interest in the healthcare sector, I wanted to combine both fields in a concrete data project.\nThis analysis explores the evolution of critical care bed capacity in French hospitals between 2013 and 2024, using open data published by the DREES (Direction de la recherche, des études, de l’évaluation et des statistiques), the French Ministry of Health’s statistical department.\n\n\n\n\n\n\nNoteKey questions explored\n\n\n\n\nHow did critical care capacity evolve over the past decade?\nWhat was the measurable impact of the Covid-19 pandemic on hospital capacity?\nHow are critical care beds distributed between public and private institutions?\nWhich departments concentrate the most critical care resources?\n\n\n\nDataset: DREES – Lits de soins critiques (2013–2024)\nTools: Python (pandas, matplotlib, seaborn)"
+    "text": "Before this module, my technical background was mostly centred around business tools — Excel, SAP Business ByDesign, and R Studio for data cleaning. I had no prior experience with web development, version control, or static site generators.\nThis module introduced me to a completely different way of working: building and deploying a website from scratch using Quarto, managing files with Git, and integrating executable Python code into a professional portfolio."
   },
   {
-    "objectID": "projects/python_analysis.html#introduction",
-    "href": "projects/python_analysis.html#introduction",
-    "title": "Hospital Critical Care Capacity in France",
+    "objectID": "reflection.html#looking-back",
+    "href": "reflection.html#looking-back",
+    "title": "Reflection",
     "section": "",
-    "text": "As a business school student specialising in Information Systems with a strong interest in the healthcare sector, I wanted to combine both fields in a concrete data project.\nThis analysis explores the evolution of critical care bed capacity in French hospitals between 2013 and 2024, using open data published by the DREES (Direction de la recherche, des études, de l’évaluation et des statistiques), the French Ministry of Health’s statistical department.\n\n\n\n\n\n\nNoteKey questions explored\n\n\n\n\nHow did critical care capacity evolve over the past decade?\nWhat was the measurable impact of the Covid-19 pandemic on hospital capacity?\nHow are critical care beds distributed between public and private institutions?\nWhich departments concentrate the most critical care resources?\n\n\n\nDataset: DREES – Lits de soins critiques (2013–2024)\nTools: Python (pandas, matplotlib, seaborn)"
+    "text": "Before this module, my technical background was mostly centred around business tools — Excel, SAP Business ByDesign, and R Studio for data cleaning. I had no prior experience with web development, version control, or static site generators.\nThis module introduced me to a completely different way of working: building and deploying a website from scratch using Quarto, managing files with Git, and integrating executable Python code into a professional portfolio."
   },
   {
-    "objectID": "projects/python_analysis.html#loading-and-exploring-the-dataset",
-    "href": "projects/python_analysis.html#loading-and-exploring-the-dataset",
-    "title": "Hospital Critical Care Capacity in France",
-    "section": "1. Loading and Exploring the Dataset",
-    "text": "1. Loading and Exploring the Dataset\n\nimport pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nfrom IPython.display import display\n\ndf = pd.read_csv(\"data/lits_soins_critiques_2022.csv\", sep=\";\", encoding=\"utf-8\")\nprint(\"Dimensions:\", df.shape)\nprint(\"\\nColumns:\", df.columns.tolist())\nprint(\"\\nYears available:\", sorted(df[\"annee\"].astype(int).unique().tolist()))\nprint(\"\\nEstablishment types:\", df[\"statut_etab\"].unique().tolist())\nprint(\"\\nBed types:\", df[\"uni\"].unique().tolist())\n\ndisplay(df.head())\n\nDimensions: (15141, 5)\n\nColumns: ['id_geo', 'statut_etab', 'annee', 'uni', 'nb_lit']\n\nYears available: [2013, 2019, 2020, 2021, 2022, 2023, 2024]\n\nEstablishment types: ['1_Public', '2_Prive_BL', '3_Prive_BNL']\n\nBed types: ['REAADU', 'REAENF', 'USIC', 'SIUNV', 'AUTSI', 'SURVADU', 'SURVENF']\n\n\n\n\n\n\n\n\n\nid_geo\nstatut_etab\nannee\nuni\nnb_lit\n\n\n\n\n0\n00_FR\n1_Public\n2013\nREAADU\n4242.0\n\n\n1\n00_FR\n1_Public\n2019\nREAADU\n4245.0\n\n\n2\n00_FR\n1_Public\n2020\nREAENF\n342.0\n\n\n3\n00_FR\n1_Public\n2013\nUSIC\n1825.0\n\n\n4\n00_FR\n1_Public\n2022\nUSIC\n1804.0\n\n\n\n\n\n\n\nThe dataset contains 5 variables: id_geo, statut_etab, annee, uni, nb_lit. No missing values — the dataset is clean and ready for analysis."
+    "objectID": "reflection.html#what-i-learned",
+    "href": "reflection.html#what-i-learned",
+    "title": "Reflection",
+    "section": "What I Learned",
+    "text": "What I Learned\n\n\n\n\n\n\nNoteKey skills acquired\n\n\n\n\nBuilding and configuring a Quarto website from scratch\nVersion control with Git and deployment via GitHub Pages\nWriting structured Markdown with rich features (callouts, tables, diagrams)\nLoading, cleaning, and visualising real-world health data with Python (pandas, matplotlib, seaborn)\nOrganising a project with a clean folder structure and consistent commit history"
   },
   {
-    "objectID": "projects/python_analysis.html#national-evolution-of-critical-care-beds-20132024",
-    "href": "projects/python_analysis.html#national-evolution-of-critical-care-beds-20132024",
-    "title": "Hospital Critical Care Capacity in France",
-    "section": "2. National Evolution of Critical Care Beds (2013–2024)",
-    "text": "2. National Evolution of Critical Care Beds (2013–2024)\n\nevolution = df[df[\"id_geo\"] == \"00_FR\"].groupby(\"annee\")[\"nb_lit\"].sum().reset_index()\n\nplt.figure(figsize=(10, 5))\nsns.lineplot(data=evolution, x=\"annee\", y=\"nb_lit\", marker=\"o\", color=\"#4C72B0\", linewidth=2.5)\nplt.title(\"Total critical care beds in France (2013–2024)\", fontsize=13)\nplt.xlabel(\"Year\")\nplt.ylabel(\"Number of beds\")\nplt.grid(True, linestyle=\"--\", alpha=0.5)\nplt.tight_layout()\nplt.show()\n\n\n\n\nEvolution of total critical care beds in France (2013–2024)\n\n\n\n\n\n\n\n\n\n\nTipKey observation\n\n\n\nThe chart shows a steady increase from 2013 to 2019, followed by a sharp peak in 2020 (+6% vs 2019). This spike directly reflects the emergency measures taken during the Covid-19 pandemic, when French hospitals were required to rapidly scale up their critical care capacity. From 2021 onwards, capacity progressively returned to pre-pandemic levels."
+    "objectID": "reflection.html#challenges-i-faced",
+    "href": "reflection.html#challenges-i-faced",
+    "title": "Reflection",
+    "section": "Challenges I Faced",
+    "text": "Challenges I Faced\nGit was by far the steepest learning curve. I encountered several issues throughout the project — committing before rendering, case sensitivity conflicts between Windows and GitHub Pages, and accidentally pushing incomplete versions of the site. Each of these forced me to understand more deeply how Git actually works, rather than just using it mechanically.\nDeploying on GitHub Pages also required careful attention to folder structure and file paths — something I underestimated at the start.\nThe Python data analysis was another challenge. I had taken Python courses but had never applied them to a real dataset independently. Working with the DREES open data on critical care capacity pushed me to go beyond course exercises and think analytically about what the data actually shows."
   },
   {
-    "objectID": "projects/python_analysis.html#evolution-by-type-of-critical-care-unit",
-    "href": "projects/python_analysis.html#evolution-by-type-of-critical-care-unit",
-    "title": "Hospital Critical Care Capacity in France",
-    "section": "3. Evolution by Type of Critical Care Unit",
-    "text": "3. Evolution by Type of Critical Care Unit\n\ntypes_lits = df[df[\"id_geo\"] == \"00_FR\"].groupby([\"annee\", \"uni\"])[\"nb_lit\"].sum().reset_index()\ntypes_lits[\"uni\"] = types_lits[\"uni\"].replace({\n    \"REAADU\": \"Adult ICU\",\n    \"REAENF\": \"Paediatric ICU\",\n    \"USIC\": \"Cardiac intensive care\",\n    \"SIUNV\": \"Neurovascular intensive care\",\n    \"SURVADU\": \"Adult continuous monitoring\",\n    \"SURVENF\": \"Paediatric continuous monitoring\",\n    \"AUTSI\": \"Other intensive care\"\n})\n\nplt.figure(figsize=(12, 6))\nsns.lineplot(data=types_lits, x=\"annee\", y=\"nb_lit\", hue=\"uni\", marker=\"o\", linewidth=2)\nplt.title(\"Critical care beds by unit type — France (2013–2024)\", fontsize=13)\nplt.xlabel(\"Year\")\nplt.ylabel(\"Number of beds\")\nplt.legend(title=\"Unit type\", bbox_to_anchor=(1.05, 1), loc=\"upper left\")\nplt.grid(True, linestyle=\"--\", alpha=0.5)\nplt.tight_layout()\nplt.show()\n\n\n\n\nCritical care beds by unit type in France (2013–2024)\n\n\n\n\n\n\n\n\n\n\nTipKey observation\n\n\n\nThe 2020 surge was driven primarily by adult ICU beds. Adult continuous monitoring beds represent the largest category overall, but show a notable drop in 2024, suggesting a structural reorganisation of critical care capacity post-pandemic."
+    "objectID": "reflection.html#connecting-to-my-career-goals",
+    "href": "reflection.html#connecting-to-my-career-goals",
+    "title": "Reflection",
+    "section": "Connecting to My Career Goals",
+    "text": "Connecting to My Career Goals\nI am aiming for a work-study contract in a MOA, AMOA, or PMO role in the healthcare or MedTech sector. At first glance, building a portfolio website might seem disconnected from project management. But I think the skills overlap more than expected.\nUnderstanding how a static site is structured, how version control works, and how to read and interpret health data in Python are all transversal skills. In a MOA or PMO role, being able to communicate with technical teams, understand data pipelines, and document work clearly are genuine assets — and this module contributed to all three."
   },
   {
-    "objectID": "projects/python_analysis.html#distribution-by-establishment-status-2024",
-    "href": "projects/python_analysis.html#distribution-by-establishment-status-2024",
-    "title": "Hospital Critical Care Capacity in France",
-    "section": "4. Distribution by Establishment Status (2024)",
-    "text": "4. Distribution by Establishment Status (2024)\n\nstatut = df[\n    (df[\"id_geo\"] == \"00_FR\") & (df[\"annee\"] == 2024)\n].groupby(\"statut_etab\")[\"nb_lit\"].sum().reset_index()\n\nstatut[\"statut_etab\"] = statut[\"statut_etab\"].replace({\n    \"1_Public\": \"Public\",\n    \"2_Prive_BL\": \"Private (for-profit)\",\n    \"3_Prive_BNL\": \"Private (non-profit)\"\n})\n\nplt.figure(figsize=(7, 7))\nplt.pie(statut[\"nb_lit\"], labels=statut[\"statut_etab\"], autopct=\"%1.1f%%\",\n        colors=[\"#4C72B0\", \"#DD8452\", \"#55A868\"], startangle=140)\nplt.title(\"Critical care beds by establishment status (2024)\", fontsize=12)\nplt.tight_layout()\nplt.show()\n\n\n\n\nDistribution of critical care beds by establishment status in France (2024)\n\n\n\n\n\n\n\n\n\n\nTipKey observation\n\n\n\nPublic hospitals account for 70% of all critical care beds in France. This distribution is particularly relevant in the context of healthcare information systems — public and private institutions operate on different IS architectures, regulatory frameworks, and data governance models, a key challenge for interoperability in the French health system."
+    "objectID": "reflection.html#what-i-would-do-differently",
+    "href": "reflection.html#what-i-would-do-differently",
+    "title": "Reflection",
+    "section": "What I Would Do Differently",
+    "text": "What I Would Do Differently\nIf I were to start again, I would commit more incrementally and write more descriptive commit messages from the beginning. I would also plan the folder structure before creating files, rather than reorganising midway through — which caused several of the Git issues I encountered."
   },
   {
-    "objectID": "projects/python_analysis.html#top-10-departments-by-critical-care-capacity-2024",
-    "href": "projects/python_analysis.html#top-10-departments-by-critical-care-capacity-2024",
-    "title": "Hospital Critical Care Capacity in France",
-    "section": "5. Top 10 Departments by Critical Care Capacity (2024)",
-    "text": "5. Top 10 Departments by Critical Care Capacity (2024)\n\ndeps = df[\n    (df[\"annee\"] == 2024) &\n    (~df[\"id_geo\"].isin([\"00_FR\", \"00_MET\"]))\n].groupby(\"id_geo\")[\"nb_lit\"].sum().reset_index()\n\ndeps = deps.sort_values(\"nb_lit\", ascending=True).tail(10)\ndeps[\"nom\"] = deps[\"id_geo\"].str.split(\"_\", n=1).str[1]\n\nplt.figure(figsize=(10, 6))\nsns.barplot(data=deps, x=\"nb_lit\", y=\"nom\", hue=\"nom\", palette=\"Blues_d\", legend=False)\nplt.title(\"Top 10 departments by critical care bed count (2024)\", fontsize=13)\nplt.xlabel(\"Number of beds\")\nplt.ylabel(\"Department\")\nplt.grid(True, linestyle=\"--\", alpha=0.5, axis=\"x\")\nplt.tight_layout()\nplt.show()\n\n\n\n\nTop 10 French departments by critical care bed count (2024)\n\n\n\n\n\n\n\n\n\n\nTipKey observation\n\n\n\nParis leads by a significant margin, followed by Nord and Bouches-du-Rhône. This concentration highlights a persistent territorial inequality in access to critical care resources, a known challenge in French health policy often discussed alongside the issue of déserts médicaux."
+    "objectID": "reflection.html#final-thoughts",
+    "href": "reflection.html#final-thoughts",
+    "title": "Reflection",
+    "section": "Final Thoughts",
+    "text": "Final Thoughts\nThis module pushed me outside my comfort zone in a productive way. Building something that is actually live and accessible online — rather than submitting a document — made the work feel more real and purposeful. It is a project I will continue to develop beyond this semester.1"
   },
   {
-    "objectID": "projects/python_analysis.html#summary-reflections",
-    "href": "projects/python_analysis.html#summary-reflections",
-    "title": "Hospital Critical Care Capacity in France",
-    "section": "Summary & Reflections",
-    "text": "Summary & Reflections\n\n\n\nFinding\nInsight\n\n\n\n\n+6% beds in 2020\nMeasurable Covid-19 emergency response\n\n\n70% public sector\nPublic hospitals dominate critical care\n\n\nParis, Nord, BdR lead\nTerritorial concentration of resources\n\n\nPost-2021 decline\nGradual return to structural capacity\n\n\n\nThis project allowed me to apply data manipulation and visualisation skills to a real-world healthcare dataset. Beyond the technical exercise, it reinforced my understanding of how data can inform strategic decisions in hospital management — whether around resource allocation, capacity planning, or IS design.\nAs someone aiming to work at the intersection of healthcare and information systems, being able to read, clean, and interpret health data is a skill I consider essential for roles in MOA, AMOA, or project management in MedTech and pharma environments."
+    "objectID": "reflection.html#footnotes",
+    "href": "reflection.html#footnotes",
+    "title": "Reflection",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nThis portfolio was built with Quarto and deployed via GitHub Pages.↩︎"
   },
   {
-    "objectID": "projects/index.html",
-    "href": "projects/index.html",
-    "title": "Projects",
+    "objectID": "projects/lean-management.html",
+    "href": "projects/lean-management.html",
+    "title": "Lean Management in Emergency Departments",
     "section": "",
-    "text": "ImpulseCap\n\n\n\nEntrepreneurship\n\nHealthTech\n\n\n\nAdaptive fitness app for people with disabilities.\n\n\n\nNov 12, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nEU AI Act — Organisational Impact Analysis\n\n\n\nAI Regulation\n\nBusiness Analysis\n\nEU Policy\n\nResearch\n\n\n\nAn analysis of the EU AI Act’s impact on organisations, examining compliance challenges and strategic responses across three case studies.\n\n\n\nJan 15, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nLean Management in Emergency Departments\n\n\n\nLean Management\n\nHealthcare\n\nConsulting\n\nVSM\n\n\n\nA consulting report applying Lean methodologies to improve patient flow and reduce waiting times in an Irish hospital emergency department.\n\n\n\nDec 1, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nHospital Critical Care Capacity in France\n\n\n\nInformation Systems\n\nHealthcare\n\nIT\n\nPython\n\n\n\nevolution of critical care bed capacity in French hospitals between 2013 and 2024, using open data published by the DREES (Direction de la recherche, des études, de…\n\n\n\nDec 1, 2024\n\n\n\n\n\n\nNo matching items"
+    "text": "This project was completed as part of the Advanced Operational Modelling module at Dublin City University during my Erasmus exchange. The objective was to act as a management consultant and propose Lean-based improvements for a fictitious Irish hospital emergency department."
   },
   {
-    "objectID": "projects/eu-ai-act.html",
-    "href": "projects/eu-ai-act.html",
-    "title": "EU AI Act — Organisational Impact Analysis",
+    "objectID": "projects/lean-management.html#overview",
+    "href": "projects/lean-management.html#overview",
+    "title": "Lean Management in Emergency Departments",
     "section": "",
-    "text": "This project was completed as part of the Business Applications of AI module at Dublin City University during my Erasmus exchange. The objective was to analyse the impact of the EU AI Act on organisations and produce a 2,000-word report accompanied by a 5-minute video presentation."
+    "text": "This project was completed as part of the Advanced Operational Modelling module at Dublin City University during my Erasmus exchange. The objective was to act as a management consultant and propose Lean-based improvements for a fictitious Irish hospital emergency department."
   },
   {
-    "objectID": "projects/eu-ai-act.html#overview",
-    "href": "projects/eu-ai-act.html#overview",
-    "title": "EU AI Act — Organisational Impact Analysis",
-    "section": "",
-    "text": "This project was completed as part of the Business Applications of AI module at Dublin City University during my Erasmus exchange. The objective was to analyse the impact of the EU AI Act on organisations and produce a 2,000-word report accompanied by a 5-minute video presentation."
+    "objectID": "projects/lean-management.html#the-problem",
+    "href": "projects/lean-management.html#the-problem",
+    "title": "Lean Management in Emergency Departments",
+    "section": "The Problem",
+    "text": "The Problem\n\n\n\n\n\n\nNote\n\n\n\nEmergency departments across Ireland face significant pressure from increasing patient volumes, staff shortages, and inefficient processes — leading to long waiting times and patient dissatisfaction."
   },
   {
-    "objectID": "projects/eu-ai-act.html#the-eu-ai-act",
-    "href": "projects/eu-ai-act.html#the-eu-ai-act",
-    "title": "EU AI Act — Organisational Impact Analysis",
-    "section": "The EU AI Act",
-    "text": "The EU AI Act\n\n\n\n\n\n\nNote\n\n\n\nThe EU AI Act, adopted in 2024, is the world’s first comprehensive legal framework for artificial intelligence. It classifies AI systems by risk level and imposes obligations on developers and deployers accordingly."
+    "objectID": "projects/lean-management.html#methodology",
+    "href": "projects/lean-management.html#methodology",
+    "title": "Lean Management in Emergency Departments",
+    "section": "Methodology",
+    "text": "Methodology\nThree core Lean tools were applied:\n\nValue Stream Mapping (VSM) — to identify waste and bottlenecks in the patient journey\nKaizen — to propose continuous improvement initiatives\n5S — to reorganise physical spaces and improve efficiency"
   },
   {
-    "objectID": "projects/eu-ai-act.html#case-studies",
-    "href": "projects/eu-ai-act.html#case-studies",
-    "title": "EU AI Act — Organisational Impact Analysis",
-    "section": "Case Studies",
-    "text": "Case Studies\nThree organisations were analysed:\n\n\n\nOrganisation\nSector\nAI Use Case\n\n\n\n\nPhilips\nHealthTech\nMedical imaging AI\n\n\nBNP Paribas\nFinance\nCredit scoring & fraud detection\n\n\nOtto Group\nRetail\nDemand forecasting & personalisation"
-  },
-  {
-    "objectID": "projects/eu-ai-act.html#key-findings",
-    "href": "projects/eu-ai-act.html#key-findings",
-    "title": "EU AI Act — Organisational Impact Analysis",
+    "objectID": "projects/lean-management.html#key-findings",
+    "href": "projects/lean-management.html#key-findings",
+    "title": "Lean Management in Emergency Departments",
     "section": "Key Findings",
-    "text": "Key Findings\n\nHigh-risk AI systems in healthcare and finance face the strictest compliance requirements\nOrganisations must implement transparency, human oversight, and risk management frameworks\nSmaller firms face disproportionate compliance costs compared to large corporations"
+    "text": "Key Findings\n\n\n\nIssue\nImpact\n\n\n\n\nRedundant triage steps\nIncreased waiting time\n\n\nPoor bed management\nPatient flow bottlenecks\n\n\nDisorganised storage\nStaff time wasted"
   },
   {
-    "objectID": "projects/eu-ai-act.html#implications-for-organisations",
-    "href": "projects/eu-ai-act.html#implications-for-organisations",
-    "title": "EU AI Act — Organisational Impact Analysis",
-    "section": "Implications for Organisations",
-    "text": "Implications for Organisations\n\nAudit existing AI systems and classify them by risk level\nAppoint an AI compliance officer or integrate responsibility into existing governance\nInvest in explainability and documentation of AI decision-making processes\nEngage with regulators early to anticipate evolving requirements"
+    "objectID": "projects/lean-management.html#recommendations",
+    "href": "projects/lean-management.html#recommendations",
+    "title": "Lean Management in Emergency Departments",
+    "section": "Recommendations",
+    "text": "Recommendations\n\nImplement a fast-track pathway for low-acuity patients\nIntroduce real-time bed management dashboard\nApply 5S methodology to medication and equipment storage\nRun regular Kaizen events with frontline staff"
   },
   {
-    "objectID": "projects/eu-ai-act.html#key-takeaways",
-    "href": "projects/eu-ai-act.html#key-takeaways",
-    "title": "EU AI Act — Organisational Impact Analysis",
+    "objectID": "projects/lean-management.html#key-takeaways",
+    "href": "projects/lean-management.html#key-takeaways",
+    "title": "Lean Management in Emergency Departments",
     "section": "Key Takeaways",
-    "text": "Key Takeaways\nThis project developed my ability to analyse regulatory frameworks and assess their organisational impact — a skill directly applicable to IS project management roles in regulated sectors such as health and pharma."
-  },
-  {
-    "objectID": "contact.html",
-    "href": "contact.html",
-    "title": "Contact",
-    "section": "",
-    "text": "I am currently looking for a work-study contract (alternance) starting September 2025 in a MOA, AMOA, or PMO role, ideally in the health, pharma, or MedTech sector.\nFeel free to reach out for any opportunity or collaboration.\n\n\n\n\n\n\nTipBest way to reach me\n\n\n\nI typically respond within 24 hours.\n\n\n\n\n\n Email\naurеlieblumenfeld@gmail.com\n\n\n LinkedIn\nlinkedin.com/in/aurelie-blumenfeld\n\n\n CV\nDownload my CV"
-  },
-  {
-    "objectID": "contact.html#get-in-touch",
-    "href": "contact.html#get-in-touch",
-    "title": "Contact",
-    "section": "",
-    "text": "I am currently looking for a work-study contract (alternance) starting September 2025 in a MOA, AMOA, or PMO role, ideally in the health, pharma, or MedTech sector.\nFeel free to reach out for any opportunity or collaboration.\n\n\n\n\n\n\nTipBest way to reach me\n\n\n\nI typically respond within 24 hours.\n\n\n\n\n\n Email\naurеlieblumenfeld@gmail.com\n\n\n LinkedIn\nlinkedin.com/in/aurelie-blumenfeld\n\n\n CV\nDownload my CV"
-  },
-  {
-    "objectID": "contact.html#location",
-    "href": "contact.html#location",
-    "title": "Contact",
-    "section": "Location",
-    "text": "Location\nBased in Paris, France — open to remote and hybrid opportunities."
-  },
-  {
-    "objectID": "aboutme.html",
-    "href": "aboutme.html",
-    "title": "My Journey",
-    "section": "",
-    "text": "2024 – 2025\n\n\n\nDublin City University · Dublin, Ireland\nAs part of my programme, I completed an Erasmus exchange at DCU. This experience strengthened my ability to work in an international environment and is the context in which this portfolio was created.\n\n\n\n\n2023 – present\n\n\n\nIMT Business School\nI joined IMT Business School to develop a business and digital perspective, specialising in project management, business analysis, and digital transformation in organisations.\n\n\n\n\n2020 – 2023\n\n\n\nBefore moving into business school, I completed a degree in biology. This background gave me a strong analytical foundation and a natural affinity for the healthcare sector."
-  },
-  {
-    "objectID": "aboutme.html#education",
-    "href": "aboutme.html#education",
-    "title": "My Journey",
-    "section": "",
-    "text": "2024 – 2025\n\n\n\nDublin City University · Dublin, Ireland\nAs part of my programme, I completed an Erasmus exchange at DCU. This experience strengthened my ability to work in an international environment and is the context in which this portfolio was created.\n\n\n\n\n2023 – present\n\n\n\nIMT Business School\nI joined IMT Business School to develop a business and digital perspective, specialising in project management, business analysis, and digital transformation in organisations.\n\n\n\n\n2020 – 2023\n\n\n\nBefore moving into business school, I completed a degree in biology. This background gave me a strong analytical foundation and a natural affinity for the healthcare sector."
-  },
-  {
-    "objectID": "aboutme.html#experience",
-    "href": "aboutme.html#experience",
-    "title": "My Journey",
-    "section": "Experience",
-    "text": "Experience\n\n\nJunior Project Manager Intern — Customer Experience\nGE HealthCare · Buc, France · April 2026 · 22 weeks\n\n\nCurrently contributing to customer experience improvement projects in an international HealthTech environment.\n\nContribution to customer experience optimisation projects\nCoordination with operational teams and progress tracking\nProcess analysis and recommendations\n\n\n\nProject Management Customer Experience MedTech International\n\n\n\n\nProcurement Project Management Intern\nBioSerenity · 2024\n\n\nBioSerenity develops connected medical devices for neurological monitoring. My mission focused on coordinating a multi-year PCB component procurement strategy.\n\nCoordinated a 3-year PCB procurement strategy involving 3 internal teams, with CFO-level reporting via SAP Business ByDesign\nManaged a Plan A → Plan B pivot following regulatory non-compliance of obsolete components\nTracked and updated stock and order data in SAP Business ByDesign\n\n\n\nSAP Business ByDesign Procurement Cross-team coordination Medical devices Risk management"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Aurélie BLUMENFELD",
-    "section": "",
-    "text": "With a background in biology, I transitioned into business school with one clear focus: the healthcare sector. Currently completing an Erasmus exchange at Dublin City University, I’m in my first year of the Information Systems Management program at IMT Business School — looking to bridge my scientific background and digital skills through IS projects in health, pharma, or MedTech.\n\nInformation Systems Healthcare Project Management MedTech\n\nSee my experience →"
-  },
-  {
-    "objectID": "index.html#hi-im-aurélie",
-    "href": "index.html#hi-im-aurélie",
-    "title": "Aurélie BLUMENFELD",
-    "section": "",
-    "text": "With a background in biology, I transitioned into business school with one clear focus: the healthcare sector. Currently completing an Erasmus exchange at Dublin City University, I’m in my first year of the Information Systems Management program at IMT Business School — looking to bridge my scientific background and digital skills through IS projects in health, pharma, or MedTech.\n\nInformation Systems Healthcare Project Management MedTech\n\nSee my experience →"
+    "text": "Key Takeaways\nThis project strengthened my ability to apply structured problem-solving frameworks to real-world healthcare operations — directly relevant to my career goals in MOA/PMO roles in the health sector."
   },
   {
     "objectID": "projects/impulsecap.html",
@@ -231,52 +168,171 @@
     "text": "Key Takeaways\nThis project gave me hands-on experience in entrepreneurship, from market analysis and competitor research to financial modelling and pitching to a jury of entrepreneurs and professors."
   },
   {
-    "objectID": "projects/lean-management.html",
-    "href": "projects/lean-management.html",
-    "title": "Lean Management in Emergency Departments",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Aurélie BLUMENFELD",
     "section": "",
-    "text": "This project was completed as part of the Advanced Operational Modelling module at Dublin City University during my Erasmus exchange. The objective was to act as a management consultant and propose Lean-based improvements for a fictitious Irish hospital emergency department."
+    "text": "With a background in biology, I transitioned into business school with one clear focus: the healthcare sector. Currently completing an Erasmus exchange at Dublin City University, I’m in my first year of the Information Systems Management program at IMT Business School — looking to bridge my scientific background and digital skills through IS projects in health, pharma, or MedTech.\n\nInformation Systems Healthcare Project Management MedTech\n\nSee my experience →"
   },
   {
-    "objectID": "projects/lean-management.html#overview",
-    "href": "projects/lean-management.html#overview",
-    "title": "Lean Management in Emergency Departments",
+    "objectID": "index.html#hi-im-aurélie",
+    "href": "index.html#hi-im-aurélie",
+    "title": "Aurélie BLUMENFELD",
     "section": "",
-    "text": "This project was completed as part of the Advanced Operational Modelling module at Dublin City University during my Erasmus exchange. The objective was to act as a management consultant and propose Lean-based improvements for a fictitious Irish hospital emergency department."
+    "text": "With a background in biology, I transitioned into business school with one clear focus: the healthcare sector. Currently completing an Erasmus exchange at Dublin City University, I’m in my first year of the Information Systems Management program at IMT Business School — looking to bridge my scientific background and digital skills through IS projects in health, pharma, or MedTech.\n\nInformation Systems Healthcare Project Management MedTech\n\nSee my experience →"
   },
   {
-    "objectID": "projects/lean-management.html#the-problem",
-    "href": "projects/lean-management.html#the-problem",
-    "title": "Lean Management in Emergency Departments",
-    "section": "The Problem",
-    "text": "The Problem\n\n\n\n\n\n\nNote\n\n\n\nEmergency departments across Ireland face significant pressure from increasing patient volumes, staff shortages, and inefficient processes — leading to long waiting times and patient dissatisfaction."
+    "objectID": "aboutme.html",
+    "href": "aboutme.html",
+    "title": "My Journey",
+    "section": "",
+    "text": "2024 – 2025\n\n\n\nDublin City University · Dublin, Ireland\nAs part of my programme, I completed an Erasmus exchange at DCU. This experience strengthened my ability to work in an international environment and is the context in which this portfolio was created.\n\n\n\n\n2023 – present\n\n\n\nIMT Business School\nI joined IMT Business School to develop a business and digital perspective, specialising in project management, business analysis, and digital transformation in organisations.\n\n\n\n\n2020 – 2023\n\n\n\nBefore moving into business school, I completed a degree in biology. This background gave me a strong analytical foundation and a natural affinity for the healthcare sector."
   },
   {
-    "objectID": "projects/lean-management.html#methodology",
-    "href": "projects/lean-management.html#methodology",
-    "title": "Lean Management in Emergency Departments",
-    "section": "Methodology",
-    "text": "Methodology\nThree core Lean tools were applied:\n\nValue Stream Mapping (VSM) — to identify waste and bottlenecks in the patient journey\nKaizen — to propose continuous improvement initiatives\n5S — to reorganise physical spaces and improve efficiency"
+    "objectID": "aboutme.html#education",
+    "href": "aboutme.html#education",
+    "title": "My Journey",
+    "section": "",
+    "text": "2024 – 2025\n\n\n\nDublin City University · Dublin, Ireland\nAs part of my programme, I completed an Erasmus exchange at DCU. This experience strengthened my ability to work in an international environment and is the context in which this portfolio was created.\n\n\n\n\n2023 – present\n\n\n\nIMT Business School\nI joined IMT Business School to develop a business and digital perspective, specialising in project management, business analysis, and digital transformation in organisations.\n\n\n\n\n2020 – 2023\n\n\n\nBefore moving into business school, I completed a degree in biology. This background gave me a strong analytical foundation and a natural affinity for the healthcare sector."
   },
   {
-    "objectID": "projects/lean-management.html#key-findings",
-    "href": "projects/lean-management.html#key-findings",
-    "title": "Lean Management in Emergency Departments",
+    "objectID": "aboutme.html#experience",
+    "href": "aboutme.html#experience",
+    "title": "My Journey",
+    "section": "Experience",
+    "text": "Experience\n\n\nJunior Project Manager Intern — Customer Experience\nGE HealthCare · Buc, France · April 2026 · 22 weeks\n\n\nCurrently contributing to customer experience improvement projects in an international HealthTech environment.\n\nContribution to customer experience optimisation projects\nCoordination with operational teams and progress tracking\nProcess analysis and recommendations\n\n\n\nProject Management Customer Experience MedTech International\n\n\n\n\nProcurement Project Management Intern\nBioSerenity · 2024\n\n\nBioSerenity develops connected medical devices for neurological monitoring. My mission focused on coordinating a multi-year PCB component procurement strategy.\n\nCoordinated a 3-year PCB procurement strategy involving 3 internal teams, with CFO-level reporting via SAP Business ByDesign\nManaged a Plan A → Plan B pivot following regulatory non-compliance of obsolete components\nTracked and updated stock and order data in SAP Business ByDesign\n\n\n\nSAP Business ByDesign Procurement Cross-team coordination Medical devices Risk management"
+  },
+  {
+    "objectID": "contact.html",
+    "href": "contact.html",
+    "title": "Contact",
+    "section": "",
+    "text": "I am currently looking for a work-study contract (alternance) starting September 2025 in a MOA, AMOA, or PMO role, ideally in the health, pharma, or MedTech sector.\nFeel free to reach out for any opportunity or collaboration.\n\n\n\n\n\n\nTipBest way to reach me\n\n\n\nI typically respond within 24 hours.\n\n\n\n\n\n Email\naurеlieblumenfeld@gmail.com\n\n\n LinkedIn\nlinkedin.com/in/aurelie-blumenfeld\n\n\n CV\nDownload my CV"
+  },
+  {
+    "objectID": "contact.html#get-in-touch",
+    "href": "contact.html#get-in-touch",
+    "title": "Contact",
+    "section": "",
+    "text": "I am currently looking for a work-study contract (alternance) starting September 2025 in a MOA, AMOA, or PMO role, ideally in the health, pharma, or MedTech sector.\nFeel free to reach out for any opportunity or collaboration.\n\n\n\n\n\n\nTipBest way to reach me\n\n\n\nI typically respond within 24 hours.\n\n\n\n\n\n Email\naurеlieblumenfeld@gmail.com\n\n\n LinkedIn\nlinkedin.com/in/aurelie-blumenfeld\n\n\n CV\nDownload my CV"
+  },
+  {
+    "objectID": "contact.html#location",
+    "href": "contact.html#location",
+    "title": "Contact",
+    "section": "Location",
+    "text": "Location\nBased in Paris, France — open to remote and hybrid opportunities."
+  },
+  {
+    "objectID": "projects/eu-ai-act.html",
+    "href": "projects/eu-ai-act.html",
+    "title": "EU AI Act — Organisational Impact Analysis",
+    "section": "",
+    "text": "This project was completed as part of the Business Applications of AI module at Dublin City University during my Erasmus exchange. The objective was to analyse the impact of the EU AI Act on organisations and produce a 2,000-word report accompanied by a 5-minute video presentation."
+  },
+  {
+    "objectID": "projects/eu-ai-act.html#overview",
+    "href": "projects/eu-ai-act.html#overview",
+    "title": "EU AI Act — Organisational Impact Analysis",
+    "section": "",
+    "text": "This project was completed as part of the Business Applications of AI module at Dublin City University during my Erasmus exchange. The objective was to analyse the impact of the EU AI Act on organisations and produce a 2,000-word report accompanied by a 5-minute video presentation."
+  },
+  {
+    "objectID": "projects/eu-ai-act.html#the-eu-ai-act",
+    "href": "projects/eu-ai-act.html#the-eu-ai-act",
+    "title": "EU AI Act — Organisational Impact Analysis",
+    "section": "The EU AI Act",
+    "text": "The EU AI Act\n\n\n\n\n\n\nNote\n\n\n\nThe EU AI Act, adopted in 2024, is the world’s first comprehensive legal framework for artificial intelligence. It classifies AI systems by risk level and imposes obligations on developers and deployers accordingly."
+  },
+  {
+    "objectID": "projects/eu-ai-act.html#case-studies",
+    "href": "projects/eu-ai-act.html#case-studies",
+    "title": "EU AI Act — Organisational Impact Analysis",
+    "section": "Case Studies",
+    "text": "Case Studies\nThree organisations were analysed:\n\n\n\nOrganisation\nSector\nAI Use Case\n\n\n\n\nPhilips\nHealthTech\nMedical imaging AI\n\n\nBNP Paribas\nFinance\nCredit scoring & fraud detection\n\n\nOtto Group\nRetail\nDemand forecasting & personalisation"
+  },
+  {
+    "objectID": "projects/eu-ai-act.html#key-findings",
+    "href": "projects/eu-ai-act.html#key-findings",
+    "title": "EU AI Act — Organisational Impact Analysis",
     "section": "Key Findings",
-    "text": "Key Findings\n\n\n\nIssue\nImpact\n\n\n\n\nRedundant triage steps\nIncreased waiting time\n\n\nPoor bed management\nPatient flow bottlenecks\n\n\nDisorganised storage\nStaff time wasted"
+    "text": "Key Findings\n\nHigh-risk AI systems in healthcare and finance face the strictest compliance requirements\nOrganisations must implement transparency, human oversight, and risk management frameworks\nSmaller firms face disproportionate compliance costs compared to large corporations"
   },
   {
-    "objectID": "projects/lean-management.html#recommendations",
-    "href": "projects/lean-management.html#recommendations",
-    "title": "Lean Management in Emergency Departments",
-    "section": "Recommendations",
-    "text": "Recommendations\n\nImplement a fast-track pathway for low-acuity patients\nIntroduce real-time bed management dashboard\nApply 5S methodology to medication and equipment storage\nRun regular Kaizen events with frontline staff"
+    "objectID": "projects/eu-ai-act.html#implications-for-organisations",
+    "href": "projects/eu-ai-act.html#implications-for-organisations",
+    "title": "EU AI Act — Organisational Impact Analysis",
+    "section": "Implications for Organisations",
+    "text": "Implications for Organisations\n\nAudit existing AI systems and classify them by risk level\nAppoint an AI compliance officer or integrate responsibility into existing governance\nInvest in explainability and documentation of AI decision-making processes\nEngage with regulators early to anticipate evolving requirements"
   },
   {
-    "objectID": "projects/lean-management.html#key-takeaways",
-    "href": "projects/lean-management.html#key-takeaways",
-    "title": "Lean Management in Emergency Departments",
+    "objectID": "projects/eu-ai-act.html#key-takeaways",
+    "href": "projects/eu-ai-act.html#key-takeaways",
+    "title": "EU AI Act — Organisational Impact Analysis",
     "section": "Key Takeaways",
-    "text": "Key Takeaways\nThis project strengthened my ability to apply structured problem-solving frameworks to real-world healthcare operations — directly relevant to my career goals in MOA/PMO roles in the health sector."
+    "text": "Key Takeaways\nThis project developed my ability to analyse regulatory frameworks and assess their organisational impact — a skill directly applicable to IS project management roles in regulated sectors such as health and pharma."
+  },
+  {
+    "objectID": "projects/index.html",
+    "href": "projects/index.html",
+    "title": "Projects",
+    "section": "",
+    "text": "ImpulseCap\n\n\n\nEntrepreneurship\n\nHealthTech\n\n\n\nAdaptive fitness app for people with disabilities.\n\n\n\nNov 12, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nEU AI Act — Organisational Impact Analysis\n\n\n\nAI Regulation\n\nBusiness Analysis\n\nEU Policy\n\nResearch\n\n\n\nAn analysis of the EU AI Act’s impact on organisations, examining compliance challenges and strategic responses across three case studies.\n\n\n\nJan 15, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nLean Management in Emergency Departments\n\n\n\nLean Management\n\nHealthcare\n\nConsulting\n\nVSM\n\n\n\nA consulting report applying Lean methodologies to improve patient flow and reduce waiting times in an Irish hospital emergency department.\n\n\n\nDec 1, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nHospital Critical Care Capacity in France\n\n\n\nInformation Systems\n\nHealthcare\n\nIT\n\nPython\n\n\n\nevolution of critical care bed capacity in French hospitals between 2013 and 2024, using open data published by the DREES (Direction de la recherche, des études, de…\n\n\n\nDec 1, 2024\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "projects/python_analysis.html",
+    "href": "projects/python_analysis.html",
+    "title": "Hospital Critical Care Capacity in France",
+    "section": "",
+    "text": "As a business school student specialising in Information Systems with a strong interest in the healthcare sector, I wanted to combine both fields in a concrete data project.\nThis analysis explores the evolution of critical care bed capacity in French hospitals between 2013 and 2024, using open data published by the DREES (Direction de la recherche, des études, de l’évaluation et des statistiques), the French Ministry of Health’s statistical department.\n\n\n\n\n\n\nNoteKey questions explored\n\n\n\n\nHow did critical care capacity evolve over the past decade?\nWhat was the measurable impact of the Covid-19 pandemic on hospital capacity?\nHow are critical care beds distributed between public and private institutions?\nWhich departments concentrate the most critical care resources?\n\n\n\nDataset: DREES – Lits de soins critiques (2013–2024)\nTools: Python (pandas, matplotlib, seaborn)"
+  },
+  {
+    "objectID": "projects/python_analysis.html#introduction",
+    "href": "projects/python_analysis.html#introduction",
+    "title": "Hospital Critical Care Capacity in France",
+    "section": "",
+    "text": "As a business school student specialising in Information Systems with a strong interest in the healthcare sector, I wanted to combine both fields in a concrete data project.\nThis analysis explores the evolution of critical care bed capacity in French hospitals between 2013 and 2024, using open data published by the DREES (Direction de la recherche, des études, de l’évaluation et des statistiques), the French Ministry of Health’s statistical department.\n\n\n\n\n\n\nNoteKey questions explored\n\n\n\n\nHow did critical care capacity evolve over the past decade?\nWhat was the measurable impact of the Covid-19 pandemic on hospital capacity?\nHow are critical care beds distributed between public and private institutions?\nWhich departments concentrate the most critical care resources?\n\n\n\nDataset: DREES – Lits de soins critiques (2013–2024)\nTools: Python (pandas, matplotlib, seaborn)"
+  },
+  {
+    "objectID": "projects/python_analysis.html#loading-and-exploring-the-dataset",
+    "href": "projects/python_analysis.html#loading-and-exploring-the-dataset",
+    "title": "Hospital Critical Care Capacity in France",
+    "section": "1. Loading and Exploring the Dataset",
+    "text": "1. Loading and Exploring the Dataset\n\nimport pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nfrom IPython.display import display\n\ndf = pd.read_csv(\"data/lits_soins_critiques_2022.csv\", sep=\";\", encoding=\"utf-8\")\nprint(\"Dimensions:\", df.shape)\nprint(\"\\nColumns:\", df.columns.tolist())\nprint(\"\\nYears available:\", sorted(df[\"annee\"].astype(int).unique().tolist()))\nprint(\"\\nEstablishment types:\", df[\"statut_etab\"].unique().tolist())\nprint(\"\\nBed types:\", df[\"uni\"].unique().tolist())\n\ndisplay(df.head())\n\nDimensions: (15141, 5)\n\nColumns: ['id_geo', 'statut_etab', 'annee', 'uni', 'nb_lit']\n\nYears available: [2013, 2019, 2020, 2021, 2022, 2023, 2024]\n\nEstablishment types: ['1_Public', '2_Prive_BL', '3_Prive_BNL']\n\nBed types: ['REAADU', 'REAENF', 'USIC', 'SIUNV', 'AUTSI', 'SURVADU', 'SURVENF']\n\n\n\n\n\n\n\n\n\nid_geo\nstatut_etab\nannee\nuni\nnb_lit\n\n\n\n\n0\n00_FR\n1_Public\n2013\nREAADU\n4242.0\n\n\n1\n00_FR\n1_Public\n2019\nREAADU\n4245.0\n\n\n2\n00_FR\n1_Public\n2020\nREAENF\n342.0\n\n\n3\n00_FR\n1_Public\n2013\nUSIC\n1825.0\n\n\n4\n00_FR\n1_Public\n2022\nUSIC\n1804.0\n\n\n\n\n\n\n\nThe dataset contains 5 variables: id_geo, statut_etab, annee, uni, nb_lit. No missing values — the dataset is clean and ready for analysis."
+  },
+  {
+    "objectID": "projects/python_analysis.html#national-evolution-of-critical-care-beds-20132024",
+    "href": "projects/python_analysis.html#national-evolution-of-critical-care-beds-20132024",
+    "title": "Hospital Critical Care Capacity in France",
+    "section": "2. National Evolution of Critical Care Beds (2013–2024)",
+    "text": "2. National Evolution of Critical Care Beds (2013–2024)\n\nevolution = df[df[\"id_geo\"] == \"00_FR\"].groupby(\"annee\")[\"nb_lit\"].sum().reset_index()\n\nplt.figure(figsize=(10, 5))\nsns.lineplot(data=evolution, x=\"annee\", y=\"nb_lit\", marker=\"o\", color=\"#4C72B0\", linewidth=2.5)\nplt.title(\"Total critical care beds in France (2013–2024)\", fontsize=13)\nplt.xlabel(\"Year\")\nplt.ylabel(\"Number of beds\")\nplt.grid(True, linestyle=\"--\", alpha=0.5)\nplt.tight_layout()\nplt.show()\n\n\n\n\nEvolution of total critical care beds in France (2013–2024)\n\n\n\n\n\n\n\n\n\n\nTipKey observation\n\n\n\nThe chart shows a steady increase from 2013 to 2019, followed by a sharp peak in 2020 (+6% vs 2019). This spike directly reflects the emergency measures taken during the Covid-19 pandemic, when French hospitals were required to rapidly scale up their critical care capacity. From 2021 onwards, capacity progressively returned to pre-pandemic levels."
+  },
+  {
+    "objectID": "projects/python_analysis.html#evolution-by-type-of-critical-care-unit",
+    "href": "projects/python_analysis.html#evolution-by-type-of-critical-care-unit",
+    "title": "Hospital Critical Care Capacity in France",
+    "section": "3. Evolution by Type of Critical Care Unit",
+    "text": "3. Evolution by Type of Critical Care Unit\n\ntypes_lits = df[df[\"id_geo\"] == \"00_FR\"].groupby([\"annee\", \"uni\"])[\"nb_lit\"].sum().reset_index()\ntypes_lits[\"uni\"] = types_lits[\"uni\"].replace({\n    \"REAADU\": \"Adult ICU\",\n    \"REAENF\": \"Paediatric ICU\",\n    \"USIC\": \"Cardiac intensive care\",\n    \"SIUNV\": \"Neurovascular intensive care\",\n    \"SURVADU\": \"Adult continuous monitoring\",\n    \"SURVENF\": \"Paediatric continuous monitoring\",\n    \"AUTSI\": \"Other intensive care\"\n})\n\nplt.figure(figsize=(12, 6))\nsns.lineplot(data=types_lits, x=\"annee\", y=\"nb_lit\", hue=\"uni\", marker=\"o\", linewidth=2)\nplt.title(\"Critical care beds by unit type — France (2013–2024)\", fontsize=13)\nplt.xlabel(\"Year\")\nplt.ylabel(\"Number of beds\")\nplt.legend(title=\"Unit type\", bbox_to_anchor=(1.05, 1), loc=\"upper left\")\nplt.grid(True, linestyle=\"--\", alpha=0.5)\nplt.tight_layout()\nplt.show()\n\n\n\n\nCritical care beds by unit type in France (2013–2024)\n\n\n\n\n\n\n\n\n\n\nTipKey observation\n\n\n\nThe 2020 surge was driven primarily by adult ICU beds. Adult continuous monitoring beds represent the largest category overall, but show a notable drop in 2024, suggesting a structural reorganisation of critical care capacity post-pandemic."
+  },
+  {
+    "objectID": "projects/python_analysis.html#distribution-by-establishment-status-2024",
+    "href": "projects/python_analysis.html#distribution-by-establishment-status-2024",
+    "title": "Hospital Critical Care Capacity in France",
+    "section": "4. Distribution by Establishment Status (2024)",
+    "text": "4. Distribution by Establishment Status (2024)\n\nstatut = df[\n    (df[\"id_geo\"] == \"00_FR\") & (df[\"annee\"] == 2024)\n].groupby(\"statut_etab\")[\"nb_lit\"].sum().reset_index()\n\nstatut[\"statut_etab\"] = statut[\"statut_etab\"].replace({\n    \"1_Public\": \"Public\",\n    \"2_Prive_BL\": \"Private (for-profit)\",\n    \"3_Prive_BNL\": \"Private (non-profit)\"\n})\n\nplt.figure(figsize=(7, 7))\nplt.pie(statut[\"nb_lit\"], labels=statut[\"statut_etab\"], autopct=\"%1.1f%%\",\n        colors=[\"#4C72B0\", \"#DD8452\", \"#55A868\"], startangle=140)\nplt.title(\"Critical care beds by establishment status (2024)\", fontsize=12)\nplt.tight_layout()\nplt.show()\n\n\n\n\nDistribution of critical care beds by establishment status in France (2024)\n\n\n\n\n\n\n\n\n\n\nTipKey observation\n\n\n\nPublic hospitals account for 70% of all critical care beds in France. This distribution is particularly relevant in the context of healthcare information systems — public and private institutions operate on different IS architectures, regulatory frameworks, and data governance models, a key challenge for interoperability in the French health system."
+  },
+  {
+    "objectID": "projects/python_analysis.html#top-10-departments-by-critical-care-capacity-2024",
+    "href": "projects/python_analysis.html#top-10-departments-by-critical-care-capacity-2024",
+    "title": "Hospital Critical Care Capacity in France",
+    "section": "5. Top 10 Departments by Critical Care Capacity (2024)",
+    "text": "5. Top 10 Departments by Critical Care Capacity (2024)\n\ndeps = df[\n    (df[\"annee\"] == 2024) &\n    (~df[\"id_geo\"].isin([\"00_FR\", \"00_MET\"]))\n].groupby(\"id_geo\")[\"nb_lit\"].sum().reset_index()\n\ndeps = deps.sort_values(\"nb_lit\", ascending=True).tail(10)\ndeps[\"nom\"] = deps[\"id_geo\"].str.split(\"_\", n=1).str[1]\n\nplt.figure(figsize=(10, 6))\nsns.barplot(data=deps, x=\"nb_lit\", y=\"nom\", hue=\"nom\", palette=\"Blues_d\", legend=False)\nplt.title(\"Top 10 departments by critical care bed count (2024)\", fontsize=13)\nplt.xlabel(\"Number of beds\")\nplt.ylabel(\"Department\")\nplt.grid(True, linestyle=\"--\", alpha=0.5, axis=\"x\")\nplt.tight_layout()\nplt.show()\n\n\n\n\nTop 10 French departments by critical care bed count (2024)\n\n\n\n\n\n\n\n\n\n\nTipKey observation\n\n\n\nParis leads by a significant margin, followed by Nord and Bouches-du-Rhône. This concentration highlights a persistent territorial inequality in access to critical care resources, a known challenge in French health policy often discussed alongside the issue of déserts médicaux."
+  },
+  {
+    "objectID": "projects/python_analysis.html#summary-reflections",
+    "href": "projects/python_analysis.html#summary-reflections",
+    "title": "Hospital Critical Care Capacity in France",
+    "section": "Summary & Reflections",
+    "text": "Summary & Reflections\n\n\n\nFinding\nInsight\n\n\n\n\n+6% beds in 2020\nMeasurable Covid-19 emergency response\n\n\n70% public sector\nPublic hospitals dominate critical care\n\n\nParis, Nord, BdR lead\nTerritorial concentration of resources\n\n\nPost-2021 decline\nGradual return to structural capacity\n\n\n\nThis project allowed me to apply data manipulation and visualisation skills to a real-world healthcare dataset. Beyond the technical exercise, it reinforced my understanding of how data can inform strategic decisions in hospital management — whether around resource allocation, capacity planning, or IS design.\nAs someone aiming to work at the intersection of healthcare and information systems, being able to read, clean, and interpret health data is a skill I consider essential for roles in MOA, AMOA, or project management in MedTech and pharma environments."
   }
 ]

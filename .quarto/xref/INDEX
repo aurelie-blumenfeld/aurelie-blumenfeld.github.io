@@ -43,5 +43,8 @@
   },
   "projects/python_analysis.qmd": {
     "python_analysis.html": "93f919aa"
+  },
+  "reflection.qmd": {
+    "reflection.html": "de13128f"
   }
 }

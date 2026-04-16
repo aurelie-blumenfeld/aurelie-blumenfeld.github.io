@@ -1,0 +1,46 @@
+---
+title: "Reflection"
+toc: false
+page-layout: full
+---
+
+## Looking Back
+
+Before this module, my technical background was mostly centred around business tools — Excel, SAP Business ByDesign, and R Studio for data cleaning. I had no prior experience with web development, version control, or static site generators.
+
+This module introduced me to a completely different way of working: building and deploying a website from scratch using **Quarto**, managing files with **Git**, and integrating executable **Python code** into a professional portfolio.
+
+## What I Learned
+
+::: {.callout-note}
+## Key skills acquired
+- Building and configuring a Quarto website from scratch
+- Version control with Git and deployment via GitHub Pages
+- Writing structured Markdown with rich features (callouts, tables, diagrams)
+- Loading, cleaning, and visualising real-world health data with Python (pandas, matplotlib, seaborn)
+- Organising a project with a clean folder structure and consistent commit history
+:::
+
+## Challenges I Faced
+
+Git was by far the steepest learning curve. I encountered several issues throughout the project — committing before rendering, case sensitivity conflicts between Windows and GitHub Pages, and accidentally pushing incomplete versions of the site. Each of these forced me to understand more deeply how Git actually works, rather than just using it mechanically.
+
+Deploying on GitHub Pages also required careful attention to folder structure and file paths — something I underestimated at the start.
+
+The Python data analysis was another challenge. I had taken Python courses but had never applied them to a real dataset independently. Working with the DREES open data on critical care capacity pushed me to go beyond course exercises and think analytically about what the data actually shows.
+
+## Connecting to My Career Goals
+
+I am aiming for a work-study contract in a **MOA, AMOA, or PMO** role in the healthcare or MedTech sector. At first glance, building a portfolio website might seem disconnected from project management. But I think the skills overlap more than expected.
+
+Understanding how a static site is structured, how version control works, and how to read and interpret health data in Python are all transversal skills. In a MOA or PMO role, being able to communicate with technical teams, understand data pipelines, and document work clearly are genuine assets — and this module contributed to all three.
+
+## What I Would Do Differently
+
+If I were to start again, I would commit more incrementally and write more descriptive commit messages from the beginning. I would also plan the folder structure before creating files, rather than reorganising midway through — which caused several of the Git issues I encountered.
+
+## Final Thoughts
+
+This module pushed me outside my comfort zone in a productive way. Building something that is actually live and accessible online — rather than submitting a document — made the work feel more real and purposeful. It is a project I will continue to develop beyond this semester.[^1]
+
+[^1]: This portfolio was built with [Quarto](https://quarto.org) and deployed via GitHub Pages.
