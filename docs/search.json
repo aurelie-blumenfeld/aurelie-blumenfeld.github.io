@@ -60,49 +60,56 @@
     "href": "projects/lean-management.html",
     "title": "Lean Management in Emergency Departments",
     "section": "",
-    "text": "This project was completed as part of the Advanced Operational Modelling module at Dublin City University during my Erasmus exchange. The objective was to act as a management consultant and propose Lean-based improvements for a fictitious Irish hospital emergency department."
+    "text": "This project was completed as part of the MNA1017 Business Processes & Lean Thinking module at Dublin City University during my Erasmus exchange. Acting as a Lean management consultant, I proposed a structured improvement plan for a fictional but realistic large urban Irish teaching hospital — 500 beds, 80,000 annual ED presentations — facing persistent delays despite adequate staffing.\n\n\n\n\n\n\nNoteContext\n\n\n\nIn Ireland, the National Emergency Medicine Programme targets 95% of patients admitted or discharged within six hours. The hospital in this case study had average waiting times exceeding four hours, driven not by capacity constraints but by fragmented processes and disorganised workspaces."
   },
   {
     "objectID": "projects/lean-management.html#overview",
     "href": "projects/lean-management.html#overview",
     "title": "Lean Management in Emergency Departments",
     "section": "",
-    "text": "This project was completed as part of the Advanced Operational Modelling module at Dublin City University during my Erasmus exchange. The objective was to act as a management consultant and propose Lean-based improvements for a fictitious Irish hospital emergency department."
-  },
-  {
-    "objectID": "projects/lean-management.html#the-problem",
-    "href": "projects/lean-management.html#the-problem",
-    "title": "Lean Management in Emergency Departments",
-    "section": "The Problem",
-    "text": "The Problem\n\n\n\n\n\n\nNote\n\n\n\nEmergency departments across Ireland face significant pressure from increasing patient volumes, staff shortages, and inefficient processes — leading to long waiting times and patient dissatisfaction."
+    "text": "This project was completed as part of the MNA1017 Business Processes & Lean Thinking module at Dublin City University during my Erasmus exchange. Acting as a Lean management consultant, I proposed a structured improvement plan for a fictional but realistic large urban Irish teaching hospital — 500 beds, 80,000 annual ED presentations — facing persistent delays despite adequate staffing.\n\n\n\n\n\n\nNoteContext\n\n\n\nIn Ireland, the National Emergency Medicine Programme targets 95% of patients admitted or discharged within six hours. The hospital in this case study had average waiting times exceeding four hours, driven not by capacity constraints but by fragmented processes and disorganised workspaces."
   },
   {
     "objectID": "projects/lean-management.html#methodology",
     "href": "projects/lean-management.html#methodology",
     "title": "Lean Management in Emergency Departments",
     "section": "Methodology",
-    "text": "Methodology\nThree core Lean tools were applied:\n\nValue Stream Mapping (VSM) — to identify waste and bottlenecks in the patient journey\nKaizen — to propose continuous improvement initiatives\n5S — to reorganise physical spaces and improve efficiency"
+    "text": "Methodology\nThree core Lean tools were applied:\n\n\n\n\n\n\n\nTool\nPurpose\n\n\n\n\nValue Stream Mapping (VSM)\nMap the full patient journey and identify waste\n\n\nKaizen\nContinuous improvement through focused, staff-led events\n\n\n5S\nReorganise physical workspaces to reduce motion waste"
+  },
+  {
+    "objectID": "projects/lean-management.html#patient-flow-value-stream-map",
+    "href": "projects/lean-management.html#patient-flow-value-stream-map",
+    "title": "Lean Management in Emergency Departments",
+    "section": "Patient Flow — Value Stream Map",
+    "text": "Patient Flow — Value Stream Map\nBefore Lean implementation — Total lead time: 310 min (23% value-added)\n\n\n\n\n\nflowchart LR\n    A[Registration & Triage\\n⏱ 25 min] --&gt; B[Nurse Preparation\\n⏱ 20 min]\n    B --&gt; C[Wait for Physician\\n⏱ 85 min]\n    C --&gt; D[Physician Assessment\\n⏱ 30 min]\n    D --&gt; E[Wait for Results\\n⏱ 130 min]\n    E --&gt; F[Nurse Finalisation\\n⏱ 20 min]\n    F --&gt; G[Discharge/Admission]\n\n\n\n\n\n\nAfter Lean implementation — Total lead time: ~200 min (40% value-added)\n\n\n\n\n\nflowchart LR\n    A[Registration & Triage\\n⏱ 25 min] --&gt; B[Nurse Preparation\\n⏱ 20 min]\n    B --&gt; C[Wait for Physician\\n⏱ 40 min]\n    C --&gt; D[Physician Assessment\\n⏱ 30 min]\n    D --&gt; E[Wait for Results\\n⏱ 55 min]\n    E --&gt; F[Nurse Finalisation\\n⏱ 20 min]\n    F --&gt; G[Discharge/Admission]"
   },
   {
     "objectID": "projects/lean-management.html#key-findings",
     "href": "projects/lean-management.html#key-findings",
     "title": "Lean Management in Emergency Departments",
     "section": "Key Findings",
-    "text": "Key Findings\n\n\n\nIssue\nImpact\n\n\n\n\nRedundant triage steps\nIncreased waiting time\n\n\nPoor bed management\nPatient flow bottlenecks\n\n\nDisorganised storage\nStaff time wasted"
+    "text": "Key Findings\nThe current-state VSM revealed three major bottlenecks:\n\n85-minute wait before physician assessment\n130-minute wait for diagnostic results\nOnly 23% of total lead time adds value from the patient’s perspective\n\nThese patterns mirror findings from Sánchez et al. (2018), who reported similar inefficiencies in a Barcelona ED resolved through Lean without additional staff or beds."
   },
   {
     "objectID": "projects/lean-management.html#recommendations",
     "href": "projects/lean-management.html#recommendations",
     "title": "Lean Management in Emergency Departments",
     "section": "Recommendations",
-    "text": "Recommendations\n\nImplement a fast-track pathway for low-acuity patients\nIntroduce real-time bed management dashboard\nApply 5S methodology to medication and equipment storage\nRun regular Kaizen events with frontline staff"
+    "text": "Recommendations\nThree focused Kaizen events were proposed:\n\nTriage-to-assessment handoff — standardise communication to reduce the 85-minute wait\nDiagnostic ordering pathway — move test ordering earlier to run in parallel with assessment\nDischarge coordination — streamline documentation between ED and admitting departments\n\nA 5S programme was also proposed for nursing stations, treatment bays and equipment storage — targeting the motion waste identified in the VSM."
+  },
+  {
+    "objectID": "projects/lean-management.html#projected-outcomes",
+    "href": "projects/lean-management.html#projected-outcomes",
+    "title": "Lean Management in Emergency Departments",
+    "section": "Projected Outcomes",
+    "text": "Projected Outcomes\n\n\n\nMetric\nBefore\nAfter\n\n\n\n\nTotal lead time\n310 min\n~200 min\n\n\nValue-added time\n23%\n~40%\n\n\nWait for physician\n85 min\n~40 min\n\n\nWait for results\n130 min\n~55 min\n\n\n\n\n\n\n\n\n\nTipEvidence base\n\n\n\nSánchez et al. (2018) reported a 32.4% reduction in waiting time in a comparable Lean intervention. Huang et al. (2022) observed a 36.9% drop in waiting time after implementing 5S in an emergency pharmacy."
   },
   {
     "objectID": "projects/lean-management.html#key-takeaways",
     "href": "projects/lean-management.html#key-takeaways",
     "title": "Lean Management in Emergency Departments",
     "section": "Key Takeaways",
-    "text": "Key Takeaways\nThis project strengthened my ability to apply structured problem-solving frameworks to real-world healthcare operations — directly relevant to my career goals in MOA/PMO roles in the health sector."
+    "text": "Key Takeaways\nThis project strengthened my ability to apply structured process improvement frameworks to real-world healthcare operations. Mapping patient flows, identifying waste, and proposing evidence-based solutions are skills directly applicable to MOA and PMO roles in the health sector — where understanding clinical processes is as important as managing the project itself."
   },
   {
     "objectID": "projects/impulsecap.html",
@@ -284,7 +291,7 @@
     "href": "projects/index.html",
     "title": "Projects",
     "section": "",
-    "text": "ImpulseCap\n\n\n\nEntrepreneurship\n\nHealthTech\n\n\n\nAdaptive fitness app for people with disabilities.\n\n\n\nNov 12, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nEU AI Act — Organisational Impact Analysis\n\n\n\nAI Regulation\n\nBusiness Analysis\n\nEU Policy\n\nResearch\n\n\n\nAn analysis of the EU AI Act’s impact on organisations, examining compliance challenges and strategic responses across three case studies.\n\n\n\nJan 15, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nLean Management in Emergency Departments\n\n\n\nLean Management\n\nHealthcare\n\nConsulting\n\nVSM\n\n\n\nA consulting report applying Lean methodologies to improve patient flow and reduce waiting times in an Irish hospital emergency department.\n\n\n\nDec 1, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nHospital Critical Care Capacity in France\n\n\n\nInformation Systems\n\nHealthcare\n\nIT\n\nPython\n\n\n\nevolution of critical care bed capacity in French hospitals between 2013 and 2024, using open data published by the DREES (Direction de la recherche, des études, de…\n\n\n\nDec 1, 2024\n\n\n\n\n\n\nNo matching items"
+    "text": "ImpulseCap\n\n\n\nEntrepreneurship\n\nHealthTech\n\n\n\nAdaptive fitness app for people with disabilities.\n\n\n\nNov 12, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nLean Management in Emergency Departments\n\n\n\nLean Management\n\nHealthcare\n\nConsulting\n\nVSM\n\nKaizen\n\n\n\nA consulting report applying Lean methodologies — VSM, Kaizen, and 5S — to improve patient flow in an Irish hospital emergency department.\n\n\n\nMar 1, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nEU AI Act — Organisational Impact Analysis\n\n\n\nAI Regulation\n\nBusiness Analysis\n\nEU Policy\n\nResearch\n\n\n\nAn analysis of the EU AI Act’s impact on organisations, examining compliance challenges and strategic responses across three case studies.\n\n\n\nJan 15, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nHospital Critical Care Capacity in France\n\n\n\nInformation Systems\n\nHealthcare\n\nIT\n\nPython\n\n\n\nevolution of critical care bed capacity in French hospitals between 2013 and 2024, using open data published by the DREES (Direction de la recherche, des études, de…\n\n\n\nDec 1, 2024\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "projects/python_analysis.html",

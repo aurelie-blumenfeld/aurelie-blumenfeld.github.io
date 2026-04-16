@@ -6,8 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2024-12-01">
-<meta name="description" content="A consulting report applying Lean methodologies to improve patient flow and reduce waiting times in an Irish hospital emergency department.">
+<meta name="dcterms.date" content="2025-03-01">
+<meta name="description" content="A consulting report applying Lean methodologies — VSM, Kaizen, and 5S — to improve patient flow in an Irish hospital emergency department.">
 
 <title>Lean Management in Emergency Departments – Aurélie Blumenfeld</title>
 <style>
@@ -71,6 +71,9 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script src="../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
 
 <link rel="stylesheet" href="../styles.css">
@@ -137,12 +140,13 @@ ul.task-list li input[type="checkbox"] {
     <div class="quarto-category">Healthcare</div>
     <div class="quarto-category">Consulting</div>
     <div class="quarto-category">VSM</div>
+    <div class="quarto-category">Kaizen</div>
   </div>
   </div>
 
 <div>
   <div class="description">
-    A consulting report applying Lean methodologies to improve patient flow and reduce waiting times in an Irish hospital emergency department.
+    A consulting report applying Lean methodologies — VSM, Kaizen, and 5S — to improve patient flow in an Irish hospital emergency department.
   </div>
 </div>
 
@@ -153,7 +157,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">December 1, 2024</p>
+      <p class="date">March 1, 2025</p>
     </div>
   </div>
   
@@ -167,70 +171,168 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="overview" class="level2">
 <h2 class="anchored" data-anchor-id="overview">Overview</h2>
-<p>This project was completed as part of the <strong>Advanced Operational Modelling</strong> module at Dublin City University during my Erasmus exchange. The objective was to act as a management consultant and propose Lean-based improvements for a fictitious Irish hospital emergency department.</p>
-</section>
-<section id="the-problem" class="level2">
-<h2 class="anchored" data-anchor-id="the-problem">The Problem</h2>
+<p>This project was completed as part of the <strong>MNA1017 Business Processes &amp; Lean Thinking</strong> module at Dublin City University during my Erasmus exchange. Acting as a Lean management consultant, I proposed a structured improvement plan for a fictional but realistic large urban Irish teaching hospital — 500 beds, 80,000 annual ED presentations — facing persistent delays despite adequate staffing.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Note
+<span class="screen-reader-only">Note</span>Context
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Emergency departments across Ireland face significant pressure from increasing patient volumes, staff shortages, and inefficient processes — leading to long waiting times and patient dissatisfaction.</p>
+<p>In Ireland, the National Emergency Medicine Programme targets 95% of patients admitted or discharged within six hours. The hospital in this case study had average waiting times exceeding four hours, driven not by capacity constraints but by fragmented processes and disorganised workspaces.</p>
 </div>
 </div>
+<hr>
 </section>
 <section id="methodology" class="level2">
 <h2 class="anchored" data-anchor-id="methodology">Methodology</h2>
 <p>Three core Lean tools were applied:</p>
-<ul>
-<li><strong>Value Stream Mapping (VSM)</strong> — to identify waste and bottlenecks in the patient journey</li>
-<li><strong>Kaizen</strong> — to propose continuous improvement initiatives</li>
-<li><strong>5S</strong> — to reorganise physical spaces and improve efficiency</li>
-</ul>
-</section>
-<section id="key-findings" class="level2">
-<h2 class="anchored" data-anchor-id="key-findings">Key Findings</h2>
 <table class="caption-top table">
+<colgroup>
+<col style="width: 40%">
+<col style="width: 60%">
+</colgroup>
 <thead>
 <tr class="header">
-<th>Issue</th>
-<th>Impact</th>
+<th>Tool</th>
+<th>Purpose</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Redundant triage steps</td>
-<td>Increased waiting time</td>
+<td><strong>Value Stream Mapping (VSM)</strong></td>
+<td>Map the full patient journey and identify waste</td>
 </tr>
 <tr class="even">
-<td>Poor bed management</td>
-<td>Patient flow bottlenecks</td>
+<td><strong>Kaizen</strong></td>
+<td>Continuous improvement through focused, staff-led events</td>
 </tr>
 <tr class="odd">
-<td>Disorganised storage</td>
-<td>Staff time wasted</td>
+<td><strong>5S</strong></td>
+<td>Reorganise physical workspaces to reduce motion waste</td>
 </tr>
 </tbody>
 </table>
+<hr>
+</section>
+<section id="patient-flow-value-stream-map" class="level2">
+<h2 class="anchored" data-anchor-id="patient-flow-value-stream-map">Patient Flow — Value Stream Map</h2>
+<p><strong>Before Lean implementation</strong> — Total lead time: 310 min (23% value-added)</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    A[Registration &amp; Triage\n⏱ 25 min] --&gt; B[Nurse Preparation\n⏱ 20 min]
+    B --&gt; C[Wait for Physician\n⏱ 85 min]
+    C --&gt; D[Physician Assessment\n⏱ 30 min]
+    D --&gt; E[Wait for Results\n⏱ 130 min]
+    E --&gt; F[Nurse Finalisation\n⏱ 20 min]
+    F --&gt; G[Discharge/Admission]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p><strong>After Lean implementation</strong> — Total lead time: ~200 min (40% value-added)</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    A[Registration &amp; Triage\n⏱ 25 min] --&gt; B[Nurse Preparation\n⏱ 20 min]
+    B --&gt; C[Wait for Physician\n⏱ 40 min]
+    C --&gt; D[Physician Assessment\n⏱ 30 min]
+    D --&gt; E[Wait for Results\n⏱ 55 min]
+    E --&gt; F[Nurse Finalisation\n⏱ 20 min]
+    F --&gt; G[Discharge/Admission]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<hr>
+</section>
+<section id="key-findings" class="level2">
+<h2 class="anchored" data-anchor-id="key-findings">Key Findings</h2>
+<p>The current-state VSM revealed three major bottlenecks:</p>
+<ul>
+<li><strong>85-minute wait</strong> before physician assessment</li>
+<li><strong>130-minute wait</strong> for diagnostic results</li>
+<li>Only <strong>23% of total lead time</strong> adds value from the patient’s perspective</li>
+</ul>
+<p>These patterns mirror findings from Sánchez et al.&nbsp;(2018), who reported similar inefficiencies in a Barcelona ED resolved through Lean without additional staff or beds.</p>
+<hr>
 </section>
 <section id="recommendations" class="level2">
 <h2 class="anchored" data-anchor-id="recommendations">Recommendations</h2>
+<p>Three focused Kaizen events were proposed:</p>
 <ol type="1">
-<li>Implement a fast-track pathway for low-acuity patients</li>
-<li>Introduce real-time bed management dashboard</li>
-<li>Apply 5S methodology to medication and equipment storage</li>
-<li>Run regular Kaizen events with frontline staff</li>
+<li><strong>Triage-to-assessment handoff</strong> — standardise communication to reduce the 85-minute wait</li>
+<li><strong>Diagnostic ordering pathway</strong> — move test ordering earlier to run in parallel with assessment</li>
+<li><strong>Discharge coordination</strong> — streamline documentation between ED and admitting departments</li>
 </ol>
+<p>A <strong>5S programme</strong> was also proposed for nursing stations, treatment bays and equipment storage — targeting the motion waste identified in the VSM.</p>
+<hr>
+</section>
+<section id="projected-outcomes" class="level2">
+<h2 class="anchored" data-anchor-id="projected-outcomes">Projected Outcomes</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Metric</th>
+<th>Before</th>
+<th>After</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Total lead time</td>
+<td>310 min</td>
+<td>~200 min</td>
+</tr>
+<tr class="even">
+<td>Value-added time</td>
+<td>23%</td>
+<td>~40%</td>
+</tr>
+<tr class="odd">
+<td>Wait for physician</td>
+<td>85 min</td>
+<td>~40 min</td>
+</tr>
+<tr class="even">
+<td>Wait for results</td>
+<td>130 min</td>
+<td>~55 min</td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Evidence base
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Sánchez et al.&nbsp;(2018) reported a 32.4% reduction in waiting time in a comparable Lean intervention. Huang et al.&nbsp;(2022) observed a 36.9% drop in waiting time after implementing 5S in an emergency pharmacy.</p>
+</div>
+</div>
+<hr>
 </section>
 <section id="key-takeaways" class="level2">
 <h2 class="anchored" data-anchor-id="key-takeaways">Key Takeaways</h2>
-<p>This project strengthened my ability to apply structured problem-solving frameworks to real-world healthcare operations — directly relevant to my career goals in MOA/PMO roles in the health sector.</p>
+<p>This project strengthened my ability to apply structured process improvement frameworks to real-world healthcare operations. Mapping patient flows, identifying waste, and proposing evidence-based solutions are skills directly applicable to MOA and PMO roles in the health sector — where understanding clinical processes is as important as managing the project itself.</p>
 
 
 </section>
