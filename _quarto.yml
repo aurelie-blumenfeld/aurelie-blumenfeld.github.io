@@ -25,6 +25,11 @@ website:
       - href: CV_aurelieblumenfeld.pdf
         text: CV
         target: _blank
+      - href: https://github.com/aurelie-blumenfeld
+        text: GitHub
+        target: _blank
+        icon: github
+
   page-footer:
     left: "© 2025 Aurélie Blumenfeld"
     right: "Built with [Quarto](https://quarto.org)"
