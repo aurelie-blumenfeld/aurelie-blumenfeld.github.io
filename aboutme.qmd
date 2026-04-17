@@ -47,32 +47,34 @@ Before moving into business school, I completed a degree in biology. This backgr
 
 ::: exp-card
 ::: exp-header
-### Junior Project Manager Intern — Customer Experience
-**GE HealthCare** · Buc, France · April 2026 · 22 weeks
+### Assistant Project Manager — Business Transformation
+**GE HealthCare** · Buc, France · April – September 2026
 :::
 ::: exp-body
-Currently contributing to customer experience improvement projects in an international HealthTech environment.
+Contributed to the migration of business processes towards the Transformation Hub within an international HealthTech environment.
 
-- Contribution to customer experience optimisation projects
-- Coordination with operational teams and progress tracking
-- Process analysis and recommendations
+- Gathered requirements, tracked tasks and KPIs across transformation projects
+- Mapped business processes and identified automation opportunities (RPA, AI, API)
+- Benchmarked solutions and formulated operational recommendations
+- Standardised administrative processes (contracts, compliance, validation) and optimised workflows via Power Automate and SharePoint
 :::
 ::: exp-tags
-`Project Management` `Customer Experience` `MedTech` `International`
+`Project Management` `Process Mapping` `Power Automate` `SharePoint` `HealthTech`
 :::
 :::
 
 ::: exp-card
 ::: exp-header
-### Procurement Project Management Intern
-**BioSerenity** · 2025
+### Procurement & Supply Chain Project Intern
+**BioSerenity** · May – September 2025
 :::
 ::: exp-body
-BioSerenity develops connected medical devices for neurological monitoring. My mission focused on coordinating a multi-year PCB component procurement strategy.
+BioSerenity develops connected medical devices for neurological monitoring. Led a strategic procurement project for a critical PCB component across multiple teams.
 
-- Coordinated a 3-year PCB procurement strategy involving 3 internal teams, with CFO-level reporting via SAP Business ByDesign
-- Managed a Plan A → Plan B pivot following regulatory non-compliance of obsolete components
-- Tracked and updated stock and order data in SAP Business ByDesign
+- Managed a Plan A → Plan B pivot following component obsolescence and medical regulatory constraints
+- Coordinated cross-functionally between production, procurement, and supplier teams to secure critical components
+- Conducted BOM analysis, technology watch, and supplier negotiations (FR/EN)
+- Tools: SAP Business ByDesign, advanced Excel (pivot tables, XLOOKUP)
 :::
 ::: exp-tags
 `SAP Business ByDesign` `Procurement` `Cross-team coordination` `Medical devices` `Risk management`

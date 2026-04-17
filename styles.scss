@@ -31,3 +31,37 @@ $body-bg: #FAF2FF;
   width: 100% !important;
   height: 200px !important;
 }
+
+.exp-card {
+  background: #fff;
+  border: 1px solid #e8e8f0;
+  border-left: 4px solid #6A338B;
+  border-radius: 12px;
+  padding: 28px 32px;
+  margin-bottom: 20px;
+}
+
+.exp-header h3 {
+  font-size: 17px;
+  font-weight: 600;
+  margin-bottom: 4px;
+  color: #1a1a2e;
+}
+
+.exp-body {
+  font-size: 14px;
+  color: #555;
+  margin: 12px 0;
+  line-height: 1.7;
+}
+
+.exp-tags code {
+  background: #f0ebf7;
+  color: #6A338B;
+  border: none;
+  font-size: 11px;
+  padding: 3px 10px;
+  border-radius: 100px;
+  font-family: inherit;
+  margin-right: 4px;
+}
