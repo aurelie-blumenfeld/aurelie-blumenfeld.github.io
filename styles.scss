@@ -74,3 +74,23 @@ body.titre-page .quarto-title .title {
 .callout-tip .callout-icon::before {
   filter: hue-rotate(300deg) saturate(0.8) brightness(0.7) !important;
 }
+
+
+.callout-note,
+.callout-note .callout-body-container,
+.callout-note .callout-header {
+  background: #fdeee9 !important;
+  background-image: none !important;
+}
+
+.callout-note {
+  border-left-color: #E8705A !important;
+}
+
+.callout-note .callout-title {
+  color: #b84a30 !important;
+}
+
+.callout-note .callout-icon::before {
+  filter: hue-rotate(300deg) saturate(0.8) brightness(0.7) !important;
+}
