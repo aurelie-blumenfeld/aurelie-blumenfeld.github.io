@@ -25,7 +25,7 @@ As part of my programme, I completed an Erasmus exchange at DCU. This experience
 2024 – present
 :::
 ::: timeline-content
-### Programme Grande École — Information Systems Management
+### Programme Grande École - Information Systems Management
 **IMT Business School**
 
 I joined IMT Business School to develop a business and digital perspective, specialising in project management, business analysis, and digital transformation in organisations.
@@ -66,7 +66,7 @@ Contributed to the migration of business processes towards the Transformation Hu
 ::: exp-card
 ::: exp-header
 ### Procurement & Supply Chain Project Intern
-**BioSerenity** · May – September 2025
+**BioSerenity** · Rosières-Pres-Troyes, France . May – September 2025
 :::
 ::: exp-body
 BioSerenity develops connected medical devices for neurological monitoring. Led a strategic procurement project for a critical PCB component across multiple teams.

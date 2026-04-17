@@ -60,14 +60,14 @@
     "href": "projects/lean-management.html",
     "title": "Lean Management in Emergency Departments",
     "section": "",
-    "text": "This project was completed as part of the MNA1017 Business Processes & Lean Thinking module at Dublin City University during my Erasmus exchange. Acting as a Lean management consultant, I proposed a structured improvement plan for a fictional but realistic large urban Irish teaching hospital — 500 beds, 80,000 annual ED presentations — facing persistent delays despite adequate staffing.\n\n\n\n\n\n\nNoteContext\n\n\n\nIn Ireland, the National Emergency Medicine Programme targets 95% of patients admitted or discharged within six hours. The hospital in this case study had average waiting times exceeding four hours, driven not by capacity constraints but by fragmented processes and disorganised workspaces."
+    "text": "This project was completed as part of the MNA1017 Business Processes & Lean Thinking module at Dublin City University during my Erasmus exchange. Acting as a Lean management consultant, I proposed a structured improvement plan for a fictional but realistic large urban Irish teaching hospital (500 beds, 80,000 annual ED presentations) facing persistent delays despite adequate staffing.\n\n\n\n\n\n\nNoteContext\n\n\n\nIn Ireland, the National Emergency Medicine Programme targets 95% of patients admitted or discharged within six hours. The hospital in this case study had average waiting times exceeding four hours, driven not by capacity constraints but by fragmented processes and disorganised workspaces."
   },
   {
     "objectID": "projects/lean-management.html#overview",
     "href": "projects/lean-management.html#overview",
     "title": "Lean Management in Emergency Departments",
     "section": "",
-    "text": "This project was completed as part of the MNA1017 Business Processes & Lean Thinking module at Dublin City University during my Erasmus exchange. Acting as a Lean management consultant, I proposed a structured improvement plan for a fictional but realistic large urban Irish teaching hospital — 500 beds, 80,000 annual ED presentations — facing persistent delays despite adequate staffing.\n\n\n\n\n\n\nNoteContext\n\n\n\nIn Ireland, the National Emergency Medicine Programme targets 95% of patients admitted or discharged within six hours. The hospital in this case study had average waiting times exceeding four hours, driven not by capacity constraints but by fragmented processes and disorganised workspaces."
+    "text": "This project was completed as part of the MNA1017 Business Processes & Lean Thinking module at Dublin City University during my Erasmus exchange. Acting as a Lean management consultant, I proposed a structured improvement plan for a fictional but realistic large urban Irish teaching hospital (500 beds, 80,000 annual ED presentations) facing persistent delays despite adequate staffing.\n\n\n\n\n\n\nNoteContext\n\n\n\nIn Ireland, the National Emergency Medicine Programme targets 95% of patients admitted or discharged within six hours. The hospital in this case study had average waiting times exceeding four hours, driven not by capacity constraints but by fragmented processes and disorganised workspaces."
   },
   {
     "objectID": "projects/lean-management.html#methodology",
@@ -77,11 +77,11 @@
     "text": "Methodology\nThree core Lean tools were applied:\n\n\n\n\n\n\n\nTool\nPurpose\n\n\n\n\nValue Stream Mapping (VSM)\nMap the full patient journey and identify waste\n\n\nKaizen\nContinuous improvement through focused, staff-led events\n\n\n5S\nReorganise physical workspaces to reduce motion waste"
   },
   {
-    "objectID": "projects/lean-management.html#patient-flow-value-stream-map",
-    "href": "projects/lean-management.html#patient-flow-value-stream-map",
+    "objectID": "projects/lean-management.html#patient-flow---value-stream-map",
+    "href": "projects/lean-management.html#patient-flow---value-stream-map",
     "title": "Lean Management in Emergency Departments",
-    "section": "Patient Flow — Value Stream Map",
-    "text": "Patient Flow — Value Stream Map\nBefore Lean implementation — Total lead time: 310 min (23% value-added)\n\n\n\n\n\nflowchart LR\n    A[Registration & Triage\\n⏱ 25 min] --&gt; B[Nurse Preparation\\n⏱ 20 min]\n    B --&gt; C[Wait for Physician\\n⏱ 85 min]\n    C --&gt; D[Physician Assessment\\n⏱ 30 min]\n    D --&gt; E[Wait for Results\\n⏱ 130 min]\n    E --&gt; F[Nurse Finalisation\\n⏱ 20 min]\n    F --&gt; G[Discharge/Admission]\n\n\n\n\n\n\nAfter Lean implementation — Total lead time: ~200 min (40% value-added)\n\n\n\n\n\nflowchart LR\n    A[Registration & Triage\\n⏱ 25 min] --&gt; B[Nurse Preparation\\n⏱ 20 min]\n    B --&gt; C[Wait for Physician\\n⏱ 40 min]\n    C --&gt; D[Physician Assessment\\n⏱ 30 min]\n    D --&gt; E[Wait for Results\\n⏱ 55 min]\n    E --&gt; F[Nurse Finalisation\\n⏱ 20 min]\n    F --&gt; G[Discharge/Admission]"
+    "section": "Patient Flow - Value Stream Map",
+    "text": "Patient Flow - Value Stream Map\nBefore Lean implementation - Total lead time: 310 min (23% value-added)\n\n\n\n\n\nflowchart LR\n    A[Registration & Triage\\n⏱ 25 min] --&gt; B[Nurse Preparation\\n⏱ 20 min]\n    B --&gt; C[Wait for Physician\\n⏱ 85 min]\n    C --&gt; D[Physician Assessment\\n⏱ 30 min]\n    D --&gt; E[Wait for Results\\n⏱ 130 min]\n    E --&gt; F[Nurse Finalisation\\n⏱ 20 min]\n    F --&gt; G[Discharge/Admission]\n\n\n\n\n\n\nAfter Lean implementation - Total lead time: ~200 min (40% value-added)\n\n\n\n\n\nflowchart LR\n    A[Registration & Triage\\n⏱ 25 min] --&gt; B[Nurse Preparation\\n⏱ 20 min]\n    B --&gt; C[Wait for Physician\\n⏱ 40 min]\n    C --&gt; D[Physician Assessment\\n⏱ 30 min]\n    D --&gt; E[Wait for Results\\n⏱ 55 min]\n    E --&gt; F[Nurse Finalisation\\n⏱ 20 min]\n    F --&gt; G[Discharge/Admission]"
   },
   {
     "objectID": "projects/lean-management.html#key-findings",
@@ -95,7 +95,7 @@
     "href": "projects/lean-management.html#recommendations",
     "title": "Lean Management in Emergency Departments",
     "section": "Recommendations",
-    "text": "Recommendations\nThree focused Kaizen events were proposed:\n\nTriage-to-assessment handoff — standardise communication to reduce the 85-minute wait\nDiagnostic ordering pathway — move test ordering earlier to run in parallel with assessment\nDischarge coordination — streamline documentation between ED and admitting departments\n\nA 5S programme was also proposed for nursing stations, treatment bays and equipment storage — targeting the motion waste identified in the VSM."
+    "text": "Recommendations\nThree focused Kaizen events were proposed:\n\nTriage-to-assessment handoff : standardise communication to reduce the 85-minute wait\nDiagnostic ordering pathway : move test ordering earlier to run in parallel with assessment\nDischarge coordination : streamline documentation between ED and admitting departments\n\nA 5S programme was also proposed for nursing stations, treatment bays and equipment storage, targeting the motion waste identified in the VSM."
   },
   {
     "objectID": "projects/lean-management.html#projected-outcomes",
@@ -109,7 +109,7 @@
     "href": "projects/lean-management.html#key-takeaways",
     "title": "Lean Management in Emergency Departments",
     "section": "Key Takeaways",
-    "text": "Key Takeaways\nThis project strengthened my ability to apply structured process improvement frameworks to real-world healthcare operations. Mapping patient flows, identifying waste, and proposing evidence-based solutions are skills directly applicable to MOA and PMO roles in the health sector — where understanding clinical processes is as important as managing the project itself."
+    "text": "Key Takeaways\nThis project strengthened my ability to apply structured process improvement frameworks to real-world healthcare operations. Mapping patient flows, identifying waste, and proposing evidence-based solutions are skills directly applicable to MOA and PMO roles in the health sector, where understanding clinical processes is as important as managing the project itself."
   },
   {
     "objectID": "projects/impulsecap.html",
@@ -151,7 +151,7 @@
     "href": "projects/impulsecap.html#business-model",
     "title": "ImpulseCap",
     "section": "Business Model",
-    "text": "Business Model\n\nFree tier: ad-supported (video ads during recovery time)\nPremium: €4.99/month — community messaging, avatar, remote physiotherapist contact"
+    "text": "Business Model\n\nFree tier: ad-supported (video ads during recovery time)\nPremium: €4.99/month : community messaging, avatar, remote physiotherapist contact"
   },
   {
     "objectID": "projects/impulsecap.html#financial-projections",
@@ -179,14 +179,14 @@
     "href": "index.html",
     "title": "Aurélie BLUMENFELD",
     "section": "",
-    "text": "With a background in biology, I transitioned into business school with one clear focus: the healthcare sector. Currently completing an Erasmus exchange at Dublin City University, I’m in my first year of the Information Systems Management program at IMT Business School — looking to bridge my scientific background and digital skills through IS projects in health, pharma, or MedTech.\n\nInformation Systems Healthcare Project Management MedTech\n\nSee my journey →"
+    "text": "With a background in biology, I transitioned into business school with one clear focus: the healthcare sector. Currently completing an Erasmus exchange at Dublin City University, I’m in my first year of the Information Systems Management program at IMT Business School. I’m looking to bridge my scientific background and digital skills through IS projects in health, pharma, or MedTech.\n\nInformation Systems Healthcare Project Management MedTech\n\nSee my journey →"
   },
   {
     "objectID": "index.html#hi-im-aurélie",
     "href": "index.html#hi-im-aurélie",
     "title": "Aurélie BLUMENFELD",
     "section": "",
-    "text": "With a background in biology, I transitioned into business school with one clear focus: the healthcare sector. Currently completing an Erasmus exchange at Dublin City University, I’m in my first year of the Information Systems Management program at IMT Business School — looking to bridge my scientific background and digital skills through IS projects in health, pharma, or MedTech.\n\nInformation Systems Healthcare Project Management MedTech\n\nSee my journey →"
+    "text": "With a background in biology, I transitioned into business school with one clear focus: the healthcare sector. Currently completing an Erasmus exchange at Dublin City University, I’m in my first year of the Information Systems Management program at IMT Business School. I’m looking to bridge my scientific background and digital skills through IS projects in health, pharma, or MedTech.\n\nInformation Systems Healthcare Project Management MedTech\n\nSee my journey →"
   },
   {
     "objectID": "aboutme.html",
@@ -207,28 +207,28 @@
     "href": "aboutme.html#experience",
     "title": "My Journey",
     "section": "Experience",
-    "text": "Experience\n\n\nAssistant Project Manager — Business Transformation\nGE HealthCare · Buc, France · April – September 2026\n\n\nContributed to the migration of business processes towards the Transformation Hub within an international HealthTech environment.\n\nGathered requirements, tracked tasks and KPIs across transformation projects\nMapped business processes and identified automation opportunities (RPA, AI, API)\nBenchmarked solutions and formulated operational recommendations\nStandardised administrative processes (contracts, compliance, validation) and optimised workflows via Power Automate and SharePoint\n\n\n\nProject Management Process Mapping Power Automate SharePoint HealthTech\n\n\n\n\nProcurement & Supply Chain Project Intern\nBioSerenity · May – September 2025\n\n\nBioSerenity develops connected medical devices for neurological monitoring. Led a strategic procurement project for a critical PCB component across multiple teams.\n\nManaged a Plan A → Plan B pivot following component obsolescence and medical regulatory constraints\nCoordinated cross-functionally between production, procurement, and supplier teams to secure critical components\nConducted BOM analysis, technology watch, and supplier negotiations (FR/EN)\nTools: SAP Business ByDesign, advanced Excel (pivot tables, XLOOKUP)\n\n\n\nSAP Business ByDesign Procurement Cross-team coordination Medical devices Risk management"
+    "text": "Experience\n\n\nAssistant Project Manager — Business Transformation\nGE HealthCare · Buc, France · April – September 2026\n\n\nContributed to the migration of business processes towards the Transformation Hub within an international HealthTech environment.\n\nGathered requirements, tracked tasks and KPIs across transformation projects\nMapped business processes and identified automation opportunities (RPA, AI, API)\nBenchmarked solutions and formulated operational recommendations\nStandardised administrative processes (contracts, compliance, validation) and optimised workflows via Power Automate and SharePoint\n\n\n\nProject Management Process Mapping Power Automate SharePoint HealthTech\n\n\n\n\nProcurement & Supply Chain Project Intern\nBioSerenity · Rosières-Pres-Troyes, France . May – September 2025\n\n\nBioSerenity develops connected medical devices for neurological monitoring. Led a strategic procurement project for a critical PCB component across multiple teams.\n\nManaged a Plan A → Plan B pivot following component obsolescence and medical regulatory constraints\nCoordinated cross-functionally between production, procurement, and supplier teams to secure critical components\nConducted BOM analysis, technology watch, and supplier negotiations (FR/EN)\nTools: SAP Business ByDesign, advanced Excel (pivot tables, XLOOKUP)\n\n\n\nSAP Business ByDesign Procurement Cross-team coordination Medical devices Risk management"
   },
   {
     "objectID": "contact.html",
     "href": "contact.html",
     "title": "Contact",
     "section": "",
-    "text": "I am currently looking for a work-study contract (alternance) starting September 2025 in a MOA, AMOA, or PMO role, ideally in the health, pharma, or MedTech sector.\nFeel free to reach out for any opportunity or collaboration.\n\n\n\n\n\n\nTipBest way to reach me\n\n\n\nI typically respond within 24 hours.\n\n\n\n\n\n Email\naurеlieblumenfeld@gmail.com\n\n\n LinkedIn\nlinkedin.com/in/aurelie-blumenfeld\n\n\n CV\nDownload my CV"
+    "text": "I am currently looking for a work-study contract (alternance) starting September 2026 in a MOA, AMOA, or PMO role, ideally in the health, pharma, or MedTech sector.\nFeel free to reach out for any opportunity or collaboration.\n\n\n\n\n\n\nTipBest way to reach me\n\n\n\nI typically respond within 24 hours.\n\n\n\n\n\n Email\naurеlieblumenfeld@gmail.com\n\n\n LinkedIn\nlinkedin.com/in/aurelie-blumenfeld\n\n\n CV\nDownload my CV"
   },
   {
     "objectID": "contact.html#get-in-touch",
     "href": "contact.html#get-in-touch",
     "title": "Contact",
     "section": "",
-    "text": "I am currently looking for a work-study contract (alternance) starting September 2025 in a MOA, AMOA, or PMO role, ideally in the health, pharma, or MedTech sector.\nFeel free to reach out for any opportunity or collaboration.\n\n\n\n\n\n\nTipBest way to reach me\n\n\n\nI typically respond within 24 hours.\n\n\n\n\n\n Email\naurеlieblumenfeld@gmail.com\n\n\n LinkedIn\nlinkedin.com/in/aurelie-blumenfeld\n\n\n CV\nDownload my CV"
+    "text": "I am currently looking for a work-study contract (alternance) starting September 2026 in a MOA, AMOA, or PMO role, ideally in the health, pharma, or MedTech sector.\nFeel free to reach out for any opportunity or collaboration.\n\n\n\n\n\n\nTipBest way to reach me\n\n\n\nI typically respond within 24 hours.\n\n\n\n\n\n Email\naurеlieblumenfeld@gmail.com\n\n\n LinkedIn\nlinkedin.com/in/aurelie-blumenfeld\n\n\n CV\nDownload my CV"
   },
   {
     "objectID": "contact.html#location",
     "href": "contact.html#location",
     "title": "Contact",
     "section": "Location",
-    "text": "Location\nBased in Paris, France — open to remote and hybrid opportunities."
+    "text": "Location\nBased in Paris, France , open to remote and hybrid opportunities."
   },
   {
     "objectID": "projects/eu-ai-act.html",
@@ -284,14 +284,14 @@
     "href": "projects/eu-ai-act.html#key-takeaways",
     "title": "EU AI Act — Organisational Impact Analysis",
     "section": "Key Takeaways",
-    "text": "Key Takeaways\nThis project developed my ability to analyse regulatory frameworks and assess their organisational impact — a skill directly applicable to IS project management roles in regulated sectors such as health and pharma."
+    "text": "Key Takeaways\nThis project developed my ability to analyse regulatory frameworks and assess their organisational impact, a skill directly applicable to IS project management roles in regulated sectors such as health and pharma."
   },
   {
     "objectID": "projects/index.html",
     "href": "projects/index.html",
     "title": "Projects",
     "section": "",
-    "text": "ImpulseCap\n\n\n\nEntrepreneurship\n\nHealthTech\n\n\n\nAdaptive fitness app for people with disabilities.\n\n\n\nNov 12, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nLean Management in Emergency Departments\n\n\n\nLean Management\n\nHealthcare\n\nConsulting\n\nVSM\n\nKaizen\n\n\n\nA consulting report applying Lean methodologies — VSM, Kaizen, and 5S — to improve patient flow in an Irish hospital emergency department.\n\n\n\nMar 1, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nEU AI Act — Organisational Impact Analysis\n\n\n\nAI Regulation\n\nBusiness Analysis\n\nEU Policy\n\nResearch\n\n\n\nAn analysis of the EU AI Act’s impact on organisations, examining compliance challenges and strategic responses across three case studies.\n\n\n\nJan 15, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nHospital Critical Care Capacity in France\n\n\n\nInformation Systems\n\nHealthcare\n\nIT\n\nPython\n\n\n\nevolution of critical care bed capacity in French hospitals between 2013 and 2024, using open data published by the DREES (Direction de la recherche, des études, de…\n\n\n\nDec 1, 2024\n\n\n\n\n\n\nNo matching items"
+    "text": "ImpulseCap\n\n\n\nEntrepreneurship\n\nHealthTech\n\n\n\nAdaptive fitness app for people with disabilities.\n\n\n\nNov 12, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nLean Management in Emergency Departments\n\n\n\nLean Management\n\nHealthcare\n\nConsulting\n\nVSM\n\nKaizen\n\n\n\nA consulting report applying Lean methodologies (VSM, Kaizen, and 5S) to improve patient flow in an Irish hospital emergency department.\n\n\n\nMar 1, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nEU AI Act — Organisational Impact Analysis\n\n\n\nAI Regulation\n\nBusiness Analysis\n\nEU Policy\n\nResearch\n\n\n\nAn analysis of the EU AI Act’s impact on organisations, examining compliance challenges and strategic responses across three case studies.\n\n\n\nJan 15, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nHospital Critical Care Capacity in France\n\n\n\nInformation Systems\n\nHealthcare\n\nIT\n\nPython\n\n\n\nevolution of critical care bed capacity in French hospitals between 2013 and 2024, using open data published by the DREES (Direction de la recherche, des études, de…\n\n\n\nDec 1, 2024\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "projects/python_analysis.html",

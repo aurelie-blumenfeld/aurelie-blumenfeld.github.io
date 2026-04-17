@@ -40,7 +40,7 @@ ImpulseCap is an **adaptive fitness application** that generates personalised tr
 ## Business Model
 
 - **Free tier**: ad-supported (video ads during recovery time)
-- **Premium**: €4.99/month — community messaging, avatar, remote physiotherapist contact
+- **Premium**: €4.99/month : community messaging, avatar, remote physiotherapist contact
 
 ## Financial Projections
 

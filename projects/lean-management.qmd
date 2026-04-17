@@ -1,6 +1,6 @@
 ---
 title: "Lean Management in Emergency Departments"
-description: "A consulting report applying Lean methodologies — VSM, Kaizen, and 5S — to improve patient flow in an Irish hospital emergency department."
+description: "A consulting report applying Lean methodologies (VSM, Kaizen, and 5S) to improve patient flow in an Irish hospital emergency department."
 date: 2025-03-01
 categories: [Lean Management, Healthcare, Consulting, VSM, Kaizen]
 image: ../images/hospital.png
@@ -8,7 +8,7 @@ image: ../images/hospital.png
 
 ## Overview
 
-This project was completed as part of the **MNA1017 Business Processes & Lean Thinking** module at Dublin City University during my Erasmus exchange. Acting as a Lean management consultant, I proposed a structured improvement plan for a fictional but realistic large urban Irish teaching hospital — 500 beds, 80,000 annual ED presentations — facing persistent delays despite adequate staffing.
+This project was completed as part of the **MNA1017 Business Processes & Lean Thinking** module at Dublin City University during my Erasmus exchange. Acting as a Lean management consultant, I proposed a structured improvement plan for a fictional but realistic large urban Irish teaching hospital (500 beds, 80,000 annual ED presentations) facing persistent delays despite adequate staffing.
 
 ::: {.callout-note}
 ## Context
@@ -29,9 +29,9 @@ Three core Lean tools were applied:
 
 ---
 
-## Patient Flow — Value Stream Map
+## Patient Flow - Value Stream Map
 
-**Before Lean implementation** — Total lead time: 310 min (23% value-added)
+**Before Lean implementation** - Total lead time: 310 min (23% value-added)
 
 ```{mermaid}
 flowchart LR
@@ -43,7 +43,7 @@ flowchart LR
     F --> G[Discharge/Admission]
 ```
 
-**After Lean implementation** — Total lead time: ~200 min (40% value-added)
+**After Lean implementation** - Total lead time: ~200 min (40% value-added)
 
 ```{mermaid}
 flowchart LR
@@ -73,11 +73,11 @@ These patterns mirror findings from Sánchez et al. (2018), who reported similar
 
 Three focused Kaizen events were proposed:
 
-1. **Triage-to-assessment handoff** — standardise communication to reduce the 85-minute wait
-2. **Diagnostic ordering pathway** — move test ordering earlier to run in parallel with assessment
-3. **Discharge coordination** — streamline documentation between ED and admitting departments
+1. **Triage-to-assessment handoff** : standardise communication to reduce the 85-minute wait
+2. **Diagnostic ordering pathway** : move test ordering earlier to run in parallel with assessment
+3. **Discharge coordination** : streamline documentation between ED and admitting departments
 
-A **5S programme** was also proposed for nursing stations, treatment bays and equipment storage — targeting the motion waste identified in the VSM.
+A **5S programme** was also proposed for nursing stations, treatment bays and equipment storage, targeting the motion waste identified in the VSM.
 
 ---
 
@@ -99,4 +99,4 @@ Sánchez et al. (2018) reported a 32.4% reduction in waiting time in a comparabl
 
 ## Key Takeaways
 
-This project strengthened my ability to apply structured process improvement frameworks to real-world healthcare operations. Mapping patient flows, identifying waste, and proposing evidence-based solutions are skills directly applicable to MOA and PMO roles in the health sector — where understanding clinical processes is as important as managing the project itself.
+This project strengthened my ability to apply structured process improvement frameworks to real-world healthcare operations. Mapping patient flows, identifying waste, and proposing evidence-based solutions are skills directly applicable to MOA and PMO roles in the health sector, where understanding clinical processes is as important as managing the project itself.

@@ -21,7 +21,7 @@ about:
 
 ## Hi, I'm Aurélie 👋
 
-With a background in biology, I transitioned into business school with one clear focus: **the healthcare sector**. Currently completing an Erasmus exchange at Dublin City University, I'm in my first year of the **Information Systems Management program** at IMT Business School — looking to bridge my scientific background and digital skills through IS projects in health, pharma, or MedTech.
+With a background in biology, I transitioned into business school with one clear focus: **the healthcare sector**. Currently completing an Erasmus exchange at Dublin City University, I'm in my first year of the **Information Systems Management program** at IMT Business School. I'm looking to bridge my scientific background and digital skills through IS projects in health, pharma, or MedTech.
 
 ::: {.hero-tags}
 `Information Systems` `Healthcare` `Project Management` `MedTech`
