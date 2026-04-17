@@ -241,7 +241,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="loading-and-exploring-the-dataset" class="level2">
 <h2 data-anchor-id="loading-and-exploring-the-dataset">1. Loading and Exploring the Dataset</h2>
-<div id="a70ec2b2" class="cell" data-execution_count="1">
+<div id="3c85b974" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
@@ -328,12 +328,12 @@ Bed types: ['REAADU', 'REAENF', 'USIC', 'SIUNV', 'AUTSI', 'SURVADU', 'SURVENF']<
 </div>
 </div>
 </div>
-<p>The dataset contains 5 variables: <code>id_geo</code>, <code>statut_etab</code>, <code>annee</code>, <code>uni</code>, <code>nb_lit</code>. No missing values — the dataset is clean and ready for analysis.</p>
+<p>The dataset contains 5 variables: <code>id_geo</code>, <code>statut_etab</code>, <code>annee</code>, <code>uni</code>, <code>nb_lit</code>. No missing values; the dataset is clean and ready for analysis.</p>
 <hr>
 </section>
 <section id="national-evolution-of-critical-care-beds-20132024" class="level2">
 <h2 data-anchor-id="national-evolution-of-critical-care-beds-20132024">2. National Evolution of Critical Care Beds (2013–2024)</h2>
-<div id="8927357b" class="cell" data-execution_count="2">
+<div id="85fa0d98" class="cell" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>evolution <span class="op">=</span> df[df[<span class="st">"id_geo"</span>] <span class="op">==</span> <span class="st">"00_FR"</span>].groupby(<span class="st">"annee"</span>)[<span class="st">"nb_lit"</span>].<span class="bu">sum</span>().reset_index()</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">5</span>))</span>
@@ -370,7 +370,7 @@ Bed types: ['REAADU', 'REAENF', 'USIC', 'SIUNV', 'AUTSI', 'SURVADU', 'SURVENF']<
 </section>
 <section id="evolution-by-type-of-critical-care-unit" class="level2">
 <h2 data-anchor-id="evolution-by-type-of-critical-care-unit">3. Evolution by Type of Critical Care Unit</h2>
-<div id="e6bd0053" class="cell" data-execution_count="3">
+<div id="f4a95e26" class="cell" data-execution_count="3">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>types_lits <span class="op">=</span> df[df[<span class="st">"id_geo"</span>] <span class="op">==</span> <span class="st">"00_FR"</span>].groupby([<span class="st">"annee"</span>, <span class="st">"uni"</span>])[<span class="st">"nb_lit"</span>].<span class="bu">sum</span>().reset_index()</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>types_lits[<span class="st">"uni"</span>] <span class="op">=</span> types_lits[<span class="st">"uni"</span>].replace({</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"REAADU"</span>: <span class="st">"Adult ICU"</span>,</span>
@@ -417,7 +417,7 @@ Bed types: ['REAADU', 'REAENF', 'USIC', 'SIUNV', 'AUTSI', 'SURVADU', 'SURVENF']<
 </section>
 <section id="distribution-by-establishment-status-2024" class="level2">
 <h2 data-anchor-id="distribution-by-establishment-status-2024">4. Distribution by Establishment Status (2024)</h2>
-<div id="74ac0af8" class="cell" data-execution_count="4">
+<div id="a662e7ec" class="cell" data-execution_count="4">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>statut <span class="op">=</span> df[</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    (df[<span class="st">"id_geo"</span>] <span class="op">==</span> <span class="st">"00_FR"</span>) <span class="op">&amp;</span> (df[<span class="st">"annee"</span>] <span class="op">==</span> <span class="dv">2024</span>)</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>].groupby(<span class="st">"statut_etab"</span>)[<span class="st">"nb_lit"</span>].<span class="bu">sum</span>().reset_index()</span>
@@ -453,14 +453,14 @@ Bed types: ['REAADU', 'REAENF', 'USIC', 'SIUNV', 'AUTSI', 'SURVADU', 'SURVENF']<
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Public hospitals account for 70% of all critical care beds in France. This distribution is particularly relevant in the context of healthcare information systems — public and private institutions operate on different IS architectures, regulatory frameworks, and data governance models, a key challenge for interoperability in the French health system.</p>
+<p>Public hospitals account for 70% of all critical care beds in France. This distribution is particularly relevant in the context of healthcare information systems: public and private institutions operate on different IS architectures, regulatory frameworks, and data governance models, a key challenge for interoperability in the French health system.</p>
 </div>
 </div>
 <hr>
 </section>
 <section id="top-10-departments-by-critical-care-capacity-2024" class="level2">
 <h2 data-anchor-id="top-10-departments-by-critical-care-capacity-2024">5. Top 10 Departments by Critical Care Capacity (2024)</h2>
-<div id="7b57e24e" class="cell" data-execution_count="5">
+<div id="3f9e163f" class="cell" data-execution_count="5">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>deps <span class="op">=</span> df[</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    (df[<span class="st">"annee"</span>] <span class="op">==</span> <span class="dv">2024</span>) <span class="op">&amp;</span></span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    (<span class="op">~</span>df[<span class="st">"id_geo"</span>].isin([<span class="st">"00_FR"</span>, <span class="st">"00_MET"</span>]))</span>
@@ -529,7 +529,7 @@ Bed types: ['REAADU', 'REAENF', 'USIC', 'SIUNV', 'AUTSI', 'SURVADU', 'SURVENF']<
 </tr>
 </tbody>
 </table>
-<p>This project allowed me to apply data manipulation and visualisation skills to a real-world healthcare dataset. Beyond the technical exercise, it reinforced my understanding of how data can inform strategic decisions in hospital management — whether around resource allocation, capacity planning, or IS design.</p>
+<p>This project allowed me to apply data manipulation and visualisation skills to a real-world healthcare dataset. Beyond the technical exercise, it reinforced my understanding of how data can inform strategic decisions in hospital management, whether around resource allocation, capacity planning, or IS design.</p>
 <p>As someone aiming to work at the intersection of healthcare and information systems, being able to read, clean, and interpret health data is a skill I consider essential for roles in MOA, AMOA, or project management in MedTech and pharma environments.</p>
 
 

@@ -52,7 +52,7 @@ Before moving into business school, I completed a degree in biology. This backgr
 
 ::: exp-card
 ::: exp-header
-### Assistant Project Manager — Business Transformation
+### Assistant Project Manager - Business Transformation
 **GE HealthCare** · Buc, France · April – September 2026
 :::
 ::: exp-body

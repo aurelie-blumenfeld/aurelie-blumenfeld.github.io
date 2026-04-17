@@ -4,14 +4,14 @@
     "href": "reflection.html",
     "title": "Reflection",
     "section": "",
-    "text": "Before this module, my technical background was mostly centred around business tools — Excel, SAP Business ByDesign, and R Studio for data cleaning. I had no prior experience with web development, version control, or static site generators.\nThis module introduced me to a completely different way of working: building and deploying a website from scratch using Quarto, managing files with Git, and integrating executable Python code into a professional portfolio."
+    "text": "Before this module, my technical background was mostly centred around business tools: Excel, SAP Business ByDesign, and R Studio for data cleaning. I had no prior experience with web development, version control, or static site generators.\nThis module introduced me to a completely different way of working: building and deploying a website from scratch using Quarto, managing files with Git, and integrating executable Python code into a professional portfolio."
   },
   {
     "objectID": "reflection.html#looking-back",
     "href": "reflection.html#looking-back",
     "title": "Reflection",
     "section": "",
-    "text": "Before this module, my technical background was mostly centred around business tools — Excel, SAP Business ByDesign, and R Studio for data cleaning. I had no prior experience with web development, version control, or static site generators.\nThis module introduced me to a completely different way of working: building and deploying a website from scratch using Quarto, managing files with Git, and integrating executable Python code into a professional portfolio."
+    "text": "Before this module, my technical background was mostly centred around business tools: Excel, SAP Business ByDesign, and R Studio for data cleaning. I had no prior experience with web development, version control, or static site generators.\nThis module introduced me to a completely different way of working: building and deploying a website from scratch using Quarto, managing files with Git, and integrating executable Python code into a professional portfolio."
   },
   {
     "objectID": "reflection.html#what-i-learned",
@@ -25,28 +25,28 @@
     "href": "reflection.html#challenges-i-faced",
     "title": "Reflection",
     "section": "Challenges I Faced",
-    "text": "Challenges I Faced\nGit was by far the steepest learning curve. I encountered several issues throughout the project — committing before rendering, case sensitivity conflicts between Windows and GitHub Pages, and accidentally pushing incomplete versions of the site. Each of these forced me to understand more deeply how Git actually works, rather than just using it mechanically.\nDeploying on GitHub Pages also required careful attention to folder structure and file paths — something I underestimated at the start.\nThe Python data analysis was another challenge. I had taken Python courses but had never applied them to a real dataset independently. Working with the DREES open data on critical care capacity pushed me to go beyond course exercises and think analytically about what the data actually shows."
+    "text": "Challenges I Faced\nGit was by far the steepest learning curve. I encountered several issues throughout the project: committing before rendering, case sensitivity conflicts between Windows and GitHub Pages, and accidentally pushing incomplete versions of the site. Each of these forced me to understand more deeply how Git actually works, rather than just using it mechanically.\nDeploying on GitHub Pages also required careful attention to folder structure and file paths, something I underestimated at the start.\nThe Python data analysis was another challenge. I had taken Python courses but had never applied them to a real dataset independently. Working with the DREES open data on critical care capacity pushed me to go beyond course exercises and think analytically about what the data actually shows."
   },
   {
     "objectID": "reflection.html#connecting-to-my-career-goals",
     "href": "reflection.html#connecting-to-my-career-goals",
     "title": "Reflection",
     "section": "Connecting to My Career Goals",
-    "text": "Connecting to My Career Goals\nI am aiming for a work-study contract in a MOA, AMOA, or PMO role in the healthcare or MedTech sector. At first glance, building a portfolio website might seem disconnected from project management. But I think the skills overlap more than expected.\nUnderstanding how a static site is structured, how version control works, and how to read and interpret health data in Python are all transversal skills. In a MOA or PMO role, being able to communicate with technical teams, understand data pipelines, and document work clearly are genuine assets — and this module contributed to all three."
+    "text": "Connecting to My Career Goals\nI am aiming for a work-study contract in a MOA, AMOA, or PMO role in the healthcare or MedTech sector. At first glance, building a portfolio website might seem disconnected from project management. But I think the skills overlap more than expected.\nUnderstanding how a static site is structured, how version control works, and how to read and interpret health data in Python are all transversal skills. In a MOA or PMO role, being able to communicate with technical teams, understand data pipelines, and document work clearly are genuine assets, and this module contributed to all three."
   },
   {
     "objectID": "reflection.html#what-i-would-do-differently",
     "href": "reflection.html#what-i-would-do-differently",
     "title": "Reflection",
     "section": "What I Would Do Differently",
-    "text": "What I Would Do Differently\nIf I were to start again, I would commit more incrementally and write more descriptive commit messages from the beginning. I would also plan the folder structure before creating files, rather than reorganising midway through — which caused several of the Git issues I encountered."
+    "text": "What I Would Do Differently\nIf I were to start again, I would commit more incrementally and write more descriptive commit messages from the beginning. I would also plan the folder structure before creating files, rather than reorganising midway through, which caused several of the Git issues I encountered."
   },
   {
     "objectID": "reflection.html#final-thoughts",
     "href": "reflection.html#final-thoughts",
     "title": "Reflection",
     "section": "Final Thoughts",
-    "text": "Final Thoughts\nThis module pushed me outside my comfort zone in a productive way. Building something that is actually live and accessible online — rather than submitting a document — made the work feel more real and purposeful. It is a project I will continue to develop beyond this semester.1"
+    "text": "Final Thoughts\nThis module pushed me outside my comfort zone in a productive way. Building something that is actually live and accessible online, rather than submitting a document, made the work feel more real and purposeful. It is a project I will continue to develop beyond this semester.1"
   },
   {
     "objectID": "reflection.html#footnotes",
@@ -298,7 +298,7 @@
     "href": "projects/python_analysis.html#loading-and-exploring-the-dataset",
     "title": "Hospital Critical Care Capacity in France",
     "section": "1. Loading and Exploring the Dataset",
-    "text": "1. Loading and Exploring the Dataset\n\nimport pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nfrom IPython.display import display\n\ndf = pd.read_csv(\"data/lits_soins_critiques_2022.csv\", sep=\";\", encoding=\"utf-8\")\nprint(\"Dimensions:\", df.shape)\nprint(\"\\nColumns:\", df.columns.tolist())\nprint(\"\\nYears available:\", sorted(df[\"annee\"].astype(int).unique().tolist()))\nprint(\"\\nEstablishment types:\", df[\"statut_etab\"].unique().tolist())\nprint(\"\\nBed types:\", df[\"uni\"].unique().tolist())\n\ndisplay(df.head())\n\nDimensions: (15141, 5)\n\nColumns: ['id_geo', 'statut_etab', 'annee', 'uni', 'nb_lit']\n\nYears available: [2013, 2019, 2020, 2021, 2022, 2023, 2024]\n\nEstablishment types: ['1_Public', '2_Prive_BL', '3_Prive_BNL']\n\nBed types: ['REAADU', 'REAENF', 'USIC', 'SIUNV', 'AUTSI', 'SURVADU', 'SURVENF']\n\n\n\n\n\n\n\n\n\nid_geo\nstatut_etab\nannee\nuni\nnb_lit\n\n\n\n\n0\n00_FR\n1_Public\n2013\nREAADU\n4242.0\n\n\n1\n00_FR\n1_Public\n2019\nREAADU\n4245.0\n\n\n2\n00_FR\n1_Public\n2020\nREAENF\n342.0\n\n\n3\n00_FR\n1_Public\n2013\nUSIC\n1825.0\n\n\n4\n00_FR\n1_Public\n2022\nUSIC\n1804.0\n\n\n\n\n\n\n\nThe dataset contains 5 variables: id_geo, statut_etab, annee, uni, nb_lit. No missing values — the dataset is clean and ready for analysis."
+    "text": "1. Loading and Exploring the Dataset\n\nimport pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nfrom IPython.display import display\n\ndf = pd.read_csv(\"data/lits_soins_critiques_2022.csv\", sep=\";\", encoding=\"utf-8\")\nprint(\"Dimensions:\", df.shape)\nprint(\"\\nColumns:\", df.columns.tolist())\nprint(\"\\nYears available:\", sorted(df[\"annee\"].astype(int).unique().tolist()))\nprint(\"\\nEstablishment types:\", df[\"statut_etab\"].unique().tolist())\nprint(\"\\nBed types:\", df[\"uni\"].unique().tolist())\n\ndisplay(df.head())\n\nDimensions: (15141, 5)\n\nColumns: ['id_geo', 'statut_etab', 'annee', 'uni', 'nb_lit']\n\nYears available: [2013, 2019, 2020, 2021, 2022, 2023, 2024]\n\nEstablishment types: ['1_Public', '2_Prive_BL', '3_Prive_BNL']\n\nBed types: ['REAADU', 'REAENF', 'USIC', 'SIUNV', 'AUTSI', 'SURVADU', 'SURVENF']\n\n\n\n\n\n\n\n\n\nid_geo\nstatut_etab\nannee\nuni\nnb_lit\n\n\n\n\n0\n00_FR\n1_Public\n2013\nREAADU\n4242.0\n\n\n1\n00_FR\n1_Public\n2019\nREAADU\n4245.0\n\n\n2\n00_FR\n1_Public\n2020\nREAENF\n342.0\n\n\n3\n00_FR\n1_Public\n2013\nUSIC\n1825.0\n\n\n4\n00_FR\n1_Public\n2022\nUSIC\n1804.0\n\n\n\n\n\n\n\nThe dataset contains 5 variables: id_geo, statut_etab, annee, uni, nb_lit. No missing values; the dataset is clean and ready for analysis."
   },
   {
     "objectID": "projects/python_analysis.html#national-evolution-of-critical-care-beds-20132024",
@@ -319,7 +319,7 @@
     "href": "projects/python_analysis.html#distribution-by-establishment-status-2024",
     "title": "Hospital Critical Care Capacity in France",
     "section": "4. Distribution by Establishment Status (2024)",
-    "text": "4. Distribution by Establishment Status (2024)\n\nstatut = df[\n    (df[\"id_geo\"] == \"00_FR\") & (df[\"annee\"] == 2024)\n].groupby(\"statut_etab\")[\"nb_lit\"].sum().reset_index()\n\nstatut[\"statut_etab\"] = statut[\"statut_etab\"].replace({\n    \"1_Public\": \"Public\",\n    \"2_Prive_BL\": \"Private (for-profit)\",\n    \"3_Prive_BNL\": \"Private (non-profit)\"\n})\n\nplt.figure(figsize=(7, 7))\nplt.pie(statut[\"nb_lit\"], labels=statut[\"statut_etab\"], autopct=\"%1.1f%%\",\n        colors=[\"#4C72B0\", \"#DD8452\", \"#55A868\"], startangle=140)\nplt.title(\"Critical care beds by establishment status (2024)\", fontsize=12)\nplt.tight_layout()\nplt.show()\n\n\n\n\nDistribution of critical care beds by establishment status in France (2024)\n\n\n\n\n\n\n\n\n\n\nTipKey observation\n\n\n\nPublic hospitals account for 70% of all critical care beds in France. This distribution is particularly relevant in the context of healthcare information systems — public and private institutions operate on different IS architectures, regulatory frameworks, and data governance models, a key challenge for interoperability in the French health system."
+    "text": "4. Distribution by Establishment Status (2024)\n\nstatut = df[\n    (df[\"id_geo\"] == \"00_FR\") & (df[\"annee\"] == 2024)\n].groupby(\"statut_etab\")[\"nb_lit\"].sum().reset_index()\n\nstatut[\"statut_etab\"] = statut[\"statut_etab\"].replace({\n    \"1_Public\": \"Public\",\n    \"2_Prive_BL\": \"Private (for-profit)\",\n    \"3_Prive_BNL\": \"Private (non-profit)\"\n})\n\nplt.figure(figsize=(7, 7))\nplt.pie(statut[\"nb_lit\"], labels=statut[\"statut_etab\"], autopct=\"%1.1f%%\",\n        colors=[\"#4C72B0\", \"#DD8452\", \"#55A868\"], startangle=140)\nplt.title(\"Critical care beds by establishment status (2024)\", fontsize=12)\nplt.tight_layout()\nplt.show()\n\n\n\n\nDistribution of critical care beds by establishment status in France (2024)\n\n\n\n\n\n\n\n\n\n\nTipKey observation\n\n\n\nPublic hospitals account for 70% of all critical care beds in France. This distribution is particularly relevant in the context of healthcare information systems: public and private institutions operate on different IS architectures, regulatory frameworks, and data governance models, a key challenge for interoperability in the French health system."
   },
   {
     "objectID": "projects/python_analysis.html#top-10-departments-by-critical-care-capacity-2024",
@@ -333,6 +333,6 @@
     "href": "projects/python_analysis.html#summary-reflections",
     "title": "Hospital Critical Care Capacity in France",
     "section": "Summary & Reflections",
-    "text": "Summary & Reflections\n\n\n\nFinding\nInsight\n\n\n\n\n+6% beds in 2020\nMeasurable Covid-19 emergency response\n\n\n70% public sector\nPublic hospitals dominate critical care\n\n\nParis, Nord, BdR lead\nTerritorial concentration of resources\n\n\nPost-2021 decline\nGradual return to structural capacity\n\n\n\nThis project allowed me to apply data manipulation and visualisation skills to a real-world healthcare dataset. Beyond the technical exercise, it reinforced my understanding of how data can inform strategic decisions in hospital management — whether around resource allocation, capacity planning, or IS design.\nAs someone aiming to work at the intersection of healthcare and information systems, being able to read, clean, and interpret health data is a skill I consider essential for roles in MOA, AMOA, or project management in MedTech and pharma environments."
+    "text": "Summary & Reflections\n\n\n\nFinding\nInsight\n\n\n\n\n+6% beds in 2020\nMeasurable Covid-19 emergency response\n\n\n70% public sector\nPublic hospitals dominate critical care\n\n\nParis, Nord, BdR lead\nTerritorial concentration of resources\n\n\nPost-2021 decline\nGradual return to structural capacity\n\n\n\nThis project allowed me to apply data manipulation and visualisation skills to a real-world healthcare dataset. Beyond the technical exercise, it reinforced my understanding of how data can inform strategic decisions in hospital management, whether around resource allocation, capacity planning, or IS design.\nAs someone aiming to work at the intersection of healthcare and information systems, being able to read, clean, and interpret health data is a skill I consider essential for roles in MOA, AMOA, or project management in MedTech and pharma environments."
   }
 ]
