@@ -65,3 +65,29 @@ $body-bg: #FAF2FF;
   font-family: inherit;
   margin-right: 4px;
 }
+
+.quarto-about-trestles {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 60px 40px;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+}
+
+.quarto-about-trestles .about-entity {
+  flex: 0 0 280px;
+}
+
+.quarto-about-trestles .about-contents {
+  flex: 1;
+  padding-left: 60px;
+}
+
+.quarto-about-trestles h1 {
+  font-size: 2rem;
+}
+
+.quarto-about-trestles .about-link {
+  font-size: 14px;
+}

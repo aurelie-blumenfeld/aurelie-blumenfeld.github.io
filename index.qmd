@@ -3,7 +3,7 @@ title: Aurélie BLUMENFELD
 image: profile-picture.jpg
 about:
   template: trestles
-  image-width: 9em
+  image-width: 12em
   image-shape: round
   links:
     - icon: linkedin
