@@ -55,3 +55,22 @@ body.titre-page .quarto-title .title {
   border-radius: 4px;
   border-bottom: none;
 }
+
+.callout-tip,
+.callout-tip .callout-body-container,
+.callout-tip .callout-header {
+  background: #fdeee9 !important;
+  background-image: none !important;
+}
+
+.callout-tip {
+  border-left-color: #E8705A !important;
+}
+
+.callout-tip .callout-title {
+  color: #b84a30 !important;
+}
+
+.callout-tip .callout-icon::before {
+  filter: hue-rotate(300deg) saturate(0.8) brightness(0.7) !important;
+}
