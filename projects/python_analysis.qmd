@@ -4,6 +4,8 @@ description: "evolution of critical care bed capacity in French hospitals betwee
 date: 2024-12-01
 categories: [Information Systems, Healthcare, IT, Python]
 image: ../images/python_analysis.png
+toc: false
+anchor-sections: false
 ---
 ## Introduction
 

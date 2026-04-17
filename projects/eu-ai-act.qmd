@@ -1,9 +1,11 @@
 ---
-title: "EU AI Act — Organisational Impact Analysis"
+title: "EU AI Act : Organisational Impact Analysis"
 description: "An analysis of the EU AI Act's impact on organisations, examining compliance challenges and strategic responses across three case studies."
 date: 2025-01-15
 categories: [AI Regulation, Business Analysis, EU Policy, Research]
 image: ../images/eu_ai_act.png
+toc: false
+anchor-sections: false
 ---
 
 ## Overview

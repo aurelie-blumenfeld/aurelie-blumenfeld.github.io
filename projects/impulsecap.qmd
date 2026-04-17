@@ -4,6 +4,8 @@ description: "Adaptive fitness app for people with disabilities."
 date: 2025-11-12
 categories: [Entrepreneurship, HealthTech]
 image: ../images/impulse-cap.png
+toc: false
+anchor-sections: false
 
 ---
 

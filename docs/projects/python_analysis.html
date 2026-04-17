@@ -73,7 +73,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
@@ -215,7 +214,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <section id="introduction" class="level2">
-<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<h2 data-anchor-id="introduction">Introduction</h2>
 <p>As a business school student specialising in Information Systems with a strong interest in the healthcare sector, I wanted to combine both fields in a concrete data project.</p>
 <p>This analysis explores the evolution of critical care bed capacity in French hospitals between 2013 and 2024, using open data published by the <strong>DREES</strong> (Direction de la recherche, des études, de l’évaluation et des statistiques), the French Ministry of Health’s statistical department.</p>
 <div class="callout callout-style-default callout-note callout-titled">
@@ -241,8 +240,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <hr>
 </section>
 <section id="loading-and-exploring-the-dataset" class="level2">
-<h2 class="anchored" data-anchor-id="loading-and-exploring-the-dataset">1. Loading and Exploring the Dataset</h2>
-<div id="26e77be4" class="cell" data-execution_count="1">
+<h2 data-anchor-id="loading-and-exploring-the-dataset">1. Loading and Exploring the Dataset</h2>
+<div id="0bb222c8" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
@@ -333,8 +332,8 @@ Bed types: ['REAADU', 'REAENF', 'USIC', 'SIUNV', 'AUTSI', 'SURVADU', 'SURVENF']<
 <hr>
 </section>
 <section id="national-evolution-of-critical-care-beds-20132024" class="level2">
-<h2 class="anchored" data-anchor-id="national-evolution-of-critical-care-beds-20132024">2. National Evolution of Critical Care Beds (2013–2024)</h2>
-<div id="dd6f2017" class="cell" data-execution_count="2">
+<h2 data-anchor-id="national-evolution-of-critical-care-beds-20132024">2. National Evolution of Critical Care Beds (2013–2024)</h2>
+<div id="5f48f842" class="cell" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>evolution <span class="op">=</span> df[df[<span class="st">"id_geo"</span>] <span class="op">==</span> <span class="st">"00_FR"</span>].groupby(<span class="st">"annee"</span>)[<span class="st">"nb_lit"</span>].<span class="bu">sum</span>().reset_index()</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">5</span>))</span>
@@ -370,8 +369,8 @@ Bed types: ['REAADU', 'REAENF', 'USIC', 'SIUNV', 'AUTSI', 'SURVADU', 'SURVENF']<
 <hr>
 </section>
 <section id="evolution-by-type-of-critical-care-unit" class="level2">
-<h2 class="anchored" data-anchor-id="evolution-by-type-of-critical-care-unit">3. Evolution by Type of Critical Care Unit</h2>
-<div id="6b530daf" class="cell" data-execution_count="3">
+<h2 data-anchor-id="evolution-by-type-of-critical-care-unit">3. Evolution by Type of Critical Care Unit</h2>
+<div id="23740086" class="cell" data-execution_count="3">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>types_lits <span class="op">=</span> df[df[<span class="st">"id_geo"</span>] <span class="op">==</span> <span class="st">"00_FR"</span>].groupby([<span class="st">"annee"</span>, <span class="st">"uni"</span>])[<span class="st">"nb_lit"</span>].<span class="bu">sum</span>().reset_index()</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>types_lits[<span class="st">"uni"</span>] <span class="op">=</span> types_lits[<span class="st">"uni"</span>].replace({</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"REAADU"</span>: <span class="st">"Adult ICU"</span>,</span>
@@ -417,8 +416,8 @@ Bed types: ['REAADU', 'REAENF', 'USIC', 'SIUNV', 'AUTSI', 'SURVADU', 'SURVENF']<
 <hr>
 </section>
 <section id="distribution-by-establishment-status-2024" class="level2">
-<h2 class="anchored" data-anchor-id="distribution-by-establishment-status-2024">4. Distribution by Establishment Status (2024)</h2>
-<div id="aa8b6350" class="cell" data-execution_count="4">
+<h2 data-anchor-id="distribution-by-establishment-status-2024">4. Distribution by Establishment Status (2024)</h2>
+<div id="503ca46e" class="cell" data-execution_count="4">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>statut <span class="op">=</span> df[</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    (df[<span class="st">"id_geo"</span>] <span class="op">==</span> <span class="st">"00_FR"</span>) <span class="op">&amp;</span> (df[<span class="st">"annee"</span>] <span class="op">==</span> <span class="dv">2024</span>)</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>].groupby(<span class="st">"statut_etab"</span>)[<span class="st">"nb_lit"</span>].<span class="bu">sum</span>().reset_index()</span>
@@ -460,8 +459,8 @@ Bed types: ['REAADU', 'REAENF', 'USIC', 'SIUNV', 'AUTSI', 'SURVADU', 'SURVENF']<
 <hr>
 </section>
 <section id="top-10-departments-by-critical-care-capacity-2024" class="level2">
-<h2 class="anchored" data-anchor-id="top-10-departments-by-critical-care-capacity-2024">5. Top 10 Departments by Critical Care Capacity (2024)</h2>
-<div id="914a36ed" class="cell" data-execution_count="5">
+<h2 data-anchor-id="top-10-departments-by-critical-care-capacity-2024">5. Top 10 Departments by Critical Care Capacity (2024)</h2>
+<div id="1f5cbe7e" class="cell" data-execution_count="5">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>deps <span class="op">=</span> df[</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    (df[<span class="st">"annee"</span>] <span class="op">==</span> <span class="dv">2024</span>) <span class="op">&amp;</span></span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    (<span class="op">~</span>df[<span class="st">"id_geo"</span>].isin([<span class="st">"00_FR"</span>, <span class="st">"00_MET"</span>]))</span>
@@ -503,7 +502,7 @@ Bed types: ['REAADU', 'REAENF', 'USIC', 'SIUNV', 'AUTSI', 'SURVADU', 'SURVENF']<
 <hr>
 </section>
 <section id="summary-reflections" class="level2">
-<h2 class="anchored" data-anchor-id="summary-reflections">Summary &amp; Reflections</h2>
+<h2 data-anchor-id="summary-reflections">Summary &amp; Reflections</h2>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -539,13 +538,6 @@ Bed types: ['REAADU', 'REAENF', 'USIC', 'SIUNV', 'AUTSI', 'SURVADU', 'SURVENF']<
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
-    const icon = "";
-    const anchorJS = new window.AnchorJS();
-    anchorJS.options = {
-      placement: 'right',
-      icon: icon
-    };
-    anchorJS.add('.anchored');
     const isCodeAnnotation = (el) => {
       for (const clz of el.classList) {
         if (clz.startsWith('code-annotation-')) {                     
