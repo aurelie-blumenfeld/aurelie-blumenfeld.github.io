@@ -7,4 +7,6 @@ listing:
   fields: [image, title, description, categories, date]
 toc: false
 page-layout: full
+anchor-sections: false
+body-classes: "titre-page"
 ---

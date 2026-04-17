@@ -3,9 +3,12 @@ title: "My Journey"
 page-layout: full
 toc: false
 anchor-sections: false
+body-classes: "titre-page"
 ---
 
+::: section-heading-edu
 ## Education
+:::
 
 ::: timeline
 ::: timeline-item
@@ -43,7 +46,9 @@ Before moving into business school, I completed a degree in biology. This backgr
 :::
 :::
 
+::: section-heading-exp
 ## Experience
+:::
 
 ::: exp-card
 ::: exp-header

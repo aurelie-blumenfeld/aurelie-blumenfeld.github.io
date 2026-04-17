@@ -1,93 +1,57 @@
 /*-- scss:defaults --*/
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-
-
 $navbar-bg: #6A338B;
 $navbar-fg: #300212;
 $body-bg: #FAF2FF;
 
+/*-- scss:rules --*/
+
 /* Timeline */
-.timeline { position: relative; padding-left: 28px; }
-.timeline::before { content: ''; position: absolute; left: 0; top: 6px; bottom: 6px; width: 1px; background: #e8e8f0; }
-.timeline-item { position: relative; margin-bottom: 36px; }
-.timeline-item::before { content: ''; position: absolute; left: -32px; top: 6px; width: 11px; height: 11px; border-radius: 50%; background: #fff; border: 2px solid #5548C8; }
-.timeline-date { font-size: 11px; font-weight: 600; color: #5548C8; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 4px; }
-.timeline-content h3 { font-size: 16px; margin-bottom: 4px; }
+.timeline { position: relative; padding-left: 32px; max-width: 700px; }
+.timeline::before { content: ''; position: absolute; left: 0; top: 6px; bottom: 6px; width: 2px; background: #e0d5f0; }
+.timeline-item { position: relative; margin-bottom: 40px; }
+.timeline-item::before { content: ''; position: absolute; left: -38px; top: 6px; width: 12px; height: 12px; border-radius: 50%; background: #fff; border: 2px solid #6A338B; }
+.timeline-item::before { content: ''; position: absolute; left: -38px; top: 6px; width: 12px; height: 12px; border-radius: 50%; background: #6A338B; border: 2px solid #6A338B; }
+.timeline-date { font-size: 11px; font-weight: 600; color: #6A338B; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 6px; }
+.timeline-title { font-size: 15px; font-weight: 500; margin-bottom: 2px; }
+.timeline-sub { font-size: 13px; color: #6b6b8a; margin-bottom: 6px; }
 
 /* Experience cards */
-.exp-card { background: #fff; border: 1px solid #e8e8f0; border-radius: 16px; padding: 32px; margin-bottom: 24px; }
-.exp-header h3 { font-size: 18px; margin-bottom: 4px; }
-.exp-body { font-size: 14px; color: #6b6b8a; margin: 16px 0; }
+.exp-card { background: #fff; border: 0.5px solid #e8e8f0; border-left: 4px solid #6A338B; border-radius: 0 12px 12px 0; padding: 28px 32px; margin-bottom: 20px; }
+.exp-header h3 { font-size: 17px; font-weight: 600; margin-bottom: 4px; }
+.exp-body { font-size: 14px; color: #555; margin: 12px 0; line-height: 1.7; }
 .exp-body li { margin-bottom: 8px; }
-.exp-tags code { background: #EEEDFB; color: #5548C8; border: none; font-size: 11px; padding: 3px 10px; border-radius: 100px; font-family: inherit; }
+.exp-tags code { background: #f0ebf7; color: #6A338B; border: none; font-size: 11px; padding: 3px 10px; border-radius: 100px; font-family: inherit; margin-right: 4px; }
 
+/* Projects grid */
+.quarto-grid-item .thumbnail-image { object-fit: contain !important; background-color: #FAF2FF; padding: 16px; width: 100% !important; height: 200px !important; }
 
-/*-- scss:rules --*/
-.quarto-grid-item .thumbnail-image {
-  object-fit: contain !important;
-  background-color: #FAF2FF;
-  padding: 16px;
-  width: 100% !important;
-  height: 200px !important;
+/* Home page */
+.quarto-about-trestles { max-width: 900px; margin: 0 auto; padding: 60px 40px; min-height: 80vh; display: flex; align-items: center; }
+.quarto-about-trestles .about-entity { flex: 0 0 280px; }
+.quarto-about-trestles .about-contents { flex: 1; padding-left: 60px; }
+.quarto-about-trestles h1 { font-size: 2rem; }
+.quarto-about-trestles .about-link { font-size: 14px; }
+
+body.titre-page .quarto-title .title {
+  font-size: 2.2rem !important;
+  font-weight: 600 !important;
+  color: #2d1a3e !important;
+  letter-spacing: -0.02em !important;
+  text-transform: none !important;
+  border-bottom: 3px solid #6A338B;
+  padding-bottom: 8px;
+  display: inline-block;
 }
 
-.exp-card {
-  background: #fff;
-  border: 1px solid #e8e8f0;
-  border-left: 4px solid #6A338B;
-  border-radius: 12px;
-  padding: 28px 32px;
-  margin-bottom: 20px;
-}
 
-.exp-header h3 {
-  font-size: 17px;
-  font-weight: 600;
-  margin-bottom: 4px;
-  color: #1a1a2e;
-}
-
-.exp-body {
-  font-size: 14px;
-  color: #555;
-  margin: 12px 0;
-  line-height: 1.7;
-}
-
-.exp-tags code {
-  background: #f0ebf7;
-  color: #6A338B;
-  border: none;
-  font-size: 11px;
-  padding: 3px 10px;
-  border-radius: 100px;
-  font-family: inherit;
-  margin-right: 4px;
-}
-
-.quarto-about-trestles {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 60px 40px;
-  min-height: 80vh;
-  display: flex;
-  align-items: center;
-}
-
-.quarto-about-trestles .about-entity {
-  flex: 0 0 280px;
-}
-
-.quarto-about-trestles .about-contents {
-  flex: 1;
-  padding-left: 60px;
-}
-
-.quarto-about-trestles h1 {
-  font-size: 2rem;
-}
-
-.quarto-about-trestles .about-link {
-  font-size: 14px;
+.section-heading-edu h2,
+.section-heading-exp h2 {
+  display: inline-block;
+  background: #fdeee9;
+  color: #b84a30;
+  padding: 2px 12px;
+  border-radius: 4px;
+  border-bottom: none;
 }

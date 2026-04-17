@@ -2,6 +2,8 @@
 title: "Contact"
 toc: false
 page-layout: full
+anchor-sections: false
+body-classes: "titre-page"
 ---
 
 ## Get in Touch
