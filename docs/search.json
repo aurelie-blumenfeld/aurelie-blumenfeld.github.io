@@ -112,6 +112,13 @@
     "text": "Key Takeaways\nThis project strengthened my ability to apply structured process improvement frameworks to real-world healthcare operations. Mapping patient flows, identifying waste, and proposing evidence-based solutions are skills directly applicable to MOA and PMO roles in the health sector, where understanding clinical processes is as important as managing the project itself."
   },
   {
+    "objectID": "projects/lean-management.html#other-projects",
+    "href": "projects/lean-management.html#other-projects",
+    "title": "Lean Management in Emergency Departments",
+    "section": "Other Projects",
+    "text": "Other Projects\n\n\n\nEU AI Act\nAI regulation and compliance analysis\n\n\n\nImpulseCap\nAdaptive fitness app for people with disabilities\n\n\n\nHospital Critical Care\nPython data analysis of French health data"
+  },
+  {
     "objectID": "projects/impulsecap.html",
     "href": "projects/impulsecap.html",
     "title": "ImpulseCap",
@@ -173,6 +180,13 @@
     "title": "ImpulseCap",
     "section": "Key Takeaways",
     "text": "Key Takeaways\nThis project gave me hands-on experience in entrepreneurship, from market analysis and competitor research to financial modelling and pitching to a jury of entrepreneurs and professors."
+  },
+  {
+    "objectID": "projects/impulsecap.html#other-projects",
+    "href": "projects/impulsecap.html#other-projects",
+    "title": "ImpulseCap",
+    "section": "Other Projects",
+    "text": "Other Projects\n\n\n\nEU AI Act\nAI regulation and compliance analysis\n\n\n\nLean Management\nProcess improvement in healthcare\n\n\n\nHospital Critical Care\nPython data analysis of French health data"
   },
   {
     "objectID": "index.html",
@@ -273,6 +287,13 @@
     "text": "Key Takeaways\nThis project developed my ability to analyse regulatory frameworks and assess their organisational impact, a skill directly applicable to IS project management roles in regulated sectors such as health and pharma."
   },
   {
+    "objectID": "projects/eu-ai-act.html#other-projects",
+    "href": "projects/eu-ai-act.html#other-projects",
+    "title": "EU AI Act : Organisational Impact Analysis",
+    "section": "Other Projects",
+    "text": "Other Projects\n\n\n\nImpulseCap\nAdaptive fitness app for people with disabilities\n\n\n\nLean Management\nProcess improvement in healthcare\n\n\n\nHospital Critical Care\nPython data analysis of French health data"
+  },
+  {
     "objectID": "projects/index.html",
     "href": "projects/index.html",
     "title": "Projects",
@@ -334,5 +355,12 @@
     "title": "Hospital Critical Care Capacity in France",
     "section": "Summary & Reflections",
     "text": "Summary & Reflections\n\n\n\nFinding\nInsight\n\n\n\n\n+6% beds in 2020\nMeasurable Covid-19 emergency response\n\n\n70% public sector\nPublic hospitals dominate critical care\n\n\nParis, Nord, BdR lead\nTerritorial concentration of resources\n\n\nPost-2021 decline\nGradual return to structural capacity\n\n\n\nThis project allowed me to apply data manipulation and visualisation skills to a real-world healthcare dataset. Beyond the technical exercise, it reinforced my understanding of how data can inform strategic decisions in hospital management, whether around resource allocation, capacity planning, or IS design.\nAs someone aiming to work at the intersection of healthcare and information systems, being able to read, clean, and interpret health data is a skill I consider essential for roles in MOA, AMOA, or project management in MedTech and pharma environments."
+  },
+  {
+    "objectID": "projects/python_analysis.html#other-projects",
+    "href": "projects/python_analysis.html#other-projects",
+    "title": "Hospital Critical Care Capacity in France",
+    "section": "Other Projects",
+    "text": "Other Projects\n\n\n\nEU AI Act\nAI regulation and compliance analysis\n\n\n\nImpulseCap\nAdaptive fitness app for people with disabilities\n\n\n\nLean Management\nProcess improvement in healthcare"
   }
 ]

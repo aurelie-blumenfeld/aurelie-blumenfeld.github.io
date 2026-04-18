@@ -48,3 +48,37 @@ Three organisations were analysed:
 ## Key Takeaways
 
 This project developed my ability to analyse regulatory frameworks and assess their organisational impact, a skill directly applicable to IS project management roles in regulated sectors such as health and pharma.
+
+---
+
+::: {.project-nav}
+## Other Projects
+
+::: {.grid}
+
+::: {.g-col-4 .project-nav-card}
+[![](../images/impulse-cap.png)](impulsecap.qmd)
+
+[**ImpulseCap**](impulsecap.qmd)
+
+Adaptive fitness app for people with disabilities
+:::
+
+::: {.g-col-4 .project-nav-card}
+[![](../images/hospital.png)](lean-management.qmd)
+
+[**Lean Management**](lean-management.qmd)
+
+Process improvement in healthcare
+:::
+
+::: {.g-col-4 .project-nav-card}
+[![](../images/python_analysis.png)](python_analysis.qmd)
+
+[**Hospital Critical Care**](python_analysis.qmd)
+
+Python data analysis of French health data
+:::
+
+:::
+:::

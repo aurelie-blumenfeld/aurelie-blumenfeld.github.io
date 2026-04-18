@@ -182,3 +182,37 @@ Paris leads by a significant margin, followed by Nord and Bouches-du-Rhône. Thi
 This project allowed me to apply data manipulation and visualisation skills to a real-world healthcare dataset. Beyond the technical exercise, it reinforced my understanding of how data can inform strategic decisions in hospital management, whether around resource allocation, capacity planning, or IS design.
 
 As someone aiming to work at the intersection of healthcare and information systems, being able to read, clean, and interpret health data is a skill I consider essential for roles in MOA, AMOA, or project management in MedTech and pharma environments.
+
+---
+
+::: {.project-nav}
+## Other Projects
+
+::: {.grid}
+
+::: {.g-col-4 .project-nav-card}
+[![](../images/eu_ai_act.png)](eu-ai-act.qmd)
+
+[**EU AI Act**](eu-ai-act.qmd)
+
+AI regulation and compliance analysis
+:::
+
+::: {.g-col-4 .project-nav-card}
+[![](../images/impulse-cap.png)](impulsecap.qmd)
+
+[**ImpulseCap**](impulsecap.qmd)
+
+Adaptive fitness app for people with disabilities
+:::
+
+::: {.g-col-4 .project-nav-card}
+[![](../images/hospital.png)](lean-management.qmd)
+
+[**Lean Management**](lean-management.qmd)
+
+Process improvement in healthcare
+:::
+
+:::
+:::

@@ -66,3 +66,37 @@ Total funding need: **€155,000**
 ## Key Takeaways
 
 This project gave me hands-on experience in entrepreneurship, from market analysis and competitor research to financial modelling and pitching to a jury of entrepreneurs and professors.
+
+---
+
+::: {.project-nav}
+## Other Projects
+
+::: {.grid}
+
+::: {.g-col-4 .project-nav-card}
+[![](../images/eu_ai_act.png)](eu-ai-act.qmd)
+
+[**EU AI Act**](eu-ai-act.qmd)
+
+AI regulation and compliance analysis
+:::
+
+::: {.g-col-4 .project-nav-card}
+[![](../images/hospital.png)](lean-management.qmd)
+
+[**Lean Management**](lean-management.qmd)
+
+Process improvement in healthcare
+:::
+
+::: {.g-col-4 .project-nav-card}
+[![](../images/python_analysis.png)](python_analysis.qmd)
+
+[**Hospital Critical Care**](python_analysis.qmd)
+
+Python data analysis of French health data
+:::
+
+:::
+:::

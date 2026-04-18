@@ -103,3 +103,65 @@ body.titre-page .quarto-title .title {
   color: #b84a30 !important;
   border-color: #f5c4b3 !important;
 }
+
+/* Project navigation grid (bottom of project pages) */
+.project-nav {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 2px solid #e0d5f0;
+}
+
+.project-nav > h2 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #6A338B;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 1.5rem;
+  border-bottom: none !important;
+}
+
+.project-nav-card {
+  background: #fff;
+  border: 1px solid #e8e8f0;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  padding: 0 !important;
+}
+
+.project-nav-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(106, 51, 139, 0.13);
+}
+
+.project-nav-card img {
+  width: 100%;
+  height: 130px;
+  object-fit: contain;
+  background: #FAF2FF;
+  padding: 12px;
+  display: block;
+}
+
+.project-nav-card p {
+  font-size: 13px;
+  padding: 10px 14px;
+  margin: 0;
+  color: #555;
+}
+
+.project-nav-card p:first-of-type {
+  padding-bottom: 4px;
+  font-weight: 600;
+  color: #2d1a3e;
+}
+
+.project-nav-card a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.project-nav-card a:hover {
+  color: #6A338B;
+}

@@ -102,3 +102,37 @@ Sánchez et al. (2018) reported a 32.4% reduction in waiting time in a comparabl
 ## Key Takeaways
 
 This project strengthened my ability to apply structured process improvement frameworks to real-world healthcare operations. Mapping patient flows, identifying waste, and proposing evidence-based solutions are skills directly applicable to MOA and PMO roles in the health sector, where understanding clinical processes is as important as managing the project itself.
+
+---
+
+::: {.project-nav}
+## Other Projects
+
+::: {.grid}
+
+::: {.g-col-4 .project-nav-card}
+[![](../images/eu_ai_act.png)](eu-ai-act.qmd)
+
+[**EU AI Act**](eu-ai-act.qmd)
+
+AI regulation and compliance analysis
+:::
+
+::: {.g-col-4 .project-nav-card}
+[![](../images/impulse-cap.png)](impulsecap.qmd)
+
+[**ImpulseCap**](impulsecap.qmd)
+
+Adaptive fitness app for people with disabilities
+:::
+
+::: {.g-col-4 .project-nav-card}
+[![](../images/python_analysis.png)](python_analysis.qmd)
+
+[**Hospital Critical Care**](python_analysis.qmd)
+
+Python data analysis of French health data
+:::
+
+:::
+:::
