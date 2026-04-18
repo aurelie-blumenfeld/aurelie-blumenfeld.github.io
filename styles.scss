@@ -94,3 +94,12 @@ body.titre-page .quarto-title .title {
 .callout-note .callout-icon::before {
   filter: hue-rotate(300deg) saturate(0.8) brightness(0.7) !important;
 }
+
+.quarto-grid-item .listing-title {
+  font-weight: 700;
+  }
+.quarto-grid-item .listing-category {
+  background: #fdeee9 !important;
+  color: #b84a30 !important;
+  border-color: #f5c4b3 !important;
+}
